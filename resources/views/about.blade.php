@@ -27,7 +27,7 @@
 						</ul>
 					</li>
 					<li class="menu">
-						<a href="blog.">Blog</a>
+						<a href="blog">Blog</a>
 						<ul class="secondary">
 							<li>
 								<a href="singlepos">Single post</a>
