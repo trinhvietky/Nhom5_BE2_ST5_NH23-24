@@ -14,12 +14,4 @@ use App\Http\Controllers\LienKetTrangController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('index');
-// });
-
-// Route::get('{name?}', function ($name = 'name') {
-//     return view($name);
-// });
-
 Route::get('/{page?}', [LienKetTrangController::class, "index"]);
