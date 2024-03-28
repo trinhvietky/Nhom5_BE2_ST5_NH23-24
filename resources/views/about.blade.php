@@ -1,45 +1,6 @@
-<!doctype html>
-<!-- Website template by freewebsitetemplates.com -->
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>about - Frozen Yogurt Shop</title>
-	<link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}" type="text/css">
-	<link rel="stylesheet" href="{{ asset('assets/css/mobile.css') }}" type="text/css">
-	<script src="{{ asset('assets/js/mobile.css') }}" type="text/javascript"></script>
-</head>
-<body>
-	<div id="page">
-		<div id="header">
-			<div>
-				<a href="index" class="logo"><img src="/images/logo.png" alt=""></a>
-				<ul id="navigation">
-					<li>
-						<a href="index">Home</a>
-					</li>
-					<li class="menu selected">
-						<a href="about">About</a>
-						<ul class="primary">
-							<li>
-								<a href="product">Product</a>
-							</li>
-						</ul>
-					</li>
-					<li class="menu">
-						<a href="blog">Blog</a>
-						<ul class="secondary">
-							<li>
-								<a href="singlepos">Single post</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="contact">Contact</a>
-					</li>
-				</ul>
-			</div>
-		</div>
+
+@extends('app')
+@section('content')
 		<div id="body">
 			<div class="header">
 				<div>
@@ -47,7 +8,7 @@
 				</div>
 			</div>
 			<div class="body">
-				<img src="/images/bg-header-about.jpg" alt="">
+				<img src="{{asset('/images/bg-header-about.jpg')}}" alt="">
 			</div>
 			<div class="footer">
 				<div class="sidebar">
@@ -68,17 +29,5 @@
 				</div>
 			</div>
 		</div>
-		<div id="footer">
-			<div>
-				<div class="connect">
-					<a href="http://freewebsitetemplates.com/go/facebook/" class="facebook">facebook</a>
-					<a href="http://freewebsitetemplates.com/go/twitter/" class="twitter">twitter</a>
-					<a href="http://freewebsitetemplates.com/go/googleplus/" class="googleplus">googleplus</a>
-					<a href="http://pinterest.com/fwtemplates/" class="pinterest">pinterest</a>
-				</div>
-				<p>&copy; 2023 Freeeze. All Rights Reserved.</p>
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+
+@endsection
