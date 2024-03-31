@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('_ticket', function (Blueprint $table) {
             $table->increments('Ticket_id');
-            $table->increments('Tour_id');
-            $table->increments('customer_id');
+            $table->string('Tour_id');
+            $table->string('customer_id');
             $table->timestamps();
         });
     }
