@@ -15,15 +15,16 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        DB::table('product')->insert([
-            'tenSP'=> "san pham 1",
-            'soLuong'=> 50,
-            'moTa'=> "san pham khong phai la thuoc de thay the thuoc chua benh",
-            'anhSP'=> "khong co",
-            'maDM'=> "2",
-            'giamGia'=> "20%",
-            'luotXem'=> "10000000",
-            'donGia'=> "23k"
-        ]);
+        // DB::table('product')->insert([
+        //     'tenSP'=> "san pham 1",
+        //     'soLuong'=> 50,
+        //     'moTa'=> "san pham khong phai la thuoc de thay the thuoc chua benh",
+        //     'anhSP'=> "khong co",
+        //     'maDM'=> "2",
+        //     'giamGia'=> "20%",
+        //     'luotXem'=> "10000000",
+        //     'donGia'=> "23k"
+        // ]);
+        $this->call(Ticket::class);
     }
 }
