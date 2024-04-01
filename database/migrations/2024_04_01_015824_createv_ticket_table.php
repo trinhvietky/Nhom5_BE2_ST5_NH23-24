@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('_ticket', function (Blueprint $table) {
-            $table->increments('Ticket_id');
-            $table->string('Tour_id');
+        Schema::create('ticket', function (Blueprint $table) {
+            $table->increments('ticket_id');
+            $table->string('tour_id');
             $table->string('customer_id');
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::drop('_ticket');
+        Schema::dropIfExists('ticket');
     }
 };
