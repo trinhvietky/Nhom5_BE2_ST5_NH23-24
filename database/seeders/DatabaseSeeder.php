@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Seeders;
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -26,5 +27,6 @@ class DatabaseSeeder extends Seeder
         //     'Guide_id'=> "43k"
         // ]);
         $this->call(TicketSeeder::class);
+        $this->call(CustomerSeeder::class);
     }
 }
