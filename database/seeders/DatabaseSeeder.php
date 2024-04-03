@@ -27,6 +27,5 @@ class DatabaseSeeder extends Seeder
         //     'Guide_id'=> "43k"
         // ]);
         $this->call(TicketSeeder::class);
-        $this->call(CustomerSeeder::class);
     }
 }
