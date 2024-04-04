@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('guides', function (Blueprint $table) {
-            $table->increments('Guide_id');
-            $table->string('Guide_name');
-            $table->string('Guide_Pno');
+            $table->increments('guide_Id');
+            $table->string('guide_Name');
+            $table->string('guide_Pno');
+            $table->string('guide_Img');
             $table->timestamps();
         });
     }
