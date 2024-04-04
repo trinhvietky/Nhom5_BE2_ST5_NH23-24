@@ -14,25 +14,38 @@ class LocationSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('location')->insert([
+        DB::table('locations')->insert([
+            [
             'Location_name' => 'Ha Giang',
             'Location_add' => 'Viet Nam',
             'Location_image' => 'hagiang.jpg',
-        ]);
-        DB::table('location')->insert([
+            'created_at' => now(),
+            'updated_at' => now(),
+            ],
+
+            [
             'Location_name' => 'Ninh Binh',
             'Location_add' => 'Viet Nam',
             'Location_image' => 'ninhbinh.jpg',
-        ]);
-        DB::table('location')->insert([
+            'created_at' => now(),
+            'updated_at' => now(),
+            ],
+
+            [
             'Location_name' => 'Da Lat',
             'Location_add' => 'Viet Nam',
             'Location_image' => 'dalat.jpg',
-        ]);
-        DB::table('location')->insert([
+            'created_at' => now(),
+            'updated_at' => now(),
+            ],
+
+            [
             'Location_name' => 'Da Nang ',
             'Location_add' => 'Viet Nam',
             'Location_image' => 'danang.jpg',
+            'created_at' => now(),
+            'updated_at' => now(),
+            ],
         ]);
 
     }
