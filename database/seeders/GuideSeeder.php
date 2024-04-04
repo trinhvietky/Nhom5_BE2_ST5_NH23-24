@@ -14,23 +14,23 @@ class GuideSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('guide')->insert([
+        DB::table('guides')->insert([
             'Guide_name' => 'A',
             'Guide_Pno' => '01',
         ]);
-        DB::table('guide')->insert([
+        DB::table('guides')->insert([
             'Guide_name' => 'B',
             'Guide_Pno' => '02',
         ]);
-        DB::table('guide')->insert([
+        DB::table('guides')->insert([
             'Guide_name' => 'C',
             'Guide_Pno' => '03',
         ]);
-        DB::table('guide')->insert([
+        DB::table('guides')->insert([
             'Guide_name' => 'D',
             'Guide_Pno' => '04',
         ]);
-        DB::table('guide')->insert([
+        DB::table('guides')->insert([
             'Guide_name' => 'E',
             'Guide_Pno' => '05',
         ]);

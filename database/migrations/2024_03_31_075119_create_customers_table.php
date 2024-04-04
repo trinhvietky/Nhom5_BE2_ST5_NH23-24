@@ -13,10 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ticket', function (Blueprint $table) {
-            $table->increments('ticket_id');
-            $table->string('tour_id');
-            $table->string('customer_id');
+        Schema::create('customers', function (Blueprint $table) {
+            $table->increments('Customer_id');
+            $table->string('Customer_name');
+            $table->string('Customer_address');
+            $table->integer('Customer_phone')->unsigned();
+            $table->string('Customer_email');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ticket');
+        Schema::dropIfExists('customers');
     }
 };

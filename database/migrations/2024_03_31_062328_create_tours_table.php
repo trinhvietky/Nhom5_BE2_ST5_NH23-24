@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('_tour', function (Blueprint $table) {
+        Schema::create('tours', function (Blueprint $table) {
             $table->increments('Tour_id');
             $table->string('Tour_name');
             $table->date('Start_day');
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_tour');
+        Schema::dropIfExists('tours');
     }
 };

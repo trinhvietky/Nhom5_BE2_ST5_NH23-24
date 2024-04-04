@@ -15,7 +15,7 @@ class CustomerSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('customer')->insert([
+        DB::table('customers')->insert([
             [
                 'customer_name' => "Nguyen Van A",
                 'customer_address' => "Nha Trang",

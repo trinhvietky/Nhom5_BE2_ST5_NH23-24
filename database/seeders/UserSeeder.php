@@ -14,47 +14,47 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('user')->insert([
+        DB::table('my_users')->insert([
             'Username' => 'trinhvietky',
             'Password' => '123456',
             'Admin' => '1',
         ]);
 
-        DB::table('user')->insert([
+        DB::table('my_users')->insert([
             'Username' => 'maitrananhtuan',
             'Password' => '123456',
             'Admin' => '1',
         ]);
 
-        DB::table('user')->insert([
+        DB::table('my_users')->insert([
             'Username' => 'nguyenthanhtai',
             'Password' => '123456',
             'Admin' => '1',
         ]);
 
-        DB::table('user')->insert([
+        DB::table('my_users')->insert([
             'Username' => 'hosiminhtri',
             'Password' => '123456',
             'Admin' => '1',
         ]);
 
-        DB::table('user')->insert([
+        DB::table('my_users')->insert([
             'Username' => 'vulehuytruong',
             'Password' => '123456',
             'Admin' => '1',
         ]);
 
-        DB::table('user')->insert([
+        DB::table('my_users')->insert([
             'Username' => 'user1',
             'Password' => '123456',
             'Admin' => '0',
         ]);
-        DB::table('user')->insert([
+        DB::table('my_users')->insert([
             'Username' => 'user2',
             'Password' => '123456',
             'Admin' => '0',
         ]);
-        DB::table('user')->insert([
+        DB::table('my_users')->insert([
             'Username' => 'user3',
             'Password' => '123456',
             'Admin' => '0',

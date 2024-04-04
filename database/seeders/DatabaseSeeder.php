@@ -26,7 +26,11 @@ class DatabaseSeeder extends Seeder
         //     'Place_id'=> "10000000",
         //     'Guide_id'=> "43k"
         // ]);
-        // $this->call(TicketSeeder::class);
-        // $this->call(CustomerSeeder::class);
+        $this->call(TicketSeeder::class);
+        $this->call(CustomerSeeder::class);
+        $this->call(LocationSeeder::class);
+        $this->call(GuideSeeder::class);
+        $this->call(TourSeeder::class);
+        $this->call(UserSeeder::class);
     }
 }
