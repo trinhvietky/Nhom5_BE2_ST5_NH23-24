@@ -14,14 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tours', function (Blueprint $table) {
-            $table->increments('Tour_id');
-            $table->string('Tour_name');
-            $table->date('Start_day');
-            $table->date('End_day');
-            $table->decimal('Price', 10, 2);
-            $table->string('Vehicle');
-            $table->integer('Place_id')->unsigned();
-            $table->integer('Guide_id')->unsigned();
+            $table->increments('tour_id');
+            $table->string('tour_name');
+            $table->string('tour_image');
+            $table->date('start_day');
+            $table->date('end_day');
+            $table->decimal('price', 10, 2);
+            $table->string('vehicle');
+            $table->integer('location_id')->unsigned();
+            $table->integer('guide_id')->unsigned();
             $table->timestamps();
         });
     }

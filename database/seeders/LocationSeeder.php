@@ -30,7 +30,7 @@ class LocationSeeder extends Seeder
             'Location_image' => 'dalat.jpg',
         ]);
         DB::table('locations')->insert([
-            'Location_name' => 'Da Nang ',
+            'Location_name' => 'Da Nang',
             'Location_add' => 'Viet Nam',
             'Location_image' => 'danang.jpg',
         ]);

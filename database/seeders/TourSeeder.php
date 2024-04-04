@@ -15,49 +15,39 @@ class TourSeeder extends Seeder
     public function run()
     {
         DB::table('tours')->insert([
-            'Tour_name' => 'Hà Nội',
-            'Start_day' => '2024-04-01',
-            'End_day' => '2024-04-07',
-            'Price' => 1000000,
-            'Vehicle' => 'Bus',
-            'Place_id' => 1,
-            'Guide_id' => 1,
+            ['tour_name' => 'Cột Cờ Lũng Cú',
+            'tour_image'=>'cotCoLungCu.jpg',
+            'start_day' => '2024-04-01',
+            'end_day' => '2024-04-07',
+            'price' => 200,
+            'vehicle' => 'Car',
+            'location_id' => 1,
+            'guide_id' => 1,],
+            ['tour_name' => 'Bà Nà Hills',
+            'tour_image'=>'baNaHill.jpg',
+            'start_day' => '2024-03-26',
+            'end_day' => '2024-04-01',
+            'price' => 500,
+            'vehicle' => 'car',
+            'location_id' => 4,
+            'guide_id' => 2,],
+            ['tour_name' => 'Thác Voi',
+            'tour_image'=>'thacVoi.jpg',
+            'start_day' => '2024-03-026',
+            'end_day' => '2024-04-01',
+            'price' => 500,
+            'vehicle' => 'car',
+            'location_id' => 3,
+            'guide_id' => 2,],
+            ['tour_name' => 'Hang Múa',
+            'tour_image'=>'hangMua.jpg',
+            'start_day' => '2024-04-10',
+            'end_day' => '2024-04-17',
+            'price' => 800,
+            'vehicle' => 'car',
+            'location_id' => 2,
+            'guide_id' => 3,]
         ]);
-        DB::table('tours')->insert([
-            'Tour_name' => 'Nha Trang',
-            'Start_day' => '2024-03-26',
-            'End_day' => '2024-04-01',
-            'Price' => 200000,
-            'Vehicle' => 'car',
-            'Place_id' => 5,
-            'Guide_id' => 2,
-        ]);
-        DB::table('tours')->insert([
-            'Tour_name' => 'Vũng Tàu',
-            'Start_day' => '2024-03-026',
-            'End_day' => '2024-04-01',
-            'Price' => 200000,
-            'Vehicle' => 'car',
-            'Place_id' => 3,
-            'Guide_id' => 2,
-        ]);
-        DB::table('tours')->insert([
-            'Tour_name' => 'Đảo Phú Quốc',
-            'Start_day' => '2024-04-10',
-            'End_day' => '2024-04-17',
-            'Price' => 800000,
-            'Vehicle' => 'car',
-            'Place_id' => 2,
-            'Guide_id' => 3,
-        ]);
-        DB::table('tours')->insert([
-            'Tour_name' => 'TP Hồ Chí Minh',
-            'Start_day' => '2024-02-23',
-            'End_day' => '2024-02-29',
-            'Price' => 1000000,
-            'Vehicle' => 'bus',
-            'Place_id' => 4,
-            'Guide_id' => 2,
-        ]);
+        
     }
 }
