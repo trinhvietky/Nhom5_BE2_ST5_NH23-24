@@ -15,6 +15,7 @@ class LocationSeeder extends Seeder
     public function run()
     {
         DB::table('locations')->insert([
+<<<<<<< HEAD
             [
             'Location_name' => 'Ha Giang',
             'Location_add' => 'Viet Nam',
@@ -40,6 +41,23 @@ class LocationSeeder extends Seeder
             ],
 
             [
+=======
+            'Location_name' => 'Ha Giang',
+            'Location_add' => 'Viet Nam',
+            'Location_image' => 'hagiang.jpg',
+        ]);
+        DB::table('locations')->insert([
+            'Location_name' => 'Ninh Binh',
+            'Location_add' => 'Viet Nam',
+            'Location_image' => 'ninhbinh.jpg',
+        ]);
+        DB::table('locations')->insert([
+            'Location_name' => 'Da Lat',
+            'Location_add' => 'Viet Nam',
+            'Location_image' => 'dalat.jpg',
+        ]);
+        DB::table('locations')->insert([
+>>>>>>> 2dddd8ee624bf5e603facd8c3862cf602a2496e0
             'Location_name' => 'Da Nang ',
             'Location_add' => 'Viet Nam',
             'Location_image' => 'danang.jpg',

@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('guide', function (Blueprint $table) {
-            $table->increments('Guide_id');
-            $table->string('Guide_name');
-            $table->string('Guide_Pno');
+        Schema::create('tickets', function (Blueprint $table) {
+            $table->increments('ticket_id');
+            $table->string('tour_id');
+            $table->string('customer_id');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('guide');
+        Schema::dropIfExists('tickets');
     }
 };

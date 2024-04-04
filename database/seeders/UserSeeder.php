@@ -15,6 +15,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+<<<<<<< HEAD
         DB::table('myUsers')->insert([
             [
                 'Username' => 'trinhvietky',
@@ -81,6 +82,52 @@ class UserSeeder extends Seeder
             ],
 
 
+=======
+        DB::table('my_users')->insert([
+            'Username' => 'trinhvietky',
+            'Password' => '123456',
+            'Admin' => '1',
+        ]);
+
+        DB::table('my_users')->insert([
+            'Username' => 'maitrananhtuan',
+            'Password' => '123456',
+            'Admin' => '1',
+        ]);
+
+        DB::table('my_users')->insert([
+            'Username' => 'nguyenthanhtai',
+            'Password' => '123456',
+            'Admin' => '1',
+        ]);
+
+        DB::table('my_users')->insert([
+            'Username' => 'hosiminhtri',
+            'Password' => '123456',
+            'Admin' => '1',
+        ]);
+
+        DB::table('my_users')->insert([
+            'Username' => 'vulehuytruong',
+            'Password' => '123456',
+            'Admin' => '1',
+        ]);
+
+        DB::table('my_users')->insert([
+            'Username' => 'user1',
+            'Password' => '123456',
+            'Admin' => '0',
+        ]);
+        DB::table('my_users')->insert([
+            'Username' => 'user2',
+            'Password' => '123456',
+            'Admin' => '0',
+        ]);
+        DB::table('my_users')->insert([
+            'Username' => 'user3',
+            'Password' => '123456',
+            'Admin' => '0',
+>>>>>>> 2dddd8ee624bf5e603facd8c3862cf602a2496e0
         ]);
 
     }

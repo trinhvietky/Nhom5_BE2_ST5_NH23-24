@@ -14,17 +14,17 @@ class TicketSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('ticket')->insert([
+        DB::table('tickets')->insert([
             'tour_id' => '1',
             'customer_id' => '1',
             
         ]);
-        DB::table('ticket')->insert([
+        DB::table('tickets')->insert([
             'tour_id' => '1',
             'customer_id' => '1',
             
         ]);
-        DB::table('ticket')->insert([
+        DB::table('tickets')->insert([
             'tour_id' => '2',
             'customer_id' => '3',
             

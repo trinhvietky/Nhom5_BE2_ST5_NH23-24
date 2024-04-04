@@ -14,7 +14,7 @@ class TourSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('_tour')->insert([
+        DB::table('tours')->insert([
             'Tour_name' => 'Hà Nội',
             'Start_day' => '2024-04-01',
             'End_day' => '2024-04-07',
@@ -23,7 +23,7 @@ class TourSeeder extends Seeder
             'Place_id' => 1,
             'Guide_id' => 1,
         ]);
-        DB::table('_tour')->insert([
+        DB::table('tours')->insert([
             'Tour_name' => 'Nha Trang',
             'Start_day' => '2024-03-26',
             'End_day' => '2024-04-01',
@@ -32,7 +32,7 @@ class TourSeeder extends Seeder
             'Place_id' => 5,
             'Guide_id' => 2,
         ]);
-        DB::table('_tour')->insert([
+        DB::table('tours')->insert([
             'Tour_name' => 'Vũng Tàu',
             'Start_day' => '2024-03-026',
             'End_day' => '2024-04-01',
@@ -41,7 +41,7 @@ class TourSeeder extends Seeder
             'Place_id' => 3,
             'Guide_id' => 2,
         ]);
-        DB::table('_tour')->insert([
+        DB::table('tours')->insert([
             'Tour_name' => 'Đảo Phú Quốc',
             'Start_day' => '2024-04-10',
             'End_day' => '2024-04-17',
@@ -50,7 +50,7 @@ class TourSeeder extends Seeder
             'Place_id' => 2,
             'Guide_id' => 3,
         ]);
-        DB::table('_tour')->insert([
+        DB::table('tours')->insert([
             'Tour_name' => 'TP Hồ Chí Minh',
             'Start_day' => '2024-02-23',
             'End_day' => '2024-02-29',
