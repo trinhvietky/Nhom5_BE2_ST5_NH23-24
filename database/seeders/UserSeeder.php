@@ -17,65 +17,65 @@ class UserSeeder extends Seeder
     {
         DB::table('myUsers')->insert([
             [
-                'Username' => 'trinhvietky',
-                'Password' => '123456',
-                'Admin' => '1',
+                'username' => 'trinhvietky',
+                'password' => '123456',
+                'admin' => '1',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
 
             [
-                'Username' => 'maitrananhtuan',
-                'Password' => '123456',
-                'Admin' => '1',
+                'username' => 'maitrananhtuan',
+                'password' => '123456',
+                'admin' => '1',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
 
             [
-                'Username' => 'nguyenthanhtai',
-                'Password' => '123456',
-                'Admin' => '1',
+                'username' => 'nguyenthanhtai',
+                'password' => '123456',
+                'admin' => '1',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
 
             [
-                'Username' => 'hosiminhtri',
-                'Password' => '123456',
-                'Admin' => '1',
+                'username' => 'hosiminhtri',
+                'password' => '123456',
+                'admin' => '1',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
 
             [
-                'Username' => 'vulehuytruong',
-                'Password' => '123456',
-                'Admin' => '1',
+                'username' => 'vulehuytruong',
+                'password' => '123456',
+                'admin' => '1',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
 
             [
-                'Username' => 'user1',
-                'Password' => '123456',
-                'Admin' => '0',
+                'username' => 'user1',
+                'password' => '123456',
+                'admin' => '0',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
 
             [
-                'Username' => 'user2',
-                'Password' => '123456',
-                'Admin' => '0',
+                'username' => 'user2',
+                'password' => '123456',
+                'admin' => '0',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
 
             [
-                'Username' => 'user3',
-                'Password' => '123456',
-                'Admin' => '0',
+                'username' => 'user3',
+                'password' => '123456',
+                'admin' => '0',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

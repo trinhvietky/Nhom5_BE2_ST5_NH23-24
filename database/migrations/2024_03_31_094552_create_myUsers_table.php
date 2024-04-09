@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('myUsers', function (Blueprint $table) {
 
-            $table->increments('User_id');
-            $table->string('Username');
-            $table->string('Password');
-            $table->string('Admin');
+            $table->increments('user_id');
+            $table->string('username');
+            $table->string('password');
+            $table->string('admin');
             $table->timestamps();
         });
     }
