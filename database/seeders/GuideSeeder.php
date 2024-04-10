@@ -15,45 +15,31 @@ class GuideSeeder extends Seeder
     public function run()
     {
         DB::table('guides')->insert([
-            'guide_Name' => 'A',
-            'guide_Pno' => '0101010101',
+            'guide_Name' => 'Ho Si Minh Tri',
+            'guide_Pno' => '035863586',
             'guide_Img' => 'team-1.jpg',
 
         ]);
         DB::table('guides')->insert([
-            'guide_Name' => 'B',
-            'guide_Pno' => '0202020202',
+            'guide_Name' => 'Mai Tran Anh Tuan',
+            'guide_Pno' => '8356238965',
             'guide_Img' => 'team-2.jpg',
         ]);
         DB::table('guides')->insert([
-            'guide_Name' => 'C',
-            'guide_Pno' => '0303030303',
+            'guide_Name' => 'Trinh Viet Ki',
+            'guide_Pno' => '4257895',
             'guide_Img' => 'team-3.jpg',
         ]);
         DB::table('guides')->insert([
-            'guide_Name' => 'D',
-            'guide_Pno' => '0404040404',
+            'guide_Name' => 'Nguyen Thanh Tai',
+            'guide_Pno' => '329528956',
             'guide_Img' => 'team-4.jpg',
         ]);
         DB::table('guides')->insert([
-            'guide_Name' => 'E',
-            'guide_Pno' => '0505050505',
-            'guide_Img' => 'rizz.jpg',
-        ]);
-        DB::table('guides')->insert([
-            'guide_Name' => 'F',
-            'guide_Pno' => '0606060606',
-            'guide_Img' => 'monkey.jpg',
-        ]);
-        DB::table('guides')->insert([
-            'guide_Name' => 'G',
-            'guide_Pno' => '0707070707',
-            'guide_Img' => 'cat.jpg',
-        ]);
-        DB::table('guides')->insert([
-            'guide_Name' => 'H',
-            'guide_Pno' => '0808080808',
+            'guide_Name' => 'Vu Le Huy Truong',
+            'guide_Pno' => '4348688',
             'guide_Img' => 'hamster.jpg',
         ]);
+        
     }
 }
