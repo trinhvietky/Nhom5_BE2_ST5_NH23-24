@@ -29,7 +29,7 @@
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                 <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                <h1 class="mb-4">Welcome to <span class="text-primary">Tourist</span></h1>
+                <h1 class="mb-4">Welcome to <span class="text-primary">Discovery</span></h1>
                 <p class="mb-4">Leading you to explore the world, Discovery is the ideal online destination for those passionate about travel.</p>
                 <p class="mb-4">Here, you'll discover a range of fascinating destinations around the world, from vibrant cities to peaceful countryside. TravelEase offers convenient hotel booking services, detailed travel guides, and an active social network community to share experiences and suggestions. With TravelEase, your journey starts here. Welcome to our world where dreams come true.</p>
                 <div class="row gy-2 gx-4 mb-4">
