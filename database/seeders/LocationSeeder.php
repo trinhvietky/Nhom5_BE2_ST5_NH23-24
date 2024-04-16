@@ -50,8 +50,31 @@ class LocationSeeder extends Seeder
                 'location_image' => 'danang.jpg',
                 'created_at' => now(),
                 'updated_at' => now(),
-            ]
-
+            ],
+            [
+                'location_name' => 'Binh Thuan',
+                'location_add' => 'Viet Nam',
+                'location_sale' => '20%',
+                'location_image' => 'binhThuan.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'location_name' => 'Thu do London',
+                'location_add' => 'Anh',
+                'location_sale' => '10%',
+                'location_image' => 'london.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'location_name' => 'Zurich',
+                'location_add' => 'Thụy Sĩ',
+                'location_sale' => '10%',
+                'location_image' => 'Zurich.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }
