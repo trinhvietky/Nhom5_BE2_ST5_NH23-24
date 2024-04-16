@@ -19,25 +19,37 @@ class LocationSeeder extends Seeder
             [
                 'location_name' => 'Ha Giang',
                 'location_add' => 'Viet Nam',
+                'location_sale' => '30%',
                 'location_image' => 'hagiang.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
 
             [
                 'location_name' => 'Ninh Binh',
                 'location_add' => 'Viet Nam',
+                'location_sale' => '20%',
                 'location_image' => 'ninhbinh.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
 
             [
                 'location_name' => 'Da Lat',
                 'location_add' => 'Viet Nam',
+                'location_sale' => '25%',
                 'location_image' => 'dalat.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             
             [
                 'location_name' => 'Da Nang',
                 'location_add' => 'Viet Nam',
+                'location_sale' => '15%',
                 'location_image' => 'danang.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
             ]
 
         ]);

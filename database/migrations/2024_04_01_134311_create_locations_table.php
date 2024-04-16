@@ -17,6 +17,7 @@ return new class extends Migration
             $table->increments('location_id');
             $table->string('location_name');
             $table->string('location_add');
+            $table->string('location_sale');
             $table->string('location_image');
             $table->timestamps();
         });
