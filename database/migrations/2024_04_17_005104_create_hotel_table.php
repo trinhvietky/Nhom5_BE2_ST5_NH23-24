@@ -14,7 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('hotel', function (Blueprint $table) {
-            $table->id();
+            $table->increments('hotel_id');
+            $table->string('hotel_name');
+            $table->string('hotel_address');
+            $table->string('hotel_city');
+            $table->string('hotel_image');
+            $table->integer('hotel_rating');
             $table->timestamps();
         });
     }

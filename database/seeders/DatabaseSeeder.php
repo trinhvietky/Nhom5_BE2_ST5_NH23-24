@@ -33,5 +33,6 @@ class DatabaseSeeder extends Seeder
         $this->call(GuideSeeder::class);
         $this->call(TourSeeder::class);
         $this->call(UserSeeder::class);
+        $this->call(HotelSeeder::class);
     }
 }
