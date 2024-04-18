@@ -38,7 +38,7 @@ class GuideSeeder extends Seeder
         DB::table('guides')->insert([
             'guide_Name' => 'Vũ Lê Huy Trường',
             'guide_Pno' => '4348688',
-            'guide_Img' => 'hamster.jpg',
+            'guide_Img' => 'team-3.jpg',
         ]);
         
     }
