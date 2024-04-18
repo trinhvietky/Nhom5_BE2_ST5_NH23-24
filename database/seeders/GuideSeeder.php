@@ -15,28 +15,28 @@ class GuideSeeder extends Seeder
     public function run()
     {
         DB::table('guides')->insert([
-            'guide_Name' => 'Ho Si Minh Tri',
+            'guide_Name' => 'Hồ Sĩ Minh Trí',
             'guide_Pno' => '035863586',
             'guide_Img' => 'team-1.jpg',
 
         ]);
         DB::table('guides')->insert([
-            'guide_Name' => 'Mai Tran Anh Tuan',
+            'guide_Name' => 'Mai Trần Anh Tuấn',
             'guide_Pno' => '8356238965',
             'guide_Img' => 'team-2.jpg',
         ]);
         DB::table('guides')->insert([
-            'guide_Name' => 'Trinh Viet Ki',
+            'guide_Name' => 'Trịnh Viết Ký',
             'guide_Pno' => '4257895',
             'guide_Img' => 'team-3.jpg',
         ]);
         DB::table('guides')->insert([
-            'guide_Name' => 'Nguyen Thanh Tai',
+            'guide_Name' => 'Nguyễn Thành Tài',
             'guide_Pno' => '329528956',
             'guide_Img' => 'team-4.jpg',
         ]);
         DB::table('guides')->insert([
-            'guide_Name' => 'Vu Le Huy Truong',
+            'guide_Name' => 'Vũ Lê Huy Trường',
             'guide_Pno' => '4348688',
             'guide_Img' => 'hamster.jpg',
         ]);

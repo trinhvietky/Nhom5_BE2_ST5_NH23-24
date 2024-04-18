@@ -17,8 +17,8 @@ class LocationSeeder extends Seeder
     {
         DB::table('locations')->insert([
             [
-                'location_name' => 'Ha Giang',
-                'location_add' => 'Viet Nam',
+                'location_name' => 'Hà Giang',
+                'location_add' => 'Việt Nam',
                 'location_sale' => '30%',
                 'location_image' => 'hagiang.jpg',
                 'created_at' => now(),
@@ -26,8 +26,8 @@ class LocationSeeder extends Seeder
             ],
 
             [
-                'location_name' => 'Ninh Binh',
-                'location_add' => 'Viet Nam',
+                'location_name' => 'Ninh Bình',
+                'location_add' => 'Việt Nam',
                 'location_sale' => '20%',
                 'location_image' => 'ninhbinh.jpg',
                 'created_at' => now(),
@@ -35,8 +35,8 @@ class LocationSeeder extends Seeder
             ],
 
             [
-                'location_name' => 'Da Lat',
-                'location_add' => 'Viet Nam',
+                'location_name' => 'Đà Lạt',
+                'location_add' => 'Việt Nam',
                 'location_sale' => '25%',
                 'location_image' => 'dalat.jpg',
                 'created_at' => now(),
@@ -44,23 +44,23 @@ class LocationSeeder extends Seeder
             ],
             
             [
-                'location_name' => 'Da Nang',
-                'location_add' => 'Viet Nam',
+                'location_name' => 'Đà Nẵng',
+                'location_add' => 'Việt Nam',
                 'location_sale' => '15%',
                 'location_image' => 'danang.jpg',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'location_name' => 'Binh Thuan',
-                'location_add' => 'Viet Nam',
+                'location_name' => 'Bình Thuận',
+                'location_add' => 'Việt Nam',
                 'location_sale' => '20%',
                 'location_image' => 'binhThuan.jpg',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'location_name' => 'Thu do London',
+                'location_name' => 'Thủ Đô London',
                 'location_add' => 'Anh',
                 'location_sale' => '10%',
                 'location_image' => 'london.jpg',
