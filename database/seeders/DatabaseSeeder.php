@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
         $this->call(LocationSeeder::class);
         $this->call(GuideSeeder::class);
         $this->call(TourSeeder::class);
-        $this->call(UserSeeder::class);
+        $this->call(AdminSeeder::class);
         $this->call(HotelSeeder::class);
     }
 }
