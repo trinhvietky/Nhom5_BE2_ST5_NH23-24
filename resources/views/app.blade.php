@@ -78,18 +78,18 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index" class="nav-item nav-link active">Home</a>
-                    <a href="about" class="nav-item nav-link">About</a>
-                    <a href="service" class="nav-item nav-link">Services</a>
-                    <a href="package" class="nav-item nav-link">Packages</a>
+                    <a href="{{ url('/index') }}" class="nav-item nav-link active">Home</a>
+                    <a href="{{ url('/about') }}" class="nav-item nav-link">About</a>
+                    <a href="{{ url('/service') }}" class="nav-item nav-link">Services</a>
+                    <a href="{{ url('/package') }}" class="nav-item nav-link">Packages</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
-                            <a href="destination" class="dropdown-item">Destination</a>
-                            <a href="booking" class="dropdown-item">Booking</a>
-                            <a href="team" class="dropdown-item">Travel Guides</a>
-                            <a href="testimonial" class="dropdown-item">Testimonial</a>
-                            <a href="404" class="dropdown-item">404 Page</a>
+                            <a href="{{ url('/destination') }}" class="dropdown-item">Destination</a>
+                            <a href="{{ url('/booking') }}" class="dropdown-item">Booking</a>
+                            <a href="{{ url('/team') }}" class="dropdown-item">Travel Guides</a>
+                            <a href="{{ url('/testimonial') }}" class="dropdown-item">Testimonial</a>
+                            <a href="{{ url('/404') }}" class="dropdown-item">404 Page</a>
                         </div>
                     </div>
                     <a href="contact" class="nav-item nav-link">Contact</a>
