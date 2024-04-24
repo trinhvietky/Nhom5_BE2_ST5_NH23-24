@@ -180,8 +180,8 @@
 
         <div class="row g-4 justify-content-center">
             @foreach($data->take(6) as $row)
-            
-            
+
+
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="package-item">
                     <div class="overflow-hidden">
@@ -211,7 +211,9 @@
             </div>
             @endforeach
             <!--nút show danh sách -->
-            <a class="btn btn-primary py-3 px-5 mt-2" href="{{ url('/package') }}">Show</a>
+            <div class="col-auto">
+                <a class="btn btn-primary rounded-pill py-3 px-4 mt-2" href="{{ url('/package') }}">Show more ...</a>
+            </div>
 
         </div>
     </div>
@@ -337,24 +339,24 @@
             <h1 class="mb-5">Meet Our Guide</h1>
         </div>
         <div class="row g-4">
-        @foreach($data_guide as $row)
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{asset('img/' . $row->guide_Img)}}" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">{{$row->guide_Name}}</h5>
-                            <small>{{$row->guide_Pno}}</small>
-                        </div>
+            @foreach($data_guide as $row)
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="team-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="{{asset('img/' . $row->guide_Img)}}" alt="">
+                    </div>
+                    <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                        <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="mb-0">{{$row->guide_Name}}</h5>
+                        <small>{{$row->guide_Pno}}</small>
                     </div>
                 </div>
-                @endforeach
+            </div>
+            @endforeach
         </div>
     </div>
 </div>
