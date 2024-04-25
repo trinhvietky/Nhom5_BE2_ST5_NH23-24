@@ -15,7 +15,7 @@ use App\Http\Controllers\LienKetTrangController;
 |
 */
 
-Route::get('/trangchu', function () {
+Route::get('/home', function () {
     return view('home');
 })->middleware(['auth', 'verified'])->name('home');
 
