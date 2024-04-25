@@ -56,6 +56,30 @@ class GuideSeeder extends Seeder
                 'updated_at' => now(),
 
             ],
+            [
+                'guide_Name' => 'Nguyễn Văn A',
+                'guide_Pno' => '2995610587',
+                'guide_Img' => 'team-1.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+
+            ],
+            [
+                'guide_Name' => 'Trần Thị B',
+                'guide_Pno' => '3862986',
+                'guide_Img' => 'team-2.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+
+            ],
+            [
+                'guide_Name' => 'Lê Văn C',
+                'guide_Pno' => '48567986',
+                'guide_Img' => 'team-4.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+
+            ],
 
         ]);
     }
