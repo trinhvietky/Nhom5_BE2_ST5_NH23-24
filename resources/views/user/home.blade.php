@@ -4,8 +4,8 @@
     <div class="container py-5">
         <div class="row justify-content-center py-5">
             <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                <h1 class="display-3 text-white mb-3 animated slideInDown">Enjoy Your Vacation With Us</h1>
-                <p class="fs-4 text-white mb-4 animated slideInDown">Get ready for your next adventure</p>
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Tận hưởng kỳ nghỉ của bạn với chúng tôi</h1>
+                <p class="fs-4 text-white mb-4 animated slideInDown">Hãy sẵn sàng cho cuộc phiêu lưu tiếp theo của bạn</p>
                 <div class="position-relative w-75 mx-auto animated slideInDown">
                     <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Eg: Thailand">
                     <button type="button" class="btn btn-primary rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px;">Search</button>
@@ -29,27 +29,27 @@
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                 <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                <h1 class="mb-4">Welcome to <span class="text-primary">Discovery</span></h1>
-                <p class="mb-4">Leading you to explore the world, Discovery is the ideal online destination for those passionate about travel.</p>
-                <p class="mb-4">Here, you'll discover a range of fascinating destinations around the world, from vibrant cities to peaceful countryside. TravelEase offers convenient hotel booking services, detailed travel guides, and an active social network community to share experiences and suggestions. With TravelEase, your journey starts here. Welcome to our world where dreams come true.</p>
+                <h1 class="mb-4">Chào mừng bạn đến <span class="text-primary">Discovery</span></h1>
+                <p class="mb-4">Dẫn dắt bạn khám phá thế giới, Discovery là điểm đến trực tuyến lý tưởng cho những ai đam mê du lịch.</p>
+                <p class="mb-4">Tại đây, bạn sẽ khám phá hàng loạt điểm đến hấp dẫn trên khắp thế giới, từ những thành phố sôi động đến vùng nông thôn yên bình. TravelEase cung cấp dịch vụ đặt phòng khách sạn tiện lợi, hướng dẫn du lịch chi tiết và cộng đồng mạng xã hội tích cực để chia sẻ kinh nghiệm và đề xuất. Với TravelEase, hành trình của bạn bắt đầu từ đây. Chào mừng đến với thế giới của chúng tôi, nơi những giấc mơ trở thành hiện thực.</p>
                 <div class="row gy-2 gx-4 mb-4">
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Chuyến bay hạng nhất</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Handpicked Hotels</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Khách sạn được lựa chọn cẩn thận</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>5 Star Accommodations</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Chỗ nghỉ 5 sao</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Latest Model Vehicles</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Xe mẫu mới nhất</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>150 Premium City Tours</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>150 chuyến tham quan thành phố cao cấp</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Service</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Dịch vụ 24/7</p>
                     </div>
                 </div>
                 <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
@@ -64,15 +64,15 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Services</h6>
-            <h1 class="mb-5">Our Services</h1>
+            <h6 class="section-title bg-white text-center text-primary px-3">Dịch vụ</h6>
+            <h1 class="mb-5">Các dịch vụ du lịch của chúng tôi</h1>
         </div>
         <div class="row g-4">
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item rounded pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                        <h5>WorldWide Tours</h5>
+                        <h5>Du lịch Thế giới</h5>
                         <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                 <div class="service-item rounded pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
-                        <h5>Hotel Reservation</h5>
+                        <h5>Đặt phòng khách sạn</h5>
                         <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                 <div class="service-item rounded pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-user text-primary mb-4"></i>
-                        <h5>Travel Guides</h5>
+                        <h5>Hướng dẫn viên du lịch</h5>
                         <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                 <div class="service-item rounded pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-cog text-primary mb-4"></i>
-                        <h5>Event Management</h5>
+                        <h5>Quản lý sự kiện</h5>
                         <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                 <div class="service-item rounded pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                        <h5>WorldWide Tours</h5>
+                        <h5>Chuyến tham quan toàn thế giới</h5>
                         <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                 <div class="service-item rounded pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
-                        <h5>Hotel Reservation</h5>
+                        <h5>Đặt phòng khách sạn</h5>
                         <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
                 <div class="service-item rounded pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-user text-primary mb-4"></i>
-                        <h5>Travel Guides</h5>
+                        <h5>Hướng dẫn viên du lịch</h5>
                         <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                 <div class="service-item rounded pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-cog text-primary mb-4"></i>
-                        <h5>Event Management</h5>
+                        <h5>Quản lý sự kiện</h5>
                         <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                     </div>
                 </div>
@@ -150,8 +150,8 @@
 <div class="container-xxl py-5 destination">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Destination</h6>
-            <h1 class="mb-5">Popular Destination</h1>
+            <h6 class="section-title bg-white text-center text-primary px-3">Điểm đến</h6>
+            <h1 class="mb-5">Điểm đến phổ biến</h1>
         </div>
 
         <div class="row g-3">
@@ -175,8 +175,8 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Packages</h6>
-            <h1 class="mb-5">Awesome Packages</h1>
+            <h6 class="section-title bg-white text-center text-primary px-3">Gói</h6>
+            <h1 class="mb-5">Gói tuyệt vời</h1>
         </div>
 
         <div class="row g-4 justify-content-center">
