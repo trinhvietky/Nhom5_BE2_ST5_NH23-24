@@ -441,3 +441,8 @@
     padding-right: 0;
     border-right: none;
 }
+
+table, th, tr, td {
+    border: 1px solid black;
+    color: #14141F;
+}

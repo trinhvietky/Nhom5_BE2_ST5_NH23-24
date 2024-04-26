@@ -79,21 +79,21 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="{{ url('/index') }}" class="nav-item nav-link active">Home</a>
-                    <a href="{{ url('/about') }}" class="nav-item nav-link">About</a>
-                    <a href="{{ url('/service') }}" class="nav-item nav-link">Services</a>
-                    <a href="{{ url('/package') }}" class="nav-item nav-link">Packages</a>
+                    <a href="{{ url('/user.home') }}" class="nav-item nav-link active">Home</a>
+                    <a href="{{ url('/user.about') }}" class="nav-item nav-link">About</a>
+                    <a href="{{ url('/user.service') }}" class="nav-item nav-link">Services</a>
+                    <a href="{{ url('/user.package') }}" class="nav-item nav-link">Packages</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
-                            <a href="{{ url('/destination') }}" class="dropdown-item">Destination</a>
-                            <a href="{{ url('/booking') }}" class="dropdown-item">Booking</a>
-                            <a href="{{ url('/team') }}" class="dropdown-item">Travel Guides</a>
-                            <a href="{{ url('/testimonial') }}" class="dropdown-item">Testimonial</a>
-                            <a href="{{ url('/404') }}" class="dropdown-item">404 Page</a>
+                            <a href="{{ url('/user.destination') }}" class="dropdown-item">Destination</a>
+                            <a href="{{ url('/user.booking') }}" class="dropdown-item">Booking</a>
+                            <a href="{{ url('/user.team') }}" class="dropdown-item">Travel Guides</a>
+                            <a href="{{ url('/user.testimonial') }}" class="dropdown-item">Testimonial</a>
+                            <a href="{{ url('/user.404') }}" class="dropdown-item">404 Page</a>
                         </div>
                     </div>
-                    <a href="contact" class="nav-item nav-link">Contact</a>
+                    <a href="{{ url('/user.contact') }}" class="nav-item nav-link">Contact</a>
                 </div>
                 <nav x-data="{ open: false }">
                     <!-- Primary Navigation Menu -->
@@ -147,7 +147,7 @@
                     <!-- Responsive Navigation Menu -->
                     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
                         <div class="pt-2 pb-3 space-y-1">
-                            <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                            <x-responsive-nav-link :href="route('user.home')" :active="request()->routeIs('user.home')">
                                 {{ __('Home') }}
                             </x-responsive-nav-link>
                         </div>

@@ -1,6 +1,5 @@
-@extends('app1')
+@extends('user.app1')
 @section('content1')
-
 <div class="container-fluid bg-primary py-5 mb-5 hero-header">
     <div class="container py-5">
         <div class="row justify-content-center py-5">
@@ -25,7 +24,7 @@
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                 <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="img/about_us.jpg" alt="" style="object-fit: cover;">
+                    <img class="img-fluid position-absolute w-100 h-100" src="/img/about_us.jpg" alt="" style="object-fit: cover;">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -163,7 +162,8 @@
                     <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">{{$row->location_sale}}</div>
                     <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">{{$row->location_name}}</div>
                 </a>
-            </div>@endforeach
+            </div>
+            @endforeach
         </div>
 
     </div>
@@ -401,5 +401,4 @@
     </div>
 </div>
 <!-- Testimonial End -->
-
 @endsection

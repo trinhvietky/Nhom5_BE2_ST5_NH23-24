@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LienKetTrangController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +17,6 @@ use App\Http\Controllers\LienKetTrangController;
 |
 */
 
-Route::get('/trangchu', function () {
-    return view('home');
-})->middleware(['auth', 'verified'])->name('home');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -28,3 +26,5 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::get('/{page?}', [LienKetTrangController::class, 'index']);
+Route::get('/user/home', [UserController::class, 'index'])->middleware('auth')->name('user.home');
+Route::get('/admin/home', [AdminController::class, 'index'])->middleware('auth')->name('admin');
