@@ -55,7 +55,7 @@
                             </div>
                             <p style="height: 150px;">Nằm trên ngọn đồi với khung cảnh tuyệt đẹp, {{ $row->tour_name}} là điểm đến nổi tiếng ở {{$row->location->location_name}} với những kiến trúc độc đáo, hệ thống cáp treo hàng đầu thế giới và các hoạt động giải trí phong phú cho du khách mọi lứa tuổi.</p>
                             <div class="d-flex justify-content-center mb-2">
-                                <a href="#" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="{{url('/booking')}}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
                                 <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Book Now</a>
                             </div>
                         </div>
