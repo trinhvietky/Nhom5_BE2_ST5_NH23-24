@@ -79,21 +79,22 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="{{ url('/user.home') }}" class="nav-item nav-link active">Home</a>
-                    <a href="{{ url('/user.about') }}" class="nav-item nav-link">About</a>
-                    <a href="{{ url('/user.service') }}" class="nav-item nav-link">Services</a>
-                    <a href="{{ url('/user.package') }}" class="nav-item nav-link">Packages</a>
+                    <a href="{{ url('/admin.home') }}" class="nav-item nav-link active">Home</a>
+                    <a href="{{ url('/admin.about') }}" class="nav-item nav-link">About</a>
+                    <a href="{{ url('/admin.service') }}" class="nav-item nav-link">Services</a>
+                    <a href="{{ url('/admin.package') }}" class="nav-item nav-link">Packages</a>
+                    <a href="{{ url('/admin.crud') }}" class="nav-item nav-link">Thông tin tour</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
-                            <a href="{{ url('/user.destination') }}" class="dropdown-item">Destination</a>
-                            <a href="{{ url('/user.booking') }}" class="dropdown-item">Booking</a>
-                            <a href="{{ url('/user.team') }}" class="dropdown-item">Travel Guides</a>
-                            <a href="{{ url('/user.testimonial') }}" class="dropdown-item">Testimonial</a>
-                            <a href="{{ url('/user.404') }}" class="dropdown-item">404 Page</a>
+                            <a href="{{ url('/admin.destination') }}" class="dropdown-item">Destination</a>
+                            <a href="{{ url('/admin.booking') }}" class="dropdown-item">Booking</a>
+                            <a href="{{ url('/admin.team') }}" class="dropdown-item">Travel Guides</a>
+                            <a href="{{ url('/admin.testimonial') }}" class="dropdown-item">Testimonial</a>
+                            <a href="{{ url('/admin.404') }}" class="dropdown-item">404 Page</a>
                         </div>
                     </div>
-                    <a href="{{ url('/user.contact') }}" class="nav-item nav-link">Contact</a>
+                    <a href="{{ url('/admin.contact') }}" class="nav-item nav-link">Contact</a>
                 </div>
                 <nav x-data="{ open: false }">
                     <!-- Primary Navigation Menu -->
@@ -147,7 +148,7 @@
                     <!-- Responsive Navigation Menu -->
                     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
                         <div class="pt-2 pb-3 space-y-1">
-                            <x-responsive-nav-link :href="route('user.home')" :active="request()->routeIs('user.home')">
+                            <x-responsive-nav-link :href="route('admin')" :active="request()->routeIs('admin')">
                                 {{ __('Home') }}
                             </x-responsive-nav-link>
                         </div>
@@ -180,7 +181,7 @@
             </div>
         </nav>
     </div>
-    @yield('content1')
+    @yield('content2')
     <!-- Navbar & Hero End -->
 
 
