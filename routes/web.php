@@ -16,9 +16,9 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/trangchu', function () {
-    return view('home');
-})->middleware(['auth', 'verified'])->name('home');
+// Route::get('/trangchu', function () {
+//     return view('home');
+// })->middleware(['auth', 'verified'])->name('home');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -30,3 +30,4 @@ require __DIR__.'/auth.php';
 
 Route::get('/{page?}', [LienKetTrangController::class, 'index']);
 Route::get('/user/home', [UserController::class, 'index'])->name('user.home');
+Route::get('/admin/home', [UserController::class, 'index'])->name('admin');
