@@ -189,11 +189,12 @@
                         <img class="img-fluid" style="width: 600px; height: 250px" src="{{ asset('img/'.$row->tour_image) }}" alt="">
                     </div>
                     <div class="d-flex border-bottom">
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>{{ $row->tour_name}}</small>
+                        <!-- <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>{{ $row->tour_name}}</small> -->
                         <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>{{ $row->start_day}} -> {{ $row->end_day}}</small>
                         <small class="flex-fill text-center py-2"><i class="fa fa-wheelchair text-primary me-2"></i>{{$row->guide->guide_Name}}</small>
                     </div>
                     <div class="text-center p-4">
+                    <div class=" text-primary fw-bold flex-fill text-center py-1" style="font-size: 30px;"><i class="fa fa-map-marker-alt text-primary me-2"></i>{{ $row->tour_name}}</div>
                         <h3 class="mb-0">{{ $row->price}}$</h3>
                         <div class="mb-3">
                             <small class="fa fa-star text-primary"></small>
