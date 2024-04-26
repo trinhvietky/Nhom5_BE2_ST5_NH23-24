@@ -36,7 +36,7 @@
             <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
                 <a class="position-relative d-block overflow-hidden" href="">
                     <img class="img-fluid" style="width: 600px; height: 250px" src="{{ asset('img/'.$row->location_image) }}" alt="">
-                    <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">{{$row->location_sale}}</div>
+                    <!-- <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">{{$row->location_sale}}</div> -->
                     <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">{{$row->location_name}}</div>
                 </a>
             </div>

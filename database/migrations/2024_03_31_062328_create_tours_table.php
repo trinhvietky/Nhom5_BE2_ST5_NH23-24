@@ -18,15 +18,19 @@ return new class extends Migration
             $table->string('tour_name');
             $table->string('tour_image');
             $table->date('start_day');
-            $table->date('end_day');
-            $table->decimal('price', 10, 2);
+            $table->string('time');
+            $table->string('star_from');
+            $table->decimal('price', 10, 0);
             $table->string('vehicle');
+            $table->text('tour_description');
+            $table->text('tour_schedule');
+            $table->string('tour_sale');
             $table->integer('location_id')->unsigned();
             $table->integer('guide_id')->unsigned();
             $table->timestamps();
         });
     }
- 
+
     /**
      * Reverse the migrations.
      *
