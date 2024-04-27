@@ -8,12 +8,12 @@
         <div class="container py-5">
             <div class="row justify-content-center py-5">
                 <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Booking</h1>
+                    <h1 class="display-3 text-white animated slideInDown">Đặt chuyến</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Booking</li>
+                            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                            <li class="breadcrumb-item"><a href="#">Trang</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Đặt chuyến</li>
                         </ol>
                     </nav>
                 </div>
@@ -53,7 +53,7 @@
             </div>
             <div class="col-md-6">
                 <div class="booking p-5">
-                    <h1 class="text-dark mb-4 display-5">Book A Tour</h1>
+                    <h1 class="text-dark mb-4 display-5">Đặt một chuyến du lịch</h1>
                     <form>
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -91,7 +91,7 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-outline-dark w-100 py-3 display-2" type="submit">Book Now</button>
+                                <button class="btn btn-outline-dark w-100 py-3 display-2" type="submit">Đặt ngay</button>
                             </div>
                         </div>
                     </form>
@@ -102,12 +102,12 @@
 </div>
 
 <div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Packages</h6>
-            <h1 class="mb-5">Awesome Packages</h1>
-        </div>
-        <div class="row g-4 justify-content-center">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Gói</h6>
+                <h1 class="mb-5">Gói tuyệt vời</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
             @foreach($data as $row)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="package-item">
@@ -121,18 +121,19 @@
                     </div>
                     <div class="text-center p-1">
                         <div class=" text-sm text-primary fw-bold flex-fill text-center py-1" style="font-size: 30px;"></i>{{ $row->tour_name}}</div>
-                        <h3 class="mb-0">{{ $row->price}}$</h3>
-                        <div class="mb-3">
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                        </div>
-                        <p style="height: 150px;">Nằm trên ngọn đồi với khung cảnh tuyệt đẹp, {{ $row->tour_name}} là điểm đến nổi tiếng ở {{$row->location->location_name}} với những kiến trúc độc đáo, hệ thống cáp treo hàng đầu thế giới và các hoạt động giải trí phong phú cho du khách mọi lứa tuổi.</p>
-                        <div class="d-flex justify-content-center mb-2">
-                            <a href="#" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                            <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Book Now</a>
+                            <h3 class="mb-0">{{ $row->price}}$</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                            <p style="height: 150px;">Nằm trên ngọn đồi với khung cảnh tuyệt đẹp, {{ $row->tour_name}} là điểm đến nổi tiếng ở {{$row->location->location_name}} với những kiến trúc độc đáo, hệ thống cáp treo hàng đầu thế giới và các hoạt động giải trí phong phú cho du khách mọi lứa tuổi.</p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <a href="#" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
+                                <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
+                            </div>
                         </div>
                     </div>
                 </div>

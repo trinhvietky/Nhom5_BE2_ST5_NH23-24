@@ -48,8 +48,8 @@
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
-                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>39 Nguyễn Huệ, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+0924 242 424</small>
                     <small class="text-light"><i class="fa fa-envelope-open me-2"></i>discovery@example.com</small>
                 </div>
             </div>
@@ -79,22 +79,22 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="{{ url('/admin.home') }}" class="nav-item nav-link active">Home</a>
-                    <a href="{{ url('/admin.about') }}" class="nav-item nav-link">About</a>
-                    <a href="{{ url('/admin.service') }}" class="nav-item nav-link">Services</a>
-                    <a href="{{ url('/admin.package') }}" class="nav-item nav-link">Packages</a>
+                    <a href="{{ url('/admin.home') }}" class="nav-item nav-link active">Trang chủ</a>
+                    <a href="{{ url('/admin.about') }}" class="nav-item nav-link">Giới thiệu</a>
+                    <a href="{{ url('/admin.service') }}" class="nav-item nav-link">Dịch vụ</a>
+                    <a href="{{ url('/admin.package') }}" class="nav-item nav-link">Gói</a>
                     <a href="{{ url('/admin.crud') }}" class="nav-item nav-link">Thông tin tour</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Trang</a>
                         <div class="dropdown-menu m-0">
-                            <a href="{{ url('/admin.destination') }}" class="dropdown-item">Destination</a>
-                            <a href="{{ url('/admin.booking') }}" class="dropdown-item">Booking</a>
-                            <a href="{{ url('/admin.team') }}" class="dropdown-item">Travel Guides</a>
-                            <a href="{{ url('/admin.testimonial') }}" class="dropdown-item">Testimonial</a>
+                            <a href="{{ url('/admin.destination') }}" class="dropdown-item">Điểm đến </a>
+                            <a href="{{ url('/admin.booking') }}" class="dropdown-item">Đặt trước</a>
+                            <a href="{{ url('/admin.team') }}" class="dropdown-item">Hướng dẫn viên du lịch</a>
+                            <a href="{{ url('/admin.testimonial') }}" class="dropdown-item">Lời chứng thực</a>
                             <a href="{{ url('/admin.404') }}" class="dropdown-item">404 Page</a>
                         </div>
                     </div>
-                    <a href="{{ url('/admin.contact') }}" class="nav-item nav-link">Contact</a>
+                    <a href="{{ url('/admin.contact') }}" class="nav-item nav-link">Liên hệ</a>
                 </div>
                 <nav x-data="{ open: false }">
                     <!-- Primary Navigation Menu -->
@@ -192,17 +192,17 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Company</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <h4 class="text-white mb-3">Công ty</h4>
+                    <a class="btn btn-link" href="">Về chúng tôi</a>
+                    <a class="btn btn-link" href="">Liên hệ chúng tôi</a>
+                    <a class="btn btn-link" href="">Chính sách bảo mật</a>
+                    <a class="btn btn-link" href="">Điều khoản & Điều kiện</a>
                     <a class="btn btn-link" href="">FAQs & Help</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>39 Nguyễn Huệ, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+0924 242 424</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>discovery@example.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
