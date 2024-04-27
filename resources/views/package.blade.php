@@ -8,12 +8,12 @@
         <div class="container py-5">
             <div class="row justify-content-center py-5">
                 <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Packages</h1>
+                    <h1 class="display-3 text-white animated slideInDown">Gói</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Packages</li>
+                            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                            <li class="breadcrumb-item"><a href="#">Trang</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Gói</li>
                         </ol>
                     </nav>
                 </div>
@@ -28,8 +28,8 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Packages</h6>
-            <h1 class="mb-5">Awesome Packages</h1>
+            <h6 class="section-title bg-white text-center text-primary px-3">Gói</h6>
+            <h1 class="mb-5">Gói tuyệt vời</h1>
         </div>
         <div class="row g-4 justify-content-center">
             @foreach($data as $row)
@@ -66,8 +66,8 @@
                         <p style="height: 120px;">{{$mota}} ... </p>
 
                         <div class="d-flex justify-content-center mb-2">
-                            <a href="#" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                            <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Book Now</a>
+                            <a href="#" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
+                            <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
                         </div>
                     </div>
                 </div>
@@ -85,32 +85,32 @@
         <div class="booking p-5">
             <div class="row g-5 align-items-center">
                 <div class="col-md-6 text-white">
-                    <h6 class="text-white text-uppercase">Booking</h6>
-                    <h1 class="text-white mb-4">Online Booking</h1>
+                    <h6 class="text-white text-uppercase">Đặt chuyến</h6>
+                    <h1 class="text-white mb-4">Đặt phòng trực tuyến</h1>
                     <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
                     <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <a class="btn btn-outline-light py-3 px-5 mt-2" href="">Read More</a>
+                    <a class="btn btn-outline-light py-3 px-5 mt-2" href="">Xem thêm</a>
                 </div>
                 <div class="col-md-6">
-                    <h1 class="text-white mb-4">Book A Tour</h1>
+                    <h1 class="text-white mb-4">Đặt một chuyến du lịch</h1>
                     <form>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control bg-transparent" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+                                    <label for="name">Tên của bạn</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="email" class="form-control bg-transparent" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
+                                    <label for="email">Email của bạn</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating date" id="date3" data-target-input="nearest">
                                     <input type="text" class="form-control bg-transparent datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
-                                    <label for="datetime">Date & Time</label>
+                                    <label for="datetime">Ngày và giờ</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -126,11 +126,11 @@
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea class="form-control bg-transparent" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Special Request</label>
+                                    <label for="message">Yêu cầu đặc biệt</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-outline-light w-100 py-3" type="submit">Book Now</button>
+                                <button class="btn btn-outline-light w-100 py-3" type="submit">Đặt ngay</button>
                             </div>
                         </div>
                     </form>
@@ -146,8 +146,8 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Process</h6>
-            <h1 class="mb-5">3 Easy Steps</h1>
+            <h6 class="section-title bg-white text-center text-primary px-3">Quá trình</h6>
+            <h1 class="mb-5">3 bước đơn giản</h1>
         </div>
         <div class="row gy-5 gx-4 justify-content-center">
             <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -155,7 +155,7 @@
                     <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
                         <i class="fa fa-globe fa-3x text-white"></i>
                     </div>
-                    <h5 class="mt-4">Choose A Destination</h5>
+                    <h5 class="mt-4">Chọn điểm đến</h5>
                     <hr class="w-25 mx-auto bg-primary mb-1">
                     <hr class="w-50 mx-auto bg-primary mt-0">
                     <p class="mb-0">Tempor erat elitr rebum clita dolor diam ipsum sit diam amet diam eos erat ipsum et lorem et sit sed stet lorem sit</p>
@@ -166,7 +166,7 @@
                     <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
                         <i class="fa fa-dollar-sign fa-3x text-white"></i>
                     </div>
-                    <h5 class="mt-4">Pay Online</h5>
+                    <h5 class="mt-4">Thanh toán trực tuyến</h5>
                     <hr class="w-25 mx-auto bg-primary mb-1">
                     <hr class="w-50 mx-auto bg-primary mt-0">
                     <p class="mb-0">Tempor erat elitr rebum clita dolor diam ipsum sit diam amet diam eos erat ipsum et lorem et sit sed stet lorem sit</p>
@@ -177,7 +177,7 @@
                     <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
                         <i class="fa fa-plane fa-3x text-white"></i>
                     </div>
-                    <h5 class="mt-4">Fly Today</h5>
+                    <h5 class="mt-4">Bay ngay hôm nay</h5>
                     <hr class="w-25 mx-auto bg-primary mb-1">
                     <hr class="w-50 mx-auto bg-primary mt-0">
                     <p class="mb-0">Tempor erat elitr rebum clita dolor diam ipsum sit diam amet diam eos erat ipsum et lorem et sit sed stet lorem sit</p>

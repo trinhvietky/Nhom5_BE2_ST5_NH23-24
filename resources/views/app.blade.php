@@ -110,17 +110,17 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Company</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <h4 class="text-white mb-3">Công ty</h4>
+                    <a class="btn btn-link" href="">Giới thiệu</a>
+                    <a class="btn btn-link" href="">Liên hệ chúng tôi</a>
+                    <a class="btn btn-link" href="">Chính sách bảo mật</a>
+                    <a class="btn btn-link" href="">Điều khoản & Điều kiện</a>
                     <a class="btn btn-link" href="">FAQs & Help</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>39 Nguyễn Huệ, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+0924 242 424</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>discovery@example.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
@@ -130,7 +130,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Gallery</h4>
+                    <h4 class="text-white mb-3">Phòng trưng bày</h4>
                     <div class="row g-2 pt-2">
                         <div class="col-4">
                             <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt="">
@@ -153,11 +153,11 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <h4 class="text-white mb-3">Bản tin</h4>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Đăng ký</button>
                     </div>
                 </div>
             </div>

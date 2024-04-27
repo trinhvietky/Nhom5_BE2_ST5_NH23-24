@@ -7,12 +7,12 @@
         <div class="container py-5">
             <div class="row justify-content-center py-5">
                 <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Destination</h1>
+                    <h1 class="display-3 text-white animated slideInDown">Điểm đến</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Destination</li>
+                            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                            <li class="breadcrumb-item"><a href="#">Trang</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Điểm đến</li>
                         </ol>
                     </nav>
                 </div>
@@ -27,8 +27,8 @@
 <div class="container-xxl py-5 destination">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Destination</h6>
-            <h1 class="mb-5">Popular Destination</h1>
+            <h6 class="section-title bg-white text-center text-primary px-3">Điểm đến</h6>
+            <h1 class="mb-5">Điểm đến phổ biến</h1>
         </div>
 
         <div class="row g-3">

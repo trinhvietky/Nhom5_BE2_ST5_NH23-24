@@ -79,21 +79,21 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="{{ url('/user.home') }}" class="nav-item nav-link active">Home</a>
-                    <a href="{{ url('/user.about') }}" class="nav-item nav-link">About</a>
-                    <a href="{{ url('/user.service') }}" class="nav-item nav-link">Services</a>
-                    <a href="{{ url('/user.package') }}" class="nav-item nav-link">Packages</a>
+                    <a href="{{ url('/user.home') }}" class="nav-item nav-link active">Trang chủ</a>
+                    <a href="{{ url('/user.about') }}" class="nav-item nav-link">Giới thiệu</a>
+                    <a href="{{ url('/user.service') }}" class="nav-item nav-link">Dịch vụ</a>
+                    <a href="{{ url('/user.package') }}" class="nav-item nav-link">Gói</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Trang</a>
                         <div class="dropdown-menu m-0">
-                            <a href="{{ url('/user.destination') }}" class="dropdown-item">Destination</a>
-                            <a href="{{ url('/user.booking') }}" class="dropdown-item">Booking</a>
-                            <a href="{{ url('/user.team') }}" class="dropdown-item">Travel Guides</a>
-                            <a href="{{ url('/user.testimonial') }}" class="dropdown-item">Testimonial</a>
+                            <a href="{{ url('/user.destination') }}" class="dropdown-item">Điểm đến</a>
+                            <a href="{{ url('/user.booking') }}" class="dropdown-item">Đặt chuyến đi</a>
+                            <a href="{{ url('/user.team') }}" class="dropdown-item">Hướng dẫn viên du lịch</a>
+                            <a href="{{ url('/user.testimonial') }}" class="dropdown-item">Lời chứng thực</a>
                             <a href="{{ url('/user.404') }}" class="dropdown-item">404 Page</a>
                         </div>
                     </div>
-                    <a href="{{ url('/user.contact') }}" class="nav-item nav-link">Contact</a>
+                    <a href="{{ url('/user.contact') }}" class="nav-item nav-link">Liên hệ</a>
                 </div>
                 <nav x-data="{ open: false }">
                     <!-- Primary Navigation Menu -->
@@ -191,17 +191,17 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Company</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">FAQs & Help</a>
+                    <h4 class="text-white mb-3">Công ty</h4>
+                    <a class="btn btn-link" href="">Về chúng tôi</a>
+                    <a class="btn btn-link" href="">Liên hệ chúng tôi</a>
+                    <a class="btn btn-link" href="">Chính sách bảo mật</a>
+                    <a class="btn btn-link" href="">Điều khoản & Điều kiện</a>
+                    <a class="btn btn-link" href="">Câu hỏi thường gặp và trợ giúp</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>39 Nguyễn Huệ, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+0924 242 424</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>discovery@example.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
@@ -211,7 +211,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Gallery</h4>
+                    <h4 class="text-white mb-3">Phòng trưng bày</h4>
                     <div class="row g-2 pt-2">
                         <div class="col-4">
                             <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt="">
@@ -234,7 +234,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <h4 class="text-white mb-3">Bản tin</h4>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
@@ -247,14 +247,14 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">Tên trang web của bạn</a>, Tất cả các quyền.
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">Home</a>
+                            <a href="">Trang chủ</a>
                             <a href="">Cookies</a>
                             <a href="">Help</a>
                             <a href="">FQAs</a>
