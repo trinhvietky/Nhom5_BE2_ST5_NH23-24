@@ -24,7 +24,7 @@ class TourSeeder extends Seeder
                 'time' => '3 ngày 4 đêm',
                 'star_from' => 'Hà Nội',
                 'price' => 1560000,
-                'vehicle' => 'Xe khách',
+                'vehicle' => 'Thành phố Hồ Chí Minh',
                 'tour_description' => 'Hành trình từ Hà Nội đến Cao Nguyên Đá và Cột Cờ Lũng Cú rồi tiếp tục đến Mèo Vạc là một cuộc phiêu lưu tuyệt vời qua những cung đường đồi núi hùng vĩ của vùng cao phía Bắc Việt Nam. Điều này mang lại cơ hội cho du khách khám phá vẻ đẹp hoang sơ của thiên nhiên, cũng như tìm hiểu về văn hóa địa phương và cuộc sống của cư dân nơi đây.',
                 'tour_schedule' => '<h3> 1.	ĐÊM 01: HÀ NỘI - HÀ GIANG (NGỦ ĐÊM TRÊN XE)</h3>
                 <p>19h00-20h00: Xe ô tô đón Quý khách tại Nhà Hát Lớn Hà Nội sau đó khởi hành đi Hà Giang bằng xe giường nằm.</p>
@@ -58,26 +58,9 @@ class TourSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
-            // [
-            //     'tour_name' => 'ĐÀ NẴNG - RỪNG DỪA BẢY MẪU - HỘI AN - BÀ NÀ HILLS',
-            //     'tour_image' => 'baNaHill.jpg',
-            //     'start_day' => '2024-03-26',
-            //     'time' => '3 ngày 2 đêm',
-            //     'star_from' => 'Thành phố Hồ Chí Minh',
-            //     'price' => 5990000,
-            //     'vehicle' => 'Máy bay',
-            //     'tour_description' => '',
-            //     'tour_schedule' => '',
-            //     'tour_sale' => 'Máy bay',
-            //     'location_id' => 2,
-            //     'guide_id' => 2,
-            //     'created_at' => now(),
-            //     'updated_at' => now(),
-            // ],
 
             [
-                'tour_name' => 'ĐÀ NẴNG - RỪNG DỪA BẢY MẪU - HỘI AN - BÀ NÀ HILLS',
+                'tour_name' => 'Đà Nẵng - Rừng Dừa Bảy Mẫu - Hội An - Bà Nà Hills',
                 'tour_image' => 'baNaHill.jpg',
                 'start_day' => '2024-03-26',
                 'time' => '3 ngày 2 đêm',
@@ -129,6 +112,204 @@ class TourSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+
+            [
+                'tour_name' => 'Phú Quốc - Vinwonder - Safari World - Hòn Thơm',
+                'tour_image' => 'phuQuoc.jpg',
+                'start_day' => '2024-05-01',
+                'time' => '3 ngày 2 đêm',
+                'star_from' => 'Thành phố Hồ Chí Minh',
+                'price' => 7390000,
+                'vehicle' => 'Máy bay',
+                'tour_description' => 'Phú Quốc là điểm nghỉ dưỡng, lặn biển, tham quan, và khám phá sinh thái tuyệt vời. Mũi Ông Đội, Đá Chào là thế giới san hô và cá biển sặc sỡ. Bãi Sao cát trắng mịn, dáng cong, nước xanh ngọc bích. Đặc sản danh tiếng cả nước là tiêu sọ, nước mắm, rượu sim, ngọc trai.',
+                'tour_schedule' => '<h3>Ngày 1: TP HỒ CHÍ MINH - PHÚ QUỐC - HÒN THƠM - THỊ TRẤN HOÀNG HÔN - GRAND WORLD (Ăn trưa, chiều)</h3>
+                <p>Quý khách tập trung tại Sân bay Tân Sơn Nhất, ga đi Trong Nước, hướng dẫn viên hỗ trợ làm thủ tục đáp chuyến bay đi Phú Quốc. </p>
+                <p>Xe đón đoàn tại sân bay đưa đến nhà ga cáp treo An Thới tham quan Sun World Hon Thom Nature Park với những hoạt động thú vị:</p>
+                <p>- Trải nghiệm cáp treo 3 dây vượt biển dài nhất thế giới - 7.899.9 mét.</p>
+                <p>- Phấn khích tột độ cùng thử thách "Mộc Xà thịnh nộ" - trò chơi tàu lượn bằng gỗ đầu tiên tại Việt Nam, có tốc độ tối đa 80km/h với nhiều góc lượn ngoạn mục; đài quan sát "Mắt đại bàng" cao 120m - du khách như được bay lên không trung, thưởng ngoạn đại dương xanh ngắt bao la, những cánh rừng nhiệt đới xanh mướt, những đảo nhỏ nhấp nhô giữa biển trời khoáng đạt (trò chơi có thể tạm dừng vì lịch bảo trì)</p>
+                <p>- Thỏa thích tắm biển Hòn Thơm: một trong những bãi biển “quyến rũ nhất hành tinh”, với bãi cát trắng mịn, hoang sơ, hàng dừa nghiêng soi bóng, màu nước biển xanh màu ngọc bích, phản chiếu long lanh dưới ánh nắng mặt trời.</p>
+                <p>- Tham gia các hoạt động giải trí trên biển: kayak, jetski, dù lượn, phao chuối (chi phí tự túc).</p>
+                <p>- Vui chơi tại công viên nước Aquatopia: một trong những công viên nước chủ đề hàng đầu Đông Nam Á, trải nghiệm 6 khu check-in chủ đề hấp dẫn mang phong cách thổ dân huyền bí.</p>
+                <p>Lãng du trên con đường Thị trấn Hoàng Hôn - được thiết kế với kiến trúc độc đáo, rực rỡ sắc màu của một thị trấn châu Âu cổ kính: check-in 1001 kiểu bậc thang, Quảng trường La Mã, “kỳ quan” Khải Hoàn Môn, Tháp đồng hồ cao 75m - lấy ý tưởng từ tháp chuông St. Marks Campanile của Ý; chiêm ngưỡng Kiss Bridge - cây cầu nổi lên như một dải lụa giữa bờ biển trong xanh, với hai nhịp cầu vươn mình ôm trọn bờ cát trắng, hướng đến nhau, hợp vào làm một thể thống nhất nhưng không chạm nhau.</p>
+                <p>Buổi tối, Quý khách có thể tự do khám phá một số hạng mục nổi bật tại “thành phố không ngủ” Grand World như: </p>
+                <p>- Công viên Nghệ Thuật Đương Đại: sự giao thoa đặc sắc giữa nghệ thuật đương đại và thiên nhiên Đảo Ngọc.</p>
+                <p>- Huyền thoại Tre: công trình tre lớn nhất Việt Nam.</p>
+                <p>- Tản bộ bên dòng “kênh đào Venice” và nhìn ngắm những chiếc thuyền Gondola, khu phố shophouse lộng lẫy sắc màu, cổng lâu đài tráng lệ, ba cây cầu vòm bán nguyệt mang đậm kiến trúc châu Âu ...</p>
+                <p>- Tham quan bảo tàng Gấu Teddy: lưu giữ nhiều hiện vật quý giá và tái hiện chuyến phiêu lưu hài hước của “nhà thám hiểm tài ba” Teddy Jones (chi phí tự túc)</p>
+                <p>- Mãn nhãn với show diễn thực cảnh “Tinh Hoa Việt Nam” quy tụ hơn 200 diễn viên (chi phí tự túc)</p>
+                <p>- Thưởng thức bữa tiệc ánh sáng đỉnh cao với show diễn “Sắc màu Venice”</p>
+                <p>Nghỉ đêm tại Phú Quốc.</p>
+                <h3>Ngày 2: VUI CHƠI THỎA THÍCH TẠI CÔNG VIÊN CHỦ ĐỀ VINWONDERS PHÚ QUỐC - KHU BẢO TỒN THIÊN NHIÊN SAFARI (Ăn sáng, trưa, chiều)</h3>
+                <p>Quý khách bắt đầu hành trình trở về với thiên nhiên tại Vinpearl Safari Phú Quốc - Vườn thú bán hoang dã đầu tiên tại Việt Nam: với quy mô 180 ha, hơn 130 loài động vật quý hiếm, du khách thưởng thức các chương trình biểu diễn, chụp ảnh với động vật; trải nghiệm vườn thú mở trong rừng tự nhiên, gần gũi và thân thiện với con người.</p>
+                <p>Buổi chiều, Quý khách tham quan khám phá Khu vui chơi giải trí VinWonders - Công viên chủ đề lớn nhất Việt Nam, quy mô hàng đầu Châu Á, du khách sẽ được:</p>
+                <p>- Trải nghiệm 12 nền văn minh nhân loại từ cổ chí kim;</p>
+                <p>- Khám phá 06 phân khu với hơn 100 hoạt động giải trí siêu độc lạ;</p>
+                <p>- Cuồng nhiệt tại Công Viên Nước lớn nhất Đông Nam Á;</p>
+                <p>- Chinh phục 20 trò chơi mạo hiểm khủng nhất hành tinh như đường trượt nhanh nhất thế giới “Cơn thịnh nộ của Zeus”, đường trượt khô “Cuộc chiến Chằn tinh” cao 15m đầu tiên của Việt Nam, đường trượt trong nhà tối “Chiến binh Đại bàng” và “Lời nguyền Ác long” - trò chơi tương tác trong nhà tối đầu tiên của Việt Nam,…</p>
+                <p>- Ngỡ ngàng với show diễn triệu đô Once đẳng cấp thế giới;</p>
+                <p>- Choáng ngợp trước thế giới đại dương huyền ảo với tầm nhìn vô cực qua tấm kính acrylic khổng lồ 8x25m bên trong Cung điện Hải vương - thủy cung hình rùa lớn nhất thế giới.</p>
+                <p>Quý khách thưởng thức bữa tối tại VinWonders.</p>
+                <p>Nghỉ đêm tại Phú Quốc.</p>
+                <h3>Ngày 3:  PHÚ QUỐC - TP HỒ CHÍ MINH (Ăn sáng)</h3>
+                <p>Quý khách dùng bữa sáng, thư giãn tại khách sạn đến giờ trả phòng. Sau đó, xe đưa đoàn tham quan và mua sắm đặc sản nổi tiếng tại Nhà thùng nước mắm Hồng Đức 1 / Khải Hoàn / Phụng Hưng, Đặc sản Đức Thạnh, Cơ sở sản xuất ngọc trai Phú Quốc - Trưng bày các trang sức bằng ngọc trai chính hiệu được nuôi cấy tại Phú Quốc. </p>
+                <p>Xe đưa Quý khách ra sân bay đáp chuyến bay trở về TP Hồ Chí Minh. Chia tay Quý khách và kết thúc chương trình du lịch tại sân bay Tân Sơn Nhất.</p>',
+                'tour_sale' => '15%',
+                'location_id' => 3,
+                'guide_id' => 5,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+
+            [
+                'tour_name' => 'Nha Trang - Làng Chài Xưa - Biển Nhũ Tiên - Vinwonders',
+                'tour_image' => 'nhaTrang.jpg',
+                'start_day' => '2024-05-09',
+                'time' => '4 ngày 3 đêm',
+                'star_from' => 'Thành phố Hồ Chí Minh',
+                'price' => 3590000,
+                'vehicle' => 'Xe khách',
+                'tour_description' => 'Nha Trang với khí hậu ôn hòa, biển xanh trong quanh năm cùng những điểm vui chơi bậc nhất và không ngừng đổi mới hằng ngày luôn thu hút du khách gần xa. Đến với Nha Trang, du khách không chỉ tận hưởng những đợt gió biển trong nắng ấm mà còn có dịp thưởng thức hải sản tươi ngon cùng sự chào đón nồng hậu từ những người dân vùng biển nghĩa tình, cho Quý khách trải nghiệm khó quên tại vùng đất này.',
+                'tour_schedule' => '<h3>Ngày 1 - TP. HỒ CHÍ MINH - PHAN THIẾT - NHA TRANG (Ăn sáng, trưa, chiều)</h3>
+                <p>Quý khách tập trung tại Discovery (39 Nguyễn Huệ, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh). Xe đưa đoàn khởi hành đi Nha Trang. Trên đường đi đoàn ghé tham quan:</p>
+                <p>• Bảo tàng Làng Chài Xưa: mở ra không gian tương tác tái hiện Làng Chài Xưa Mũi Né với lịch sử 300 năm cái nôi của nghề làm nước mắm, trải nghiệm cảm giác lao động trên đồng muối, đi trên con đường rạng xưa, thăm phố cổ Phan Thiết, vào xóm lò tĩn, thăm nhà lều của hàm hộ nước mắm xưa, đắm chìm cảm xúc trong biển 3D và thích thú khi đi chợ làng chài xưa với bàn tính tay, bàn cân xưa thú vị.</p>
+                <p>Đến Nha Trang, Quý khách dùng bữa tối, tự do khám phá thành phố biển về đêm. Nghỉ đêm tại Nha Trang.</p>
+                <h3>Ngày 2 - NHA TRANG - BIỂN NHŨ TIÊN - VINWONDERS (Ăn sáng, trưa, tự túc ăn chiều)</h3>
+                <p>Dùng bữa sáng tại khách sạn, xe đưa đoàn tham quan:</p>
+                <p>• Biển Nhũ Tiên: đắm mình trong làn nước biển trong xanh, mát mẻ, được bao bọc bởi bãi cát dài trắng xóa và những hàng dừa lao xao trong gió. Với vẻ đẹp hoang sơ, thơ mộng, biển Nhũ Tiên tựa như nàng tiên đang ngủ vùi giữa không gian mênh mông của sóng, của gió, của núi và của mây.
+                </p>
+                <p>Buổi chiều, Quý khách tự do khám phá thành phố Nha Trang hoặc đăng ký tham quan Vinwonders Nha Trang đầy sắc màu (chi phí tự túc): ngắm toàn cảnh Vịnh Nha Trang từ đỉnh vòng xoay mặt trời lớn nhất Việt Nam, tham quan bộ sưu tập “kỳ hoa, dị thảo” tại đồi Vạn Hoa, khu vườn thú mở - vườn Quý Vương, tham gia các trò chơi tương tác và liên hoàn tại Quảng trường Thần Thoại hay Vùng đất yêu thương, xem phim 4D tại lâu đài Đại Dương, khám phá khu trò chơi cảm giác mạnh, khu trò chơi trong nhà hay tắm biển, tắm hồ bơi lớn nhất Đông Nam Á… và thưởng thức chương trình biểu diễn Nhạc Nước hiện đại. Đoàn tự do dùng bữa tối tại đây và tiếp tục tham gia các hoạt động buổi tối tại Vinpearl đến giờ về lại đất liền. Nghỉ đêm tại Nha Trang</p>
+                <h3>Ngày 3 - NHA TRANG - I-RESORT - THÁP BÀ PONARGAR (Ăn sáng, ăn trưa, chiều)</h3>
+                <p>Dùng bữa sáng tại khách sạn, xe đưa đoàn tham quan và thư giãn tại:</p>
+                <p>• Suối khoáng nóng I-Resort: với không gian yên tĩnh, cây cối xanh tươi, I-Resort sẽ hiện ra như một bức tranh thiên nhiên đậm chất Việt, Quý khách sẽ được trải nghiệm dịch vụ tắm khoáng thư giãn. Ngoài ra, Quý khách còn có thể tắm bùn khoáng hoặc massage cho làn da thêm tươi trẻ.
+                </p>
+                <p>Buổi chiều, đoàn tiếp tục tham quan các thắng cảnh tại thành phố biển:</p>
+                <p>• Tháp Bà Ponagar: công trình tiêu biểu cho nghệ thuật kiến trúc và điêu khắc tín ngưỡng tôn giáo bậc nhất của dân tộc Chăm tại Nha Trang.</p>
+                <p>• Hòn Chồng: một thắng cảnh tự nhiên nằm ở bờ biển phía Bắc thành phố Nha Trang. Nơi đây du khách có thể di chuyển vài bước đã chạm đến sóng biển hoặc chân đồi. Nhiều người bảo, Hòn Chồng là nơi giao nhau giữa biển và núi. Quần thể đá Hòn Chồng từ lâu đã trở thành điểm du lịch giàu tính nhân văn. Điều kỳ thú là những tảng đá lớn nằm chồng chất lên nhau bao đời nay nhưng sóng biển và mưa gió không thể xô ngã.
+                </p>
+                <p>• Ngọc trai Long Beach Pearl (đường Trương Hán Siêu): tham quan, mua sắm các sản phẩm từ ngọc trai - báu vật khơi xa kết hợp cùng sự sáng tạo của người nghệ nhân tạo thành những sản phẩm trang sức cao cấp, chất lượng cao. Không chỉ dành riêng cho phái nữ, Long Beach Pearl còn chế tác những chiếc vòng tay dây da ngọc trai dành cho nam giới. </p>
+                <p>Nghỉ đêm tại Nha Trang.</p>
+                <h3>Ngày 4 - NHA TRANG - TP. HỒ CHÍ MINH (Ăn sáng, trưa)</h3>
+                <p>Sau khi dùng bữa sáng, xe đưa đoàn về lại thành phố Hồ Chí Minh, trên đường Quý khách ghé Ninh Thuận mua các sản phẩm đặc sản (nho, tỏi) của vùng đất nắng và gió nơi đây về làm quà cho người thân. Đến điểm đón ban đầu, chia tay đoàn và kết thúc chương trình du lịch.</p>',
+                'tour_sale' => '5%',
+                'location_id' => 2,
+                'guide_id' => 4,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+
+            [
+                'tour_name' => 'Hà Nội - Sapa - Fansipan - Hạ Long - Ninh Bình - Tràng An',
+                'tour_image' => 'haLong.jpg',
+                'start_day' => '2024-05-05',
+                'time' => '7 ngày 6 đêm',
+                'star_from' => 'Thành phố Hồ Chí Minh',
+                'price' => 10390000,
+                'vehicle' => 'Máy bay',
+                'tour_description' => 'Nói đến vùng đất Quảng Ninh, không thể không nhắc đến Vịnh Hạ Long - nơi được UNESCO Công nhận hai lần là Di sản thiên nghiên thế giới với nhiều đảo, hòn và hang động đẹp nổi tiếng. Bên cạnh đó Quảng Ninh còn có Bãi Cháy - là một bãi tắm rộng và đẹp nằm sát bờ vịnh Hạ Long; Núi Yên Tử - vốn là một thắng cảnh thiên nhiên - và cũng là nơi lưu giữ nhiều di tích lịch sử với mệnh danh "đất tổ Phật giáo Việt Nam"; và nhiều di tích, danh thắng nổi tiếng, hấp dẫn khác như đảo Tuần Châu, Cô Tô...',
+                'tour_schedule' => '<h3>Ngày 1 - TPHCM - SÂN BAY NỘI BÀI (HÀ NỘI) 00 bữa ăn: (Tự túc ăn ngày đầu tiên)</h3>
+                <p>Quý khách tập trung tại sân bay Tân Sơn Nhất (ga trong nước), hướng dẫn làm thủ tục cho Quý khách đáp chuyến bay đi Hà Nội. Đến sân bay Nội Bài, xe đưa quý khách về trung tâm Hà Nội nhận phòng khách sạn nghỉ ngơi. </p>
+                <p>Nghỉ đêm tại Hà Nội.</p>
+                <h3>Ngày 2 - HÀ NỘI - SAPA - BẢN CÁT CÁT 03 bữa ăn: (Sáng, Trưa, Chiều)</h3>
+                <p>Quý khách ăn sáng và trả phòng. Xe khởi hành đưa Quý khách đi tham quan: </p>
+                <p>- Lăng Hồ Chủ Tịch (không viếng vào thứ 2, thứ 6 hàng tuần và giai đoạn bảo trì định kì hàng năm) tham quan và tìm hiểu cuộc đời và sự nghiệp của vị cha già dân tộc tại Nhà Sàn Bác Hồ, Bảo Tàng Hồ Chí Minh, Chùa Một Cột.</p>
+                <p>Tiếp tục hành trình, Quý khách khởi hành đi Sapa theo cao tốc Hà Nội - Lào Cai. Trên đường, Quý khách dùng cơm trưa tại nhà hàng địa phương. Đến nơi, Quý khách tham quan:</p>
+                <p>- Bản Cát Cát - đẹp như một bức tranh giữa vùng phố cổ Sapa, nơi đây thu hút du khách bởi cầu treo, thác nước, guồng nước và những mảng màu hoa mê hoặc du khách khi lạc bước đến đây. Thăm những nếp nhà của người Mông, Dao, Giáy trong bản, du khách sẽ không khỏi ngỡ ngàng trước vẻ đẹp mộng mị của một trong những ngôi làng cổ đẹp nhất Sapa. Tại đây Quý khách xem chương trình biểu diễn văn nghệ của người HMông.</p>
+                <p>Quý khách dùng cơm tối và nhận phòng nghỉ ngơi hoặc tự do dạo phố ngắm nhà thờ Đá Sapa, tự do thưởng thức đặc sản vùng cao như: thịt lợn cắp nách nướng, trứng nướng, rượu táo mèo, giao lưu với người dân tộc vùng cao.</p>
+                <p>Nghỉ đêm tại Sapa</p>
+                <h3>Ngày 3 - SAPA - FANSIPAN LEGEND - ĐÈO Ô QUY HỒ 03 bữa ăn: (Sáng, Trưa, Chiều)</h3>
+                <p>Quý khách dùng điểm tâm sáng tại khách sạn. xe đưa đoàn ra ga Sapa, Quý khách trải nghiệm đến khu du lịch Fansipan Legend bằng Tàu hỏa leo núi Mường Hoa hiện đại nhất Việt Nam với tổng chiều dài gần 2000m, thưởng ngoạn bức tranh phong cảnh đầy màu sắc của cánh rừng nguyên sinh, thung lũng Mường Hoa.</p>
+                <p>- Chinh phục đỉnh núi Fansipan với độ cao 3.143m hùng vĩ bằng cáp treo (chi phí tự túc). </p>
+                <p>- Lễ Phật tại chùa Trình hay cầu phúc lộc, bình an cho gia đình tại Bích Vân Thiền Tự trong hệ thống cảnh quan tâm linh trên đỉnh Fansipan.</p>
+                <p>Tiếp tục hành trình, Quý khách dùng cơm trưa và tham quan: </p>
+                <p>- Chinh phục đèo Ô Quy Hồ - con đèo đẹp, hùng vĩ và dài nhất trong Tứ Đại Đỉnh Đèo miền Bắc.</p>
+                <p>- Khu du lịch Cổng Trời Ô Quy Hồ - một trong những điểm săn mây, ngắm hoàng hôn cực đẹp tại Sapa.</p>
+                <p>Quý khách dùng cơm tối tại Sapa và tự do nghỉ ngơi.</p>
+                <p>Nghỉ đêm tại Sapa.</p>
+                <h3>Ngày 4 - SAPA - LÀO CAI - HÀ NỘI 03 bữa ăn: (Sáng, Trưa, Chiều)</h3>
+                <p>Quý khách ăn sáng và trả phòng khách sạn. Xe khởi hành đưa Quý khách về Hà Nội, trên đường dừng tham quan mua sắm tại Siêu thị Du lịch nông nghiệp OCOP Phú Thọ - chợ Tp Việt Trì và dùng cơm trưa tại nhà hàng địa phương. Đến Hà Nội nhận phòng khách sạn nghỉ ngơi hoặc tự do đi tham quan Hồ Hoàn Kiếm ngắm bên ngoài Tháp Rùa, Đền Ngọc Sơn, Cầu Thê Húc.</p>
+                <p>Nghỉ đêm tại Hà Nội.  </p>
+                <h3>Ngày 5 - HÀ NỘI - YÊN TỬ - HẠ LONG 03 Bữa ăn: (Sáng, Trưa, Chiều)</h3>
+                <p>Quý khách ăn sáng và trả phòng. Xe khởi hành đưa Quý khách đến thành phố biển Hạ Long theo quốc lộ 18, trên đường dừng ăn trưa và tham quan vùng đất thiêng Yên Tử: </p>
+                <p>- Tham quan chụp hình Làng Nương và dùng bữa trưa tại Cơm Quê </p>
+                <p>- Quý khách lên cáp treo du ngoạn thắng cảnh thiên nhiên Đông Yên Tử (chi phí cáp treo tự túc), nơi còn lưu giữ nhiều di tích lịch sử mệnh danh “Đất tổ Phật giáo Việt Nam”, chiêm bái chùa Một Mái, chùa Hoa Yên - nơi tu hành của Phật Hoàng Trần Nhân Tông khai sinh ra dòng mới Thiền Phái Trúc Lâm, nằm trên lưng chừng núi ở độ cao 516m. Theo dấu chân Phật Hoàng viếng Chùa Đồng có tên Thiên Trúc Tự (chùa Cõi Phật), tọa lạc ở đỉnh cao nhất dãy Yên Tử (1.068m) - ngôi chùa bằng đồng lớn nhất Việt Nam.</p>
+                <p>Đến Hạ Long, Quý khách tham quan mua sắm tại Trung tâm Mỹ Ngọc - Trung tâm Ngọc trai lớn nhất miền bắc Việt Nam.Tới đây Quý khách chiêm ngưỡng vẻ đẹp sang trọng, đủ các màu sắc hấp dẫn của những viên ngọc trai được nuôi trong lòng Di sản - Kỳ quan thiên nhiên thế giới vịnh Hạ Long tại phòng trưng bày sản phẩm. Quý khách có thể lựa chọn cho mình và người thân những đồ trang sức ngọc trai Hạ Long như ý và những sản phẩm lưu niệm được chế tác từ vỏ trai, sản phẩm đạt chất lượng OCOP 5 sao cấp Quốc gia đầu tiên của Việt Nam
+                </p>
+                <p>Dùng cơm chiều và nhận phòng khách sạn nghỉ ngơi. Buổi tối, Quý khách tự do khám phá nhiều hoạt động dịch vụ giải trí sôi nổi tại “phố cổ” Bãi Cháy - nằm cạnh công viên Sun World Hạ Long từ những ẩm thực đường phố đến các quán cà phê siêu dễ thương như Hòn Gai Coffee & Lounge hay thoải mái bung xõa tại The Mini Bar, Brothers Pub,…</p>
+                <p>Nghỉ đêm tại Hạ Long. </p>
+                <h3>Ngày 6 - VỊNH HẠ LONG - ĐỘNG THIÊN CUNG - NINH BÌNH 03 Bữa ăn: (Sáng, Trưa, Chiều)</h3>
+                <p>Quý khách ăn sáng và trả phòng khách sạn. Xe đưa quý khách ra bến tàu, xuống thuyền du ngoạn Vịnh Hạ Long - Thắng cảnh thiên nhiên tuyệt đẹp và vô cùng sống động, được UNESCO công nhận là di sản thiên nhiên Thế giới năm 1994.</p>
+                <p>- Động Thiên Cung là một trong những động đẹp nhất ở Hạ Long. Vẻ đẹp nguy nga và lộng lẫy bởi những lớp thạch nhũ và những luồng ánh sáng lung linh.
+                </p>
+                <p>- Từ trên tàu ngắm nhìn các hòn đảo lớn nhỏ trong Vịnh Hạ Long: Hòn Gà Chọi, Hòn Lư Hương.</p>
+                <p>Xe đón Quý khách tại bến thuyền khởi hành đi Ninh Bình - vùng đất mệnh danh là “Nơi mơ đến, chốn mong về” với nhiều di tích văn hóa, thiên nhiên vô cùng đặc sắc.
+                </p>
+                <p>Buổi tối quý khách tự do khám phá Phố cổ Hoa Lư, một không gian check-in cổ, đẹp, trầm mặc đẹp trở nên lung linh, huyền ảo hơn với sắc màu của những chiếc đèn lồng và Bảo Tháp trên Hồ Kỳ Lân; trải nghiệm nhiều hoạt động trò chơi dân gian và nhiều loại hình văn hóa nghệ thuật từ dân tộc như múa rối nước, nhảy múa Tắc Xình, hát xẩm, ... đến những buổi trình diễn acoustic sẽ được diễn ra vào các buổi tối ngày cuối tuần.</p>
+                <p>Nghỉ đêm tại Ninh Bình.</p>
+                <h3>Ngày 7 - NINH BÌNH - TRÀNG AN - BÁI ĐÍNH - SÂN BAY NỘI BÀI 02 Bữa ăn: (Sáng, Trưa)</h3>
+                <p>Quý khách ăn sáng và trả phòng khách sạn. Xe đưa Quý khách đi tham quan: </p>
+                <p>- Khu Du Lịch Tràng An:  Quý khách lên thuyền truyền thống đi tham quan thắng cảnh hệ thống núi đá vôi hùng vĩ và các thung lũng ngập nước, thông với nhau bởi các dòng suối tạo nên các hang động ngập nước quanh năm. Điểm xuyến trong không gian hoang sơ, tĩnh lặng là hình ảnh rêu phong, cổ kính của các mái đình, đền, phủ nằm nép mình dưới chân các dãy núi cao. 
+                </p>
+                <p>- Viếng Chùa Bái Đính - một quần thể chùa với nhiều kỷ lục Việt Nam như pho tượng phật Di Lặc bằng đồng nặng 80 tấn, hành lang với 500 tượng vị La Hán, tòa Bảo Tháp cao 99m…
+                </p>
+                <p>Xe khởi hành đưa Quý khách ra sân bay Nội Bài làm thủ tục đón chuyến bay về Tp.HCM. Chia tay Quý khách và kết thúc chương trình du lịch tại sân bay Tân Sơn Nhất.</p>',
+                'tour_sale' => '10%',
+                'location_id' => 1,
+                'guide_id' => 4,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+
+            [
+                'tour_name' => 'Côn Đảo Huyền Thoại - Hành Hương Vùng Đất Tâm Linh',
+                'tour_image' => 'conDao.jpg',
+                'start_day' => '2024-05-16',
+                'time' => '2 ngày 1 đêm',
+                'star_from' => 'Thành phố Hồ Chí Minh',
+                'price' => 5390000,
+                'vehicle' => 'Máy bay',
+                'tour_description' => 'Đến với Côn Đảo - vùng đất thiêng liêng của Tổ Quốc, Quý khách sẽ được tìm hiểu về lịch sử oai hùng qua các di tích, thăm muôn vàn cảnh đẹp hoang sơ, kỳ bí và thưởng trọn nét yên bình của vùng biển hiền hòa.',
+                'tour_schedule' => '<h3>Ngày 1 - TP.HCM - CÔN ĐẢO OAI HÙNG (Ăn trưa, chiều)</h3>
+                <p>Quý khách tập trung tại sân bay Tân Sơn Nhất (ga trong nước), Hướng dẫn viên làm thủ tục cho đoàn đáp chuyến bay đến Côn Đảo. </p>
+                <p>Đến nơi, xe và Hướng dẫn viên đưa đoàn theo con đường quanh co trải dài hàng cây xanh nối liền từ sân bay về trung tâm thị trấn, chiêm ngưỡng cảnh quan thiên nhiên của núi cao hùng vĩ, xa xa là những hòn đảo ẩn hiện trong sắc xanh của biển cả …  </p>
+                <p>Quý khách tham quan các Di tích Văn hóa - Lịch sử hào hùng:</p>
+                <p>- Bảo tàng Côn Đảo: nơi trưng bày những kỷ vật về năm tháng lịch sử hào hùng của dân tộc Việt Nam.</p>
+                <p>- Dinh Chúa Đảo: nơi sống và làm việc các đời chúa đảo từ năm 1862 - 1975.</p>
+                <p>- Trại Phú Hải: trại giam lớn và cổ nhất của hệ thống nhà tù Côn Đảo.</p>
+                <p>- Chuồng cọp kiểu Pháp (trại Phú Tường): khám phá hệ thống chuồng Cọp kiên cố được xây dựng ẩn giữa các tòa nhà như mê cung.</p>
+                <p>- Chuồng cọp kiểu Mỹ (trại Phú Bình): với các dãy phòng giam nhỏ hẹp và ẩm thấp được xây dựng vào năm 1971. Nơi đây chủ yếu tra tấn tù nhân về tinh thần và cũng là nơi nhận được tin Sài Gòn giải phóng đầu tiên. 
+             </p>
+                <p>Buổi chiều, Quý khách tham quan:</p>
+                <p>- An Sơn Miếu: nghe kể về giai thoại thứ phi Phi Yến với câu hát ru nổi tiếng “Gió đưa cây cải về trời, rau răm ở lại chịu đời đắng cay”. </p>
+                <p>- Ngắm nhìn vẻ đẹp của hồ An Hải tham quan Vân Sơn Tự - Ngôi chùa Phật giáo duy nhất ở Côn Đảo như rực rỡ trong bức tranh thủy mặc của mái ngói đỏ tươi giữa nền xanh của rừng cây cổ thụ</p>
+                <p>Buổi tối, Quý khách viếng mộ cô Sáu nổi tiếng linh thiêng về đêm.</p>
+                <p>Quý khách tự do tản bộ khám phá Côn Đảo yên bình về đêm; thưởng thức cà phê Côn Sơn ngắm cầu tàu 914 hoặc kem dừa đất Côn Đảo thơm ngon, cuốn khách.</p>
+                <p>Nghỉ đêm tại Côn Đảo.</p>
+                <h3>Ngày 2 - CÔN ĐẢO - TP.HCM (Ăn sáng)</h3>
+                <p>Quý khách dùng bữa sáng tại khách sạn, tự do nghỉ ngơi thư giãn và tắm biển. </p>
+                <p>Xe đưa Quý khách khởi hành ra sân bay Côn Đảo trở về TP.Hồ Chí Minh. Chia tay Quý khách và kết thúc chuyến du lịch tại sân bay Tân Sơn Nhất.</p>',
+                'tour_sale' => '25%',
+                'location_id' => 3,
+                'guide_id' => 4,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+
+            // [
+            //     'tour_name' => 'ĐÀ NẴNG - RỪNG DỪA BẢY MẪU - HỘI AN - BÀ NÀ HILLS',
+            //     'tour_image' => 'baNaHill.jpg',
+            //     'start_day' => '2024-03-26',
+            //     'time' => '3 ngày 2 đêm',
+            //     'star_from' => 'Thành phố Hồ Chí Minh',
+            //     'price' => 5990000,
+            //     'vehicle' => 'Máy bay',
+            //     'tour_description' => '',
+            //     'tour_schedule' => '',
+            //     'tour_sale' => 'Máy bay',
+            //     'location_id' => 2,
+            //     'guide_id' => 2,
+            //     'created_at' => now(),
+            //     'updated_at' => now(),
+            // ],
 
 
 

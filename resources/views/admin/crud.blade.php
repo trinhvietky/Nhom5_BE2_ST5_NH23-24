@@ -50,9 +50,6 @@
                     <label for="star_from" class="form-label text-primary text-xl">Nơi khởi hành</label>
                     <select class="form-select" id="star_from" name="star_from">
                         <option value="1">Thành phố Hồ Chí Minh</option>
-                        <option value="2">Hà Nội</option>
-                        <option value="3">Đà Nẵng</option>
-                        <!-- Thêm các option khác tương ứng với các Guide ID -->
                     </select>
                 </div>
 

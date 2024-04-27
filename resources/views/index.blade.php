@@ -197,9 +197,10 @@
                         <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>{{ $row->time}}</small>
                         <small class="flex-fill text-center py-2"><i class="fa fa-plane-departure text-primary me-2"></i>{{$row->star_from}}</small>
                     </div>
-                    <div class="text-center p-1">
-                        <div class=" text-primary fw-bold flex-fill text-center py-1" style="font-size: 20px;">{{ $row->tour_name}}</div>
-                        <h3 class="mb-0">{{ $row->price}} vnd</h3>
+                    <h4 class=" text-primary fw-bold flex-fill text-center py-2" style="height: 50px;">{{ $row->tour_name}}</h4>
+                    <div class="text-center pt-2">
+                        
+                        <h5 class="mb-0 text-danger">{{ $row->price}} vnd</h5>
                         
                         <div class="mb-3">
                             <small class="fa fa-star text-primary"></small>
@@ -217,7 +218,7 @@
                         // Lấy 100 từ đầu tiên
                         $mota = implode(' ', array_slice($words, 0, 50));
                         ?>
-                        <p style="height: 120px;">{{$mota}} ... </p>
+                        <p style="height: 130px;">{{$mota}} ... </p>
                         <div class="d-flex justify-content-center mb-2">
                             <a href="#" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
                             <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Book Now</a>
