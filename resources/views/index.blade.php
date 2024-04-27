@@ -28,31 +28,30 @@
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                <h1 class="mb-4">Welcome to <span class="text-primary">Discovery</span></h1>
-                <p class="mb-4">Leading you to explore the world, Discovery is the ideal online destination for those passionate about travel.</p>
-                <p class="mb-4">Here, you'll discover a range of fascinating destinations around the world, from vibrant cities to peaceful countryside. TravelEase offers convenient hotel booking services, detailed travel guides, and an active social network community to share experiences and suggestions. With TravelEase, your journey starts here. Welcome to our world where dreams come true.</p>
+                <!-- <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6> -->
+                <h1 class="mb-4">Chào mừng bạn đến với <span class="text-primary">Discovery</span></h1>
+                <p class="mb-4">Đưa bạn đến với những vùng đất mới lạ trên thế giới, Discovery hứa hẹn sẽ là điểm đến lý tưởng cho những ai đam mê du lịch.</p>Tại đây, bạn sẽ khám phá hàng loạt điểm đến hấp dẫn trên khắp thế giới, từ những thành phố sôi động đến vùng nông thôn yên bình. Discovery sẽ cung cấp dịch vụ đặt phòng khách sạn tiện lợi, hướng dẫn du lịch chi tiết và các hoạt động xã hội tích cực. Với Discovery, hành trình của bạn sẽ bắt đầu từ đây. Chào mừng đến với thế giới của chúng tôi, nơi những giấc mơ trở thành hiện thực.</p>
                 <div class="row gy-2 gx-4 mb-4">
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Chuyến bay hạng nhất</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Handpicked Hotels</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Khách sạn được lựa chọn cẩn thận</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>5 Star Accommodations</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>chỗ ở 5*</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Latest Model Vehicles</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Phương tiện di chuyển mới nhất</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>150 Premium City Tours</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>150 chuyến tham quan thành phố cao cấp</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Service</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Dịch vụ 24/7</p>
                     </div>
                 </div>
-                <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+                <a class="btn btn-primary py-3 px-5 mt-2" href="">Đọc tiếp ...</a>
             </div>
         </div>
     </div>
