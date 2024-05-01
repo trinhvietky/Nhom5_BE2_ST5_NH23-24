@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\LienKetTrangController;
 use App\Http\Controllers\UserController;
 
@@ -31,3 +32,5 @@ require __DIR__.'/auth.php';
 Route::get('/{page?}', [LienKetTrangController::class, 'index']);
 Route::get('/user/home', [UserController::class, 'index'])->name('user.home');
 Route::get('/admin/home', [UserController::class, 'index'])->name('admin');
+
+Route::get('/result', [LienKetTrangController::class, 'searchT'])->name('search');;
