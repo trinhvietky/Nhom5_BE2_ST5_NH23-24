@@ -23188,3 +23188,5 @@ process.umask = function() { return 0; };
 /******/ 	
 /******/ })()
 ;
+
+// js ảnh

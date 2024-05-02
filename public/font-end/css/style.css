@@ -447,7 +447,7 @@ table, th, tr, td {
 }
 
 .tour-image {
-    max-width: 100%;
+    max-width: 700px;
     height: auto;
 }
 
@@ -455,5 +455,19 @@ table, th, tr, td {
     background-color: #f8f9fa; /* Màu nền sáng */
 }
 .tour-name {
-    color: #333; /* Màu chữ */
+    color: #333;
+    letter-spacing: 1px;
+    width: 720px;
+    position: relative;
+    top: -20px;
+}
+
+.booking {
+    position: relative;
+    right: 60px;
+}
+
+.booking-form {
+    position: relative;
+    left: 120px;
 }

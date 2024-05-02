@@ -30,32 +30,28 @@
             <div class="col-md-6">
                 <div class="booking p-5">
                     <div class="tour-details text-dark">
-                    @if($value)
-                        <h2 class="tour-name display-6" style="position: relative; top: -20px;">Tên tour: {{ $value->tour_name }}</h2>
-                        <img class="tour-image" src="{{ asset('img/'.$value->tour_image) }}" alt="Ảnh Tour">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p class="start-day" style="font-size: 20px; font-weight: 800; margin: 10px 0;">Ngày bắt đầu: {{ $value->start_day }}</p>
-                            </div>
-                            <div class="col-md-6">
-                                <!-- <p class="end-day" style="font-size: 20px; font-weight: 800; margin: 10px 0;">Ngày kết thúc: 07/01/2024</p> -->
-                            </div>
+                        @if($value)
+                        <div class="tour-name-container">
+                            <h2 class="tour-name">Tên tour: {{ $value->tour_name }}</h2>
                         </div>
+                        <img class="tour-image" src="{{ asset('img/'.$value->tour_image) }}" alt="Ảnh Tour" style="width: 180%; height: auto;">
                         <div class="row">
                             <div class="col-md-6">
-                                <p class="start-day" style="font-size: 20px; font-weight: 800;">Thời gian: {{ $value->time }}</p>
+                                <p class="start-day" style="font-size: 20px; font-weight: 800; margin: 10px 0; width: 700px;">Ngày bắt đầu: {{ $value->start_day }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="start-day" style="font-size: 20px; font-weight: 800; width: 700px; margin: 10px 50px;">Thời gian: {{ $value->time }}</p>
                             </div>
                         </div>
                         <p class="price" style="font-size: 20px; font-weight: 800;">Giá: {{ $value->price }}đ</p>
                         <p class="vehicle" style="font-size: 20px; font-weight: 800;">Phương tiện: {{ $value->vehicle }}</p>
-                        <p class="mb-4" style="font-size: 20px; font-weight: 800;">Chi tiết: {{ $value->tour_description }}</p>
-                    
-                    @endif
+                        <p class="mb-4" style="font-size: 20px; font-weight: 800; width: 710px; text-align: justify;">Chi tiết: {{ $value->tour_description }}</p>
+                        @endif
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="booking p-5">
+                <div class="booking-form p-5">
                     <h1 class="text-dark mb-4 display-5">Đặt một chuyến du lịch</h1>
                     <form>
                         <div class="row g-3">
@@ -105,47 +101,63 @@
 </div>
 
 <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Gói</h6>
-                <h1 class="mb-5">Gói tuyệt vời</h1>
-            </div>
-            <div class="row g-4 justify-content-center">
-            @foreach($data as $row)
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Gói</h6>
+            <h1 class="mb-5">Gói tuyệt vời</h1>
+        </div>
+        <div class="row g-4 justify-content-center">
+            @foreach($data->take(6) as $row)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="package-item">
-                    <div class="overflow-hidden">
+                    <div class="position-relative overflow-hidden">
                         <img class="img-fluid" style="width: 600px; height: 250px" src="{{ asset('img/'.$row->tour_image) }}" alt="">
+                        <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">{{$row->tour_sale}}</div>
                     </div>
-                    <div class="d-flex border-bottom">
-                        
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>{{ $row->start_day}} -> {{ $row->end_day}}</small>
-                        <small class="flex-fill text-center py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>{{$row->location->location_name}}</small>
+                    <div class="d-flex border-bottom" style="height: 50px;">
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>{{ $row->start_day}}</small>
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>{{ $row->time}}</small>
+                        <small class="flex-fill text-center py-2"><i class="fa fa-plane-departure text-primary me-2"></i>{{$row->star_from}}</small>
                     </div>
-                    <div class="text-center p-1">
-                        <div class=" text-sm text-primary fw-bold flex-fill text-center py-1" style="font-size: 30px;"></i>{{ $row->tour_name}}</div>
-                            <h3 class="mb-0">{{ $row->price}}$</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                            </div>
-                            <p style="height: 150px;">Nằm trên ngọn đồi với khung cảnh tuyệt đẹp, {{ $row->tour_name}} là điểm đến nổi tiếng ở {{$row->location->location_name}} với những kiến trúc độc đáo, hệ thống cáp treo hàng đầu thế giới và các hoạt động giải trí phong phú cho du khách mọi lứa tuổi.</p>
-                            <div class="d-flex justify-content-center mb-2">
-                                <a href="#" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
-                                <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
-                            </div>
+                    <h4 class=" text-primary fw-bold flex-fill text-center py-2" style="height: 50px;">{{ $row->tour_name}}</h4>
+                    <div class="text-center pt-2">
+
+                        <h5 class="mb-0 text-danger">{{ $row->price}} vnd</h5>
+
+                        <div class="mb-3">
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                        </div>
+                        <?php
+                        $tourDescription = $row->tour_description;
+
+                        // Chia chuỗi thành mảng các từ
+                        $words = explode(' ', $tourDescription);
+
+                        // Lấy 100 từ đầu tiên
+                        $mota = implode(' ', array_slice($words, 0, 50));
+                        ?>
+                        <p style="height: 130px;">{{$mota}} ... </p>
+                        <div class="d-flex justify-content-center mb-2">
+                            <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
+                            <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
                         </div>
                     </div>
                 </div>
             </div>
             @endforeach
         </div>
+        <!--nút show danh sách -->
+        <div class="row justify-content-center py-3">
+            <div class="col-auto">
+                <a class="btn btn-primary rounded-pill py-3 px-4 mt-2" href="{{ url('/package') }}">Xem thêm ...</a>
+            </div>
+        </div>
     </div>
 </div>
-
 <!-- Booking Start -->
 
 
