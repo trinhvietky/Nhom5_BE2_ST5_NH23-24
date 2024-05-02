@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Tour extends Model
 {
     use HasFactory;
-    
+    protected $primaryKey = 'tour_id';
     public function location(){
         return $this->belongsTo(Location::class, 'location_id', 'location_id');
     }

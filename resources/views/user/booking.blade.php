@@ -30,24 +30,27 @@
             <div class="col-md-6">
                 <div class="booking p-5">
                     <div class="tour-details text-dark">
-                        <h2 class="tour-name display-6" style="position: relative; top: -20px;">Tên tour: Cột Cờ Lũng Cú</h2>
-                        <img class="tour-image" src="img/cotCoLungCu.jpg" alt="Ảnh Tour">
+                    @if($value)
+                        <h2 class="tour-name display-6" style="position: relative; top: -20px;">Tên tour: {{ $value->tour_name }}</h2>
+                        <img class="tour-image" src="{{ asset('img/'.$value->tour_image) }}" alt="Ảnh Tour">
                         <div class="row">
                             <div class="col-md-6">
-                                <p class="start-day" style="font-size: 20px; font-weight: 800; margin: 10px 0;">Ngày bắt đầu: 01/01/2024</p>
+                                <p class="start-day" style="font-size: 20px; font-weight: 800; margin: 10px 0;">Ngày bắt đầu: {{ $value->start_day }}</p>
                             </div>
                             <div class="col-md-6">
-                                <p class="end-day" style="font-size: 20px; font-weight: 800; margin: 10px 0;">Ngày kết thúc: 07/01/2024</p>
+                                <!-- <p class="end-day" style="font-size: 20px; font-weight: 800; margin: 10px 0;">Ngày kết thúc: 07/01/2024</p> -->
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <p class="start-day" style="font-size: 20px; font-weight: 800;">Thời gian: 2 ngày 1 đêm</p>
+                                <p class="start-day" style="font-size: 20px; font-weight: 800;">Thời gian: {{ $value->time }}</p>
                             </div>
                         </div>
-                        <p class="price" style="font-size: 20px; font-weight: 800;">Giá: 5.000.000Đ</p>
-                        <p class="vehicle" style="font-size: 20px; font-weight: 800;">Phương tiện: Xe hơi</p>
-                        <p class="mb-4" style="font-size: 20px; font-weight: 800;">Chi tiết: Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                        <p class="price" style="font-size: 20px; font-weight: 800;">Giá: {{ $value->price }}đ</p>
+                        <p class="vehicle" style="font-size: 20px; font-weight: 800;">Phương tiện: {{ $value->vehicle }}</p>
+                        <p class="mb-4" style="font-size: 20px; font-weight: 800;">Chi tiết: {{ $value->tour_description }}</p>
+                    
+                    @endif
                     </div>
                 </div>
             </div>
