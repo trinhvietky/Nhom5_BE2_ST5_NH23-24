@@ -10,8 +10,8 @@
 
                     <form action="{{ route('search') }}" method="get">
                         {{ csrf_field() }}
-                    <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Eg: Thailand" name="search">
-                    <button type="submit" class="btn btn-primary rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px;">Tìm kiếm</button>
+                        <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Eg: Thailand" name="search">
+                        <button type="submit" class="btn btn-primary rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px;">Tìm kiếm</button>
                     </form>
 
                 </div>
@@ -68,16 +68,15 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Dịch vụ</h6>
-            <h1 class="mb-5">Dịch vụ của chúng tôi</h1>
+            <h1 class="text-center text-primary px-3">Dịch vụ của chúng tôi</h1>
         </div>
         <div class="row g-4">
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item rounded pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                        <h5>Chuyến tham quan toàn thế giới</h5>
-                        <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        <h5>Vòng quanh thế giới</h5>
+                        <p>Đưa bạn đến với những địa điểm mới lạ trên toàn thế giới</p>
                     </div>
                 </div>
             </div>
@@ -86,7 +85,7 @@
                     <div class="p-4">
                         <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
                         <h5>Đặt phòng khách sạn</h5>
-                        <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        <p>Khách sạn 5* được đánh giá tốt nhất trên thế giới</p>
                     </div>
                 </div>
             </div>
@@ -95,7 +94,7 @@
                     <div class="p-4">
                         <i class="fa fa-3x fa-user text-primary mb-4"></i>
                         <h5>Hướng dẫn viên du lịch</h5>
-                        <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        <p>Thân thiện, hòa đồng và đồng hành trong suốt hành trình của bạn</p>
                     </div>
                 </div>
             </div>
@@ -104,11 +103,11 @@
                     <div class="p-4">
                         <i class="fa fa-3x fa-cog text-primary mb-4"></i>
                         <h5>Quản lý sự kiện</h5>
-                        <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        <p>Những sự kiện, hoạt động trong suốt hành trình của bạn</p>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </div>
@@ -119,8 +118,7 @@
 <div class="container-xxl py-5 destination">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Điểm đến</h6>
-            <h1 class="mb-5">Điểm đến phổ biến</h1>
+            <h1 class="text-center text-primary px-3">Điểm đến phổ biến</h1>
         </div>
 
         <div class="row g-3">
@@ -150,8 +148,7 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Gói</h6>
-            <h1 class="mb-5">Gói tuyệt vời</h1>
+            <h1 class="text-center text-primary px-3">Tour phổ biến </h1>
         </div>
 
         <div class="row g-4 justify-content-center">
@@ -169,9 +166,9 @@
                     </div>
                     <h4 class=" text-primary fw-bold flex-fill text-center py-2" style="height: 50px;">{{ $row->tour_name}}</h4>
                     <div class="text-center pt-2">
-                        
-                        <h5 class="mb-0 text-danger">{{ $row->price}} vnd</h5>
-                        
+
+                        <h5 class="mb-0 text-danger">{{number_format($row->price, 0, ',', '.')}} vnđ</h5>
+
                         <div class="mb-3">
                             <small class="fa fa-star text-primary"></small>
                             <small class="fa fa-star text-primary"></small>
@@ -184,20 +181,26 @@
 
                         // Chia chuỗi thành mảng các từ
                         $words = explode(' ', $tourDescription);
-                        
+
                         // Lấy 100 từ đầu tiên
                         $mota = implode(' ', array_slice($words, 0, 50));
                         ?>
                         <p style="height: 130px;">{{$mota}} ... </p>
+<<<<<<< HEAD
                         <div class="d-flex justify-content-center mb-2">
                         <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
                             <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
+=======
+                        <div class="d-flex justify-content-center mb-2 pb-2">
+                            <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
+                            <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
+>>>>>>> d9904614284a455373782c09da9e26afafba33a6
                         </div>
                     </div>
                 </div>
             </div>
             @endforeach
-            
+
 
         </div>
         <!--nút show danh sách -->
@@ -214,8 +217,7 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Quá trình</h6>
-            <h1 class="mb-5">3 bước đơn giản</h1>
+            <h1 class="text-center text-primary px-3">Quá trình đặt vé với 3 bước ...</h1>
         </div>
         <div class="row gy-5 gx-4 justify-content-center">
             <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -226,7 +228,7 @@
                     <h5 class="mt-4">Chọn điểm đến</h5>
                     <hr class="w-25 mx-auto bg-primary mb-1">
                     <hr class="w-50 mx-auto bg-primary mt-0">
-                    <p class="mb-0">Tempor erat elitr rebum clita dolor diam ipsum sit diam amet diam eos erat ipsum et lorem et sit sed stet lorem sit</p>
+                    <p class="mb-0">Lựa chọn điểm đến phù với với yêu cầu và mong muốn của bạn</p>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
@@ -237,7 +239,7 @@
                     <h5 class="mt-4">Thanh toán trực tuyến</h5>
                     <hr class="w-25 mx-auto bg-primary mb-1">
                     <hr class="w-50 mx-auto bg-primary mt-0">
-                    <p class="mb-0">Tempor erat elitr rebum clita dolor diam ipsum sit diam amet diam eos erat ipsum et lorem et sit sed stet lorem sit</p>
+                    <p class="mb-0">Bạn có thể thanh toán ngay để chắc rằng bạn sẽ tham gia cuộc hành trình</p>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
@@ -248,7 +250,7 @@
                     <h5 class="mt-4">Bay ngay hôm nay</h5>
                     <hr class="w-25 mx-auto bg-primary mb-1">
                     <hr class="w-50 mx-auto bg-primary mt-0">
-                    <p class="mb-0">Tempor erat elitr rebum clita dolor diam ipsum sit diam amet diam eos erat ipsum et lorem et sit sed stet lorem sit</p>
+                    <p class="mb-0">Còn chần chờ gì nữa, xách balo và tận hưởng chuyến đi của bạn cùng chúng tôi</p>
                 </div>
             </div>
         </div>
@@ -261,8 +263,7 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Hướng dẫn viên du lịch</h6>
-            <h1 class="mb-5">Meet Our Guide</h1>
+            <h1 class="text-center text-primary px-3">Hướng dẫn viên du lịch</h1>
         </div>
         <div class="row g-4">
             @foreach($data_guide as $row)
@@ -293,8 +294,7 @@
 <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
         <div class="text-center">
-            <h6 class="section-title bg-white text-center text-primary px-3">Lời chứng thực</h6>
-            <h1 class="mb-5">Khách hàng của chúng tôi nói!!!</h1>
+            <h1 class="text-center text-primary px-3">Khách hàng nói gì? </h1>
         </div>
         <div class="owl-carousel testimonial-carousel position-relative">
             <div class="testimonial-item bg-white text-center border p-4">

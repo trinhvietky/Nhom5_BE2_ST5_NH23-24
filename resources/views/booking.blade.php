@@ -119,6 +119,7 @@
                         <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>{{ $row->time}}</small>
                         <small class="flex-fill text-center py-2"><i class="fa fa-plane-departure text-primary me-2"></i>{{$row->star_from}}</small>
                     </div>
+<<<<<<< HEAD
                     <h4 class=" text-primary fw-bold flex-fill text-center py-2" style="height: 50px;">{{ $row->tour_name}}</h4>
                     <div class="text-center pt-2">
 
@@ -144,6 +145,23 @@
                         <div class="d-flex justify-content-center mb-2">
                             <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
                             <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
+=======
+                    <div class="text-center p-1">
+                        <div class=" text-sm text-primary fw-bold flex-fill text-center py-1" style="font-size: 30px;"></i>{{ $row->tour_name}}</div>
+                            <h3 class="mb-0">{{ $row->price}}$</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                            <p style="height: 150px;">Nằm trên ngọn đồi với khung cảnh tuyệt đẹp, {{ $row->tour_name}} là điểm đến nổi tiếng ở {{$row->location->location_name}} với những kiến trúc độc đáo, hệ thống cáp treo hàng đầu thế giới và các hoạt động giải trí phong phú cho du khách mọi lứa tuổi.</p>
+                            <div class="d-flex justify-content-center mb-2">
+                            <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
+                                <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
+                            </div>
+>>>>>>> d9904614284a455373782c09da9e26afafba33a6
                         </div>
                     </div>
                 </div>
