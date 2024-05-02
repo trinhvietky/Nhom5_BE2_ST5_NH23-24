@@ -28,7 +28,7 @@
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-md-6">
-                <div class="booking p-5">
+                <div class="booking booking-detail p-5">
                     <div class="tour-details text-dark">
                         @if($value)
                         <div class="tour-name-container">
@@ -99,13 +99,13 @@
         </div>
     </div>
 </div>
-
+<!-- Package Start -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Gói</h6>
-            <h1 class="mb-5">Gói tuyệt vời</h1>
+            <h1 class="text-center text-primary px-3">Tour phổ biến </h1>
         </div>
+
         <div class="row g-4 justify-content-center">
             @foreach($data->take(6) as $row)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -119,11 +119,10 @@
                         <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>{{ $row->time}}</small>
                         <small class="flex-fill text-center py-2"><i class="fa fa-plane-departure text-primary me-2"></i>{{$row->star_from}}</small>
                     </div>
-<<<<<<< HEAD
                     <h4 class=" text-primary fw-bold flex-fill text-center py-2" style="height: 50px;">{{ $row->tour_name}}</h4>
                     <div class="text-center pt-2">
 
-                        <h5 class="mb-0 text-danger">{{ $row->price}} vnd</h5>
+                        <h5 class="mb-0 text-danger">{{number_format($row->price, 0, ',', '.')}} vnđ</h5>
 
                         <div class="mb-3">
                             <small class="fa fa-star text-primary"></small>
@@ -143,30 +142,15 @@
                         ?>
                         <p style="height: 130px;">{{$mota}} ... </p>
                         <div class="d-flex justify-content-center mb-2">
-                            <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
+                        <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
                             <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
-=======
-                    <div class="text-center p-1">
-                        <div class=" text-sm text-primary fw-bold flex-fill text-center py-1" style="font-size: 30px;"></i>{{ $row->tour_name}}</div>
-                            <h3 class="mb-0">{{ $row->price}}$</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                            </div>
-                            <p style="height: 150px;">Nằm trên ngọn đồi với khung cảnh tuyệt đẹp, {{ $row->tour_name}} là điểm đến nổi tiếng ở {{$row->location->location_name}} với những kiến trúc độc đáo, hệ thống cáp treo hàng đầu thế giới và các hoạt động giải trí phong phú cho du khách mọi lứa tuổi.</p>
-                            <div class="d-flex justify-content-center mb-2">
-                            <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
-                                <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
-                            </div>
->>>>>>> d9904614284a455373782c09da9e26afafba33a6
                         </div>
                     </div>
                 </div>
             </div>
             @endforeach
+
+
         </div>
         <!--nút show danh sách -->
         <div class="row justify-content-center py-3">
@@ -176,7 +160,4 @@
         </div>
     </div>
 </div>
-<!-- Booking Start -->
-
-
 @endsection
