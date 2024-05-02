@@ -86,7 +86,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
                             <a href="{{ url('/destination') }}" class="dropdown-item">Destination</a>
-                            <a href="{{ url('/booking') }}" class="dropdown-item">Booking</a>
+                            <!-- <a href="{{ url('/booking') }}" class="dropdown-item">Booking</a> -->
                             <a href="{{ url('/team') }}" class="dropdown-item">Travel Guides</a>
                             <a href="{{ url('/testimonial') }}" class="dropdown-item">Testimonial</a>
                             <a href="{{ url('/404') }}" class="dropdown-item">404 Page</a>

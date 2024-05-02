@@ -27,14 +27,13 @@
 <div class="container-xxl py-5 destination">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Điểm đến</h6>
-            <h1 class="mb-5">Điểm đến phổ biến</h1>
+            <h1 class="text-center text-primary px-3">Điểm đến phổ biến</h1>
         </div>
 
         <div class="row g-3">
             @foreach($data_location as $row)
             <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
-                <a class="position-relative d-block overflow-hidden" href="">
+                <a class="position-relative d-block overflow-hidden" href="#">
                     <img class="img-fluid" style="width: 600px; height: 250px" src="{{ asset('img/'.$row->location_image) }}" alt="">
                     <!-- <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">{{$row->location_sale}}</div> -->
                     <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">{{$row->location_name}}</div>

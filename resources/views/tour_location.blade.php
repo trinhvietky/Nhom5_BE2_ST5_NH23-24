@@ -13,7 +13,7 @@
                         <ol class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
                             <li class="breadcrumb-item"><a href="#">Trang</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Gói</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Danh sách tour</li>
                         </ol>
                     </nav>
                 </div>
@@ -28,7 +28,7 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h1 class="text-center text-primary px-3">Tour triển khai  </h1>
+            <h1 class="text-center text-primary px-3">Danh sách tour tại   </h1>
         </div>
         <div class="row g-4 justify-content-center">
             @foreach($data as $row)

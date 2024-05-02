@@ -186,8 +186,8 @@
                         $mota = implode(' ', array_slice($words, 0, 50));
                         ?>
                         <p style="height: 130px;">{{$mota}} ... </p>
-                        <div class="d-flex justify-content-center mb-2">
-                        <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
+                        <div class="d-flex justify-content-center mb-2 pb-2">
+                            <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
                             <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
                         </div>
                     </div>
