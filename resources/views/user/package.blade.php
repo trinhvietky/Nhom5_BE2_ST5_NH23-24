@@ -66,8 +66,8 @@
                         <p style="height: 150px;">{{$mota}} ... </p>
 
                         <div class="d-flex justify-content-center mb-2">
-                            <a href="#" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                            <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Book Now</a>
+                            <a href="" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Book Now</a>
                         </div>
                     </div>
                 </div>
