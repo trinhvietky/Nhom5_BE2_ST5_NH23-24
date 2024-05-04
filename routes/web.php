@@ -29,12 +29,12 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+Route::get('/search', [LienKetTrangController::class, 'search']);
 
 Route::get('/{page?}', [LienKetTrangController::class, 'index']);
 Route::get('/user/home', [UserController::class, 'index'])->name('user.home');
 Route::get('/admin/home', [UserController::class, 'index'])->name('admin');
 
-Route::get('/result', [LienKetTrangController::class, 'searchT'])->name('search');;
 
 
 // Route::get('/booking/{tour_id}', [BookingController::class, 'showBooking'])->name('booking');

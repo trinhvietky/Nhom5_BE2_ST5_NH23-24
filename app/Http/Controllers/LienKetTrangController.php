@@ -10,16 +10,13 @@ use Illuminate\Http\Request;
 
 class LienKetTrangController extends Controller
 {
-    public function searchT(Request $request) {
-    $page = "result";
-    $tours = Tour::orderBy('tour_id');
-    if (request()->has('search')) {
-    // $data = $request -> input('search');
-    // $tours = $tours->where('tour_name' , 'like' , '%' . $data . '%');
-    $tours = $tours->where('tour_name' , 'like' , '%' . request()->get('search','') . '%');
-    }
-    // $tours = $tours->where('tour_name' , 'like' , '%' . $data . '%')->get();
-    return view($page, ['result'=>$tours]);
+    public function search(Request $request) {
+   
+    $search = $request->search;
+    $tours=Tour::where(function($query) use ($search){
+        $query->where('tour_name','like',"%$search%");
+    })->get();
+    return view('result', compact('tours'));
     }
 
     public function index($page = "index") {
