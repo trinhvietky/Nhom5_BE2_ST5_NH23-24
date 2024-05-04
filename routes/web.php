@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddTourController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Tour;
@@ -39,4 +40,8 @@ Route::get('/result', [LienKetTrangController::class, 'searchT'])->name('search'
 // Route::get('/booking/{tour_id}', [BookingController::class, 'showBooking'])->name('booking');
 
 Route::get('/tour/{tour_id}', [LienKetTrangController::class, 'hienThi'])->name('tourShow.booking');
-Route::get('/user/tour/{tour_id}', [LienKetTrangController::class, 'show'])->name('tour.booking');
+Route::get('/user/tour/{tour_id}', [LienKetTrangController::class, 'hienThiUser'])->name('tour.readmore');
+
+
+// Route::post('/crud', [AddTourController::class, 'store'])->name('tours.store');
+Route::post('/tours', [AddTourController::class, 'store'])->name('tours.store');

@@ -29,12 +29,12 @@ class LienKetTrangController extends Controller
         return view($page, ['data'=>$tours,'data_guide'=>$guide, 'data_location'=>$location]);
     }
 
-    public function show($id)
-    {
-        $tours = Tour::orderBy('tour_id')->get();
-        $tour = Tour::findOrFail($id);
-        return view('user.booking', ['value'=>$tour,'data'=>$tours]);
-    }
+    // public function show($id)
+    // {
+    //     $tours = Tour::orderBy('tour_id')->get();
+    //     $tour = Tour::findOrFail($id);
+    //     return view('user.booking', ['value'=>$tour,'data'=>$tours]);
+    // }
     public function hienThi($id)
     {
         $tours = Tour::orderBy('tour_id')->get();
@@ -47,4 +47,8 @@ class LienKetTrangController extends Controller
         $tour = Tour::findOrFail($id);
         return view('user.booking', ['value'=>$tour,'data'=>$tours]);
     }
+
+
+
+    
 }

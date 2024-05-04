@@ -217,7 +217,7 @@
                         ?>
                         <p style="height: 150px;">{{$mota}} ... </p>
                         <div class="d-flex justify-content-center mb-2">
-                        <a href="{{ route('tour.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
+                        <a href="{{ route('tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
                             <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
                         </div>
                     </div>
