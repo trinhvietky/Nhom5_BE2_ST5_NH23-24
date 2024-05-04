@@ -47,4 +47,15 @@ class LienKetTrangController extends Controller
         $tour = Tour::findOrFail($id);
         return view('user.booking', ['value'=>$tour,'data'=>$tours]);
     }
+
+    public function hienThiTourTheoDiaDiem($id)
+    {
+        // $tours = Tour::orderBy('location_id')->get();
+        // $tour = Tour::findOrFail($id);
+        // return view('tour_location', ['value'=>$tour,'data'=>$tours]);
+        $tours = Tour::where('location_id', $id)->get();
+        $location = Location::find($id);
+        return view('tour_location', compact('tours','location'));
+
+    }
 }
