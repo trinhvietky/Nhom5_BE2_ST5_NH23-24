@@ -150,9 +150,8 @@
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h1 class="text-center text-primary px-3">Tour phổ biến </h1>
         </div>
-
         <div class="row g-4 justify-content-center">
-            @foreach($data->take(6) as $row)
+        @foreach($data->take(6) as $row)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="package-item">
                     <div class="position-relative overflow-hidden">
@@ -194,8 +193,6 @@
                 </div>
             </div>
             @endforeach
-
-
         </div>
         <!--nút show danh sách -->
         <div class="row justify-content-center py-3">
