@@ -46,4 +46,42 @@ class AddTourController extends Controller
         // Redirect back or to a success page
         return redirect()->back()->with('success', 'Tour đã được thêm thành công!');
     }
+
+    public function destroy($id)
+    {
+        $tour = Tour::findOrFail($id);
+        $tour->delete();
+
+        return redirect()->back()->with('success', 'Tour đã được xóa thành công!');
+    }
+
+    // edit tour
+    public function edit($id)
+    {
+        $tour = Tour::findOrFail($id);
+        return view('admin.editTour', compact('tour'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $validatedData = $request->validate([
+            'tour_name' => 'required|string|max:255',
+            'tour_image' => 'required|string',
+            'start_day' => 'required|date',
+            'time' => 'required|string',
+            'star_from' => 'required|string',
+            'price' => 'required|numeric',
+            'vehicle' => 'required|string',
+            'tour_description' => 'required|string',
+            'tour_schedule' => 'required|string',
+            'tour_sale' => 'required|string',
+            'location_id' => 'required|integer',
+            'guide_id' => 'required|integer',
+        ]);
+
+        $tour = Tour::findOrFail($id);
+        $tour->update($validatedData);
+
+        return redirect()->back()->with('success', 'Tour đã được cập nhật thành công!');
+    }
 }

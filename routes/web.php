@@ -40,14 +40,15 @@ Route::get('/result', [LienKetTrangController::class, 'searchT'])->name('search'
 // Route::get('/booking/{tour_id}', [BookingController::class, 'showBooking'])->name('booking');
 
 Route::get('/tour/{tour_id}', [LienKetTrangController::class, 'hienThi'])->name('tourShow.booking');
-<<<<<<< HEAD
 Route::get('/user/tour/{tour_id}', [LienKetTrangController::class, 'show'])->name('tour.booking');
 
 Route::get('/tour_location/{location_id}', [LienKetTrangController::class, 'hienThiTourTheoDiaDiem'])->name('tour.location');
-=======
+
 Route::get('/user/tour/{tour_id}', [LienKetTrangController::class, 'hienThiUser'])->name('tour.readmore');
 
-
-// Route::post('/crud', [AddTourController::class, 'store'])->name('tours.store');
 Route::post('/tours', [AddTourController::class, 'store'])->name('tours.store');
->>>>>>> b63ca35fd16f2dccdf280451628e6859ac377008
+
+Route::delete('/tours/{id}', [AddTourController::class, 'destroy'])->name('tours.destroy');
+
+Route::get('/tours/{id}/edit', [AddTourController::class, 'edit'])->name('tours.edit');
+Route::put('/tours/{id}', [AddTourController::class, 'update'])->name('tours.update');

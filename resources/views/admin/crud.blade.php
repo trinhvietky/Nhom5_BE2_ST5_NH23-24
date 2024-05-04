@@ -18,61 +18,66 @@
 
 <div class="container-xxl py-5">
     <div class="row justify-content-center">
-        <div class="col-md-6" style="width: 500px;">
-            <div class="mb-3">
-                <label for="tour_name" class="form-label">Tên tour</label>
-                <input type="text" class="form-control" id="tour_name" name="tour_name" placeholder="Tên tour">
+        <form action="{{ route('tours.store') }}" method="POST">
+            @csrf
+            <div class="col-md-6" style="width: 500px;">
+
+                <div class="mb-3">
+                    <label for="tour_name" class="form-label">Tên tour</label>
+                    <input type="text" class="form-control" id="tour_name" name="tour_name" placeholder="Tên tour">
+                </div>
+                <div class="mb-3">
+                    <label for="tour_image" class="form-label text-primary text-xl">Hình ảnh tour</label>
+                    <input type="file" class="form-control" id="tour_image" name="tour_image">
+                </div>
+                <div class="mb-3">
+                    <label for="start_day" class="form-label">Ngày bắt đầu</label>
+                    <input type="date" class="form-control" id="start_day" name="start_day" placeholder="Ngày bắt đầu">
+                </div>
+                <div class="mb-3">
+                    <label for="time" class="form-label">Thời gian</label>
+                    <input type="text" class="form-control" id="time" name="time" placeholder="Thời gian">
+                </div>
+                <div class="mb-3">
+                    <label for="star_from" class="form-label">Nơi khởi hành</label>
+                    <input type="text" class="form-control" id="star_from" name="star_from" placeholder="Nơi khởi hành">
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Giá tour</label>
+                    <input type="text" class="form-control" id="price" name="price" placeholder="Giá tour">
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="tour_image" class="form-label text-primary text-xl">Hình ảnh tour</label>
-                <input type="file" class="form-control" id="tour_image" name="tour_image">
+            <div class="col-md-6" style="position: relative; top: -10px; width: 500px;">
+                <div class="mb-3">
+                    <label for="vehicle" class="form-label">Phương tiện di chuyển</label>
+                    <input type="text" class="form-control" id="vehicle" name="vehicle" placeholder="Phương tiện di chuyển">
+                </div>
+                <div class="mb-3">
+                    <label for="tour_description" class="form-label">Giới thiệu tour</label>
+                    <textarea class="form-control" id="tour_description" name="tour_description" placeholder="Giới thiệu tour"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="tour_schedule" class="form-label">Lịch trình tour</label>
+                    <textarea class="form-control" id="tour_schedule" name="tour_schedule" placeholder="Lịch trình tour"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="tour_sale" class="form-label">Giảm giá tour</label>
+                    <input type="text" class="form-control" id="tour_sale" name="tour_sale" placeholder="Giảm giá tour">
+                </div>
+                <div class="mb-3">
+                    <label for="location_id" class="form-label">Location ID</label>
+                    <input type="number" class="form-control" id="location_id" name="location_id" placeholder="Location ID">
+                </div>
+                <div class="mb-3">
+                    <label for="guide_id" class="form-label">Guide ID</label>
+                    <input type="number" class="form-control" id="guide_id" name="guide_id" placeholder="Guide ID">
+                </div>
+                <div class="text-end">
+                    <button type="submit" class="btn btn-primary">Thêm</button>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="start_day" class="form-label">Ngày bắt đầu</label>
-                <input type="date" class="form-control" id="start_day" name="start_day" placeholder="Ngày bắt đầu">
-            </div>
-            <div class="mb-3">
-                <label for="time" class="form-label">Thời gian</label>
-                <input type="text" class="form-control" id="time" name="time" placeholder="Thời gian">
-            </div>
-            <div class="mb-3">
-                <label for="star_from" class="form-label">Nơi khởi hành</label>
-                <input type="text" class="form-control" id="star_from" name="star_from" placeholder="Nơi khởi hành">
-            </div>
-            <div class="mb-3">
-                <label for="price" class="form-label">Giá tour</label>
-                <input type="text" class="form-control" id="price" name="price" placeholder="Giá tour">
-            </div>
-        </div>
-        <div class="col-md-6" style="position: relative; top: -10px; width: 500px;">
-            <div class="mb-3">
-                <label for="vehicle" class="form-label">Phương tiện di chuyển</label>
-                <input type="text" class="form-control" id="vehicle" name="vehicle" placeholder="Phương tiện di chuyển">
-            </div>
-            <div class="mb-3">
-                <label for="tour_description" class="form-label">Giới thiệu tour</label>
-                <textarea class="form-control" id="tour_description" name="tour_description" placeholder="Giới thiệu tour"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="tour_schedule" class="form-label">Lịch trình tour</label>
-                <textarea class="form-control" id="tour_schedule" name="tour_schedule" placeholder="Lịch trình tour"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="tour_sale" class="form-label">Giảm giá tour</label>
-                <input type="text" class="form-control" id="tour_sale" name="tour_sale" placeholder="Giảm giá tour">
-            </div>
-            <div class="mb-3">
-                <label for="location_id" class="form-label">Location ID</label>
-                <input type="number" class="form-control" id="location_id" name="location_id" placeholder="Location ID">
-            </div>
-            <div class="mb-3">
-                <label for="guide_id" class="form-label">Guide ID</label>
-                <input type="number" class="form-control" id="guide_id" name="guide_id" placeholder="Guide ID">
-            </div>
-            <div class="text-end">
-                <button type="submit" class="btn btn-primary">Thêm</button>
-            </div>
-        </div>
+        </form>
+
     </div>
 </div>
 
@@ -96,41 +101,55 @@
                             <th class="text-center" scope="col">Schedule</th>
                             <th class="text-center" scope="col">Location ID</th>
                             <th class="text-center" scope="col">Guide ID</th>
+                            <th class="text-center" scope="col">Actions</th>
+
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($data as $row)
+
+                        @foreach($data as $row)
                         <tr>
                             <td class="text-center">{{ $row->tour_id}}</td>
                             <td>{{ $row->tour_name}}</td>
-                            <td class="text-center"><img class="img-fluid"  src="{{ asset('img/'.$row->tour_image) }}" alt=""></td>
+                            <td class="text-center"><img class="img-fluid" src="{{ asset('img/'.$row->tour_image) }}" alt=""></td>
                             <td class="text-center">{{ $row->start_day}}</td>
                             <td class="text-center">{{ $row->time}}</td>
                             <td class="text-center">{{ $row->star_from}}</td>
                             <td class="text-center">{{ $row->price}}</td>
                             <td class="text-center">{{ $row->vehicle}}</td>
                             <?php
-                        $tourDescription = $row->tour_description;
+                            $tourDescription = $row->tour_description;
 
-                        // Chia chuỗi thành mảng các từ
-                        $words = explode(' ', $tourDescription);
-                        
-                        // Lấy 100 từ đầu tiên
-                        $mota = implode(' ', array_slice($words, 0, 20));
-                        ?>
+                            // Chia chuỗi thành mảng các từ
+                            $words = explode(' ', $tourDescription);
+
+                            // Lấy 100 từ đầu tiên
+                            $mota = implode(' ', array_slice($words, 0, 20));
+                            ?>
                             <td class="text-center">{{ $mota}}</td>
                             <?php
-                        $tourSchedule = $row->tour_schedule;
+                            $tourSchedule = $row->tour_schedule;
 
-                        // Chia chuỗi thành mảng các từ
-                        $words1 = explode(' ', $tourSchedule);
-                        
-                        // Lấy 100 từ đầu tiên
-                        $schedule = implode(' ', array_slice($words1, 0, 20));
-                        ?>
+                            // Chia chuỗi thành mảng các từ
+                            $words1 = explode(' ', $tourSchedule);
+
+                            // Lấy 100 từ đầu tiên
+                            $schedule = implode(' ', array_slice($words1, 0, 20));
+                            ?>
                             <td class="text-center">{{$schedule}}</td>
                             <td class="text-center">{{ $row->location_id}}</td>
                             <td class="text-center">{{ $row->guide_id}}</td>
+                            <!-- Nút xóa -->
+                            <td class="text-center">
+                                <form action="{{ route('tours.destroy', $row->tour_id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Xóa</button>
+                                </form>
+                            </td>
+                            <td>
+                                <a href="{{ route('tours.edit', $row->tour_id) }}" class="btn btn-sm btn-primary">edit</a>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
