@@ -63,12 +63,31 @@
                     <div class="col-sm-6">
                         <p class="mb-0"><i class="fa fa-users text-primary me-2"></i>Số lượng người: </p>
                     </div>
-                    <div class="col-sm-6">
+                    <!-- <div class="col-sm-6">
                         <div class="quantity buttons_added">
-                            <input id="#" style="text-align: center;" type="number" size="4" class="input-text qty text border-1" title="Qty" value="1" min="0" step="1">
+                            <input id="#" name="quantity" style="text-align: center;" type="number" size="4" class="input-text qty text border-1" title="Qty" value="1" min="0" step="1" >
                         </div>
 
                     </div>
+                    <td class="product-subtotal">
+                        <span class="amount" id="">{{number_format( $value->price * $value['quantity'],0, ',', '.')}} vnđ</span>
+                    </td> -->
+
+                    <div class="col-sm-6">
+                        <div class="quantity buttons_added">
+                            <input id="quantityInput" style="text-align: center;" type="number" size="4" class="input-text qty text border-1" title="Qty" value="0" min="0" step="1">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-money-check text-primary me-2"></i>Thành tiền</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <td class="product-subtotal ">
+                            <span class="amount mb-0 text-danger" id="subtotal">0 vnđ</span>
+                        </td>
+                    </div>
+
+
                 </div>
                 <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Đặt ngay</a>
             </div>
@@ -86,7 +105,7 @@
         </div>
     </div>
     <div style="color: black; font-weight: 400; font-size: 17px;">
-    {!! $value->tour_schedule !!}
+        {!! $value->tour_schedule !!}
     </div>
 </div>
 <!-- Team End -->
@@ -145,5 +164,16 @@
     </div>
 </div>
 <!-- Package End -->
+<script>
+    document.getElementById('quantityInput').addEventListener('input', function() {
+        var quantity = parseInt(this.value);
+        var price = parseFloat("{{$value->price}}");
+        var subtotal = quantity * price;
+        document.getElementById('subtotal').textContent = formatCurrency(subtotal) + ' vnđ';
+    });
 
+    function formatCurrency(amount) {
+        return amount.toFixed(0).replace(/\d(?=(\d{3})+$)/g, '$&,');
+    }
+</script>
 @endsection

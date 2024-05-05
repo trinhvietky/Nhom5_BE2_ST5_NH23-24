@@ -85,10 +85,15 @@
                     <a href="{{ url('/admin.service') }}" class="nav-item nav-link">Dịch vụ</a>
                     <a href="{{ url('/admin.package') }}" class="nav-item nav-link">Gói</a>
                     <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Quản lý thông tin</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Quản lý</a>
                         <div class="dropdown-menu m-0">
-                            <a href="{{ url('/admin.crud') }}" class="dropdown-item">Thông tin tour</a>
-                            <a href="{{ url('/admin.infomation') }}" class="dropdown-item">Thông tin user</a>
+                            <a href="{{ url('/admin.crud') }}" class="dropdown-item">Tour</a>
+                            <a href="{{ url('/admin.infomation') }}" class="dropdown-item">Users</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Danh mục</a>
+                        <div class="dropdown-menu m-0">
                             <a href="{{ url('/admin.team') }}" class="dropdown-item">Hướng dẫn viên du lịch</a>
                             <a href="{{ url('/admin.destination') }}" class="dropdown-item">Điểm đến </a>
                             <a href="{{ url('/admin.booking') }}" class="dropdown-item">Đặt trước</a>

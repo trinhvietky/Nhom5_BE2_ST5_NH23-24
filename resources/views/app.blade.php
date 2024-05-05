@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Tourist - Travel Agency HTML Template</title>
+    <title>Discovery</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -47,9 +47,9 @@
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
-                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>discovery@example.com</small>
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>39 Nguyễn Huệ, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>0924 242 424</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>discovery@mail.tour.com</small>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
@@ -78,24 +78,24 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="{{ url('/index') }}" class="nav-item nav-link active">Home</a>
-                    <a href="{{ url('/about') }}" class="nav-item nav-link">About</a>
-                    <a href="{{ url('/service') }}" class="nav-item nav-link">Services</a>
-                    <a href="{{ url('/package') }}" class="nav-item nav-link">Packages</a>
+                    <a href="{{ url('/index') }}" class="nav-item nav-link active">Trang chủ</a>
+                    <a href="{{ url('/about') }}" class="nav-item nav-link">Giới thiệu</a>
+                    <a href="{{ url('/service') }}" class="nav-item nav-link">Dịch vụ</a>
+                    <a href="{{ url('/package') }}" class="nav-item nav-link">Tour</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Danh mục</a>
                         <div class="dropdown-menu m-0">
-                            <a href="{{ url('/destination') }}" class="dropdown-item">Destination</a>
-                            <a href="{{ url('/booking') }}" class="dropdown-item">Booking</a>
-                            <a href="{{ url('/team') }}" class="dropdown-item">Travel Guides</a>
-                            <a href="{{ url('/testimonial') }}" class="dropdown-item">Testimonial</a>
+                            <a href="{{ url('/destination') }}" class="dropdown-item">Điểm đến</a>
+                            <a href="{{ url('/booking') }}" class="dropdown-item">Đặt vé</a>
+                            <a href="{{ url('/team') }}" class="dropdown-item">Hướng dẫn viên</a>
+                            <a href="{{ url('/testimonial') }}" class="dropdown-item">Đánh giá từ khách hàng</a>
                             <a href="{{ url('/404') }}" class="dropdown-item">404 Page</a>
                         </div>
                     </div>
-                    <a href="contact" class="nav-item nav-link">Contact</a>
+                    <a href="contact" class="nav-item nav-link">Liên hệ</a>
                 </div>
-                <a href="{{route('login')}}" class="btn btn-primary rounded-pill py-2 px-4 m-2">Login</a>
-                <a href="{{route('register')}}" class="btn btn-primary rounded-pill py-2 px-4">Regiser</a>
+                <a href="{{route('login')}}" class="btn btn-primary rounded-pill py-2 px-4 m-2">Đăng nhập</a>
+                <a href="{{route('register')}}" class="btn btn-primary rounded-pill py-2 px-4">Đăng ký</a>
             </div>
         </nav>
     </div>
@@ -115,13 +115,13 @@
                     <a class="btn btn-link" href="">Liên hệ chúng tôi</a>
                     <a class="btn btn-link" href="">Chính sách bảo mật</a>
                     <a class="btn btn-link" href="">Điều khoản & Điều kiện</a>
-                    <a class="btn btn-link" href="">FAQs & Help</a>
+                    <a class="btn btn-link" href="">Câu hỏi và trợ giúp</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>39 Nguyễn Huệ, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+0924 242 424</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>discovery@example.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>discovery@mail.tour.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -130,7 +130,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Phòng trưng bày</h4>
+                    <h4 class="text-white mb-3">Sản phẩm của chúng tôi</h4>
                     <div class="row g-2 pt-2">
                         <div class="col-4">
                             <img class="img-fluid bg-light p-1" src="{{asset('img/package-1.jpg')}}" alt="">
@@ -154,7 +154,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Bản tin</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <p>Để nhận được các bản tin về du lịch, bạn vui lòng nhập email đăng ký với chúng tôi</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Đăng ký</button>
