@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Tourist - Travel Agency HTML Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
@@ -83,13 +84,14 @@
                     <a href="{{ url('/admin.about') }}" class="nav-item nav-link">Giới thiệu</a>
                     <a href="{{ url('/admin.service') }}" class="nav-item nav-link">Dịch vụ</a>
                     <a href="{{ url('/admin.package') }}" class="nav-item nav-link">Gói</a>
-                    <a href="{{ url('/admin.crud') }}" class="nav-item nav-link">Thông tin tour</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Trang</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Quản lý thông tin</a>
                         <div class="dropdown-menu m-0">
+                            <a href="{{ url('/admin.infomation') }}" class="nav-item nav-link">Thông tin user</a>
+                            <a href="{{ url('/admin.team') }}" class="dropdown-item">Hướng dẫn viên du lịch</a>
                             <a href="{{ url('/admin.destination') }}" class="dropdown-item">Điểm đến </a>
                             <a href="{{ url('/admin.booking') }}" class="dropdown-item">Đặt trước</a>
-                            <a href="{{ url('/admin.team') }}" class="dropdown-item">Hướng dẫn viên du lịch</a>
+                            <a href="{{ url('/admin.crud') }}" class="nav-item nav-link">Thông tin tour</a>
                             <a href="{{ url('/admin.testimonial') }}" class="dropdown-item">Lời chứng thực</a>
                             <a href="{{ url('/admin.404') }}" class="dropdown-item">404 Page</a>
                         </div>
@@ -282,7 +284,6 @@
     <script src="{{asset('font-end/lib/tempusdominus/js/moment.min.js')}}"></script>
     <script src="{{asset('font-end/lib/tempusdominus/js/moment-timezone.min.js')}}"></script>
     <script src="{{asset('font-end/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js')}}"></script>
-
     <!-- Template Javascript -->
     <script src="{{asset('font-end/js/main.js')}}"></script>
     <script src="{{asset('font-end/js/app.js')}}"></script>

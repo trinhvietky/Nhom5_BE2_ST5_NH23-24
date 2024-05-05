@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Tour;
+use App\Models\Tour; 
+use App\Models\User; 
 use App\Models\Guide;
 use App\Models\Location;
 use Illuminate\Http\Request;
@@ -21,9 +22,10 @@ class LienKetTrangController extends Controller
 
     public function index($page = "index") {
         $tours = Tour::orderBy('tour_id')->get();
+        $user = User::orderBy('id')->get();
         $guide = Guide::orderBy('guide_Id')->get();
         $location = Location::orderBy('location_id')->get();
-        return view($page, ['data'=>$tours,'data_guide'=>$guide, 'data_location'=>$location]);
+        return view($page, ['data'=>$tours,'data_guide'=>$guide, 'data_location'=>$location, 'decentralization'=>$user]);
     }
     public function hienThi($id)
     {

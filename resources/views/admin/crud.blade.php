@@ -18,66 +18,68 @@
 
 <div class="container-xxl py-5">
     <div class="row justify-content-center">
-        <form action="{{ route('tours.store') }}" method="POST">
-            @csrf
-            <div class="col-md-6" style="width: 500px;">
-
-                <div class="mb-3">
-                    <label for="tour_name" class="form-label">Tên tour</label>
-                    <input type="text" class="form-control" id="tour_name" name="tour_name" placeholder="Tên tour">
+        <div class="col-md-6">
+            <form action="{{ route('tours.store') }}" method="POST">
+                @csrf
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="tour_name" class="form-label">Tên tour</label>
+                            <input type="text" class="form-control" id="tour_name" name="tour_name" placeholder="Tên tour">
+                        </div>
+                        <div class="mb-3">
+                            <label for="start_day" class="form-label">Ngày bắt đầu</label>
+                            <input type="date" class="form-control" id="start_day" name="start_day" placeholder="Ngày bắt đầu">
+                        </div>
+                        <div class="mb-3">
+                            <label for="star_from" class="form-label">Nơi khởi hành</label>
+                            <input type="text" class="form-control" id="star_from" name="star_from" placeholder="Nơi khởi hành">
+                        </div>
+                        <div class="mb-3">
+                            <label for="price" class="form-label">Giá tour</label>
+                            <input type="text" class="form-control" id="price" name="price" placeholder="Giá tour">
+                        </div>
+                        <div class="mb-3">
+                            <label for="tour_image" class="form-label text-primary text-xl">Hình ảnh tour</label>
+                            <input type="file" class="form-control" id="tour_image" name="tour_image">
+                        </div>
+                        <div class="mb-3">
+                            <label for="time" class="form-label">Thời gian</label>
+                            <input type="text" class="form-control" id="time" name="time" placeholder="Thời gian">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="vehicle" class="form-label">Phương tiện di chuyển</label>
+                            <input type="text" class="form-control" id="vehicle" name="vehicle" placeholder="Phương tiện di chuyển">
+                        </div>
+                        <div class="mb-3">
+                            <label for="tour_description" class="form-label">Giới thiệu tour</label>
+                            <textarea class="form-control" id="tour_description" name="tour_description" placeholder="Giới thiệu tour"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tour_schedule" class="form-label">Lịch trình tour</label>
+                            <textarea class="form-control" id="tour_schedule" name="tour_schedule" placeholder="Lịch trình tour"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tour_sale" class="form-label">Giảm giá tour</label>
+                            <input type="text" class="form-control" id="tour_sale" name="tour_sale" placeholder="Giảm giá tour">
+                        </div>
+                        <div class="mb-3">
+                            <label for="location_id" class="form-label">Location ID</label>
+                            <input type="number" class="form-control" id="location_id" name="location_id" placeholder="Location ID">
+                        </div>
+                        <div class="mb-3">
+                            <label for="guide_id" class="form-label">Guide ID</label>
+                            <input type="number" class="form-control" id="guide_id" name="guide_id" placeholder="Guide ID">
+                        </div>
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-primary">Thêm</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="tour_image" class="form-label text-primary text-xl">Hình ảnh tour</label>
-                    <input type="file" class="form-control" id="tour_image" name="tour_image">
-                </div>
-                <div class="mb-3">
-                    <label for="start_day" class="form-label">Ngày bắt đầu</label>
-                    <input type="date" class="form-control" id="start_day" name="start_day" placeholder="Ngày bắt đầu">
-                </div>
-                <div class="mb-3">
-                    <label for="time" class="form-label">Thời gian</label>
-                    <input type="text" class="form-control" id="time" name="time" placeholder="Thời gian">
-                </div>
-                <div class="mb-3">
-                    <label for="star_from" class="form-label">Nơi khởi hành</label>
-                    <input type="text" class="form-control" id="star_from" name="star_from" placeholder="Nơi khởi hành">
-                </div>
-                <div class="mb-3">
-                    <label for="price" class="form-label">Giá tour</label>
-                    <input type="text" class="form-control" id="price" name="price" placeholder="Giá tour">
-                </div>
-            </div>
-            <div class="col-md-6" style="position: relative; top: -10px; width: 500px;">
-                <div class="mb-3">
-                    <label for="vehicle" class="form-label">Phương tiện di chuyển</label>
-                    <input type="text" class="form-control" id="vehicle" name="vehicle" placeholder="Phương tiện di chuyển">
-                </div>
-                <div class="mb-3">
-                    <label for="tour_description" class="form-label">Giới thiệu tour</label>
-                    <textarea class="form-control" id="tour_description" name="tour_description" placeholder="Giới thiệu tour"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="tour_schedule" class="form-label">Lịch trình tour</label>
-                    <textarea class="form-control" id="tour_schedule" name="tour_schedule" placeholder="Lịch trình tour"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="tour_sale" class="form-label">Giảm giá tour</label>
-                    <input type="text" class="form-control" id="tour_sale" name="tour_sale" placeholder="Giảm giá tour">
-                </div>
-                <div class="mb-3">
-                    <label for="location_id" class="form-label">Location ID</label>
-                    <input type="number" class="form-control" id="location_id" name="location_id" placeholder="Location ID">
-                </div>
-                <div class="mb-3">
-                    <label for="guide_id" class="form-label">Guide ID</label>
-                    <input type="number" class="form-control" id="guide_id" name="guide_id" placeholder="Guide ID">
-                </div>
-                <div class="text-end">
-                    <button type="submit" class="btn btn-primary">Thêm</button>
-                </div>
-            </div>
-        </form>
-
+            </form>
+        </div>
     </div>
 </div>
 
