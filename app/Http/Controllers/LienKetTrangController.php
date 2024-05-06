@@ -6,6 +6,7 @@ use App\Models\Tour;
 use App\Models\User; 
 use App\Models\Guide;
 use App\Models\Location;
+use App\Models\Client;
 use Illuminate\Http\Request;
 // use Ramsey\Uuid\Guid\Guide;
 
@@ -25,7 +26,8 @@ class LienKetTrangController extends Controller
         $user = User::orderBy('id')->get();
         $guide = Guide::orderBy('guide_Id')->get();
         $location = Location::orderBy('location_id')->get();
-        return view($page, ['data'=>$tours,'data_guide'=>$guide, 'data_location'=>$location, 'decentralization'=>$user]);
+        $client = Client::orderBy('client_id')->get();
+        return view($page, ['data'=>$tours,'data_guide'=>$guide, 'data_location'=>$location, 'decentralization'=>$user, 'data_comment'=>$client]);
     }
     public function hienThi($id)
     {
