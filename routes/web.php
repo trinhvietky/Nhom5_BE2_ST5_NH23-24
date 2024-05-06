@@ -32,8 +32,8 @@ require __DIR__.'/auth.php';
 Route::get('/search', [LienKetTrangController::class, 'search']);
 
 Route::get('/{page?}', [LienKetTrangController::class, 'index']);
-Route::get('/user/home', [UserController::class, 'index'])->name('user.home');
-Route::get('/admin/home', [UserController::class, 'index'])->name('admin');
+Route::get('/user/home', [UserController::class, 'index'])->name('home');
+Route::get('/admin/home', [UserController::class, 'index'])->name('home');
 
 
 
