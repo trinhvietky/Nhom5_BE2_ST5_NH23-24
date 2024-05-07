@@ -55,6 +55,6 @@ Route::get('/tours/{id}/edit', [AddTourController::class, 'edit'])->name('tours.
 Route::put('/tours/{id}', [AddTourController::class, 'update'])->name('tours.update');
 
 // Xóa thông tin user
-Route::delete('/xoa/{id}', [AdminController::class, 'xoaUser'])->name('tours.xoaUser');
+Route::delete('/xoaUser/{id}', [AdminController::class, 'xoaUser'])->name('tours.xoaUser');
 // Sửa quyền user
 Route::post('/update-usertype',  [AdminController::class, 'updateUsertype'])->name('tours.suaUser');
