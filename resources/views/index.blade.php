@@ -269,7 +269,22 @@
                     </div>
                     <div class="text-center p-4">
                         <h5 class="mb-0">{{$row->guide_Name}}</h5>
-                        <small>{{$row->guide_Pno}}</small>
+                    </div>
+                    <div class="d-flex border " >
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-phone text-primary me-2"></i>{{ $row->guide_Pno}}</small>
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-envelope text-primary me-2"></i>{{ $row->guide_Mail}}</small>
+                    </div>
+                    <div class="text-center">
+                    <?php
+                        $guideIntro = $row->guide_Intro;
+
+                        // Chia chuỗi thành mảng các từ
+                        $words = explode(' ', $guideIntro);
+
+                        // Lấy 100 từ đầu tiên
+                        $motaGuide = implode(' ', array_slice($words, 0, 50));
+                        ?>
+                        <p style="height: auto;">{{$motaGuide}}</p>
                     </div>
                 </div>
             </div>
