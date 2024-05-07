@@ -1708,3 +1708,6 @@ select {
   }
 }
 
+.image-background {
+  background: red;
+}

@@ -49,11 +49,12 @@ Route::get('/user/tour/{tour_id}', [LienKetTrangController::class, 'hienThiUser'
 Route::post('/tours', [AddTourController::class, 'store'])->name('tours.store');
 
 Route::delete('/tours/{id}', [AddTourController::class, 'destroy'])->name('tours.destroy');
-// Xóa thông tin user
-Route::delete('/tours/{id}', [AdminController::class, 'xoaUser'])->name('tours.xoaUser');
+
 
 Route::get('/tours/{id}/edit', [AddTourController::class, 'edit'])->name('tours.edit');
 Route::put('/tours/{id}', [AddTourController::class, 'update'])->name('tours.update');
 
+// Xóa thông tin user
+Route::delete('/xoa/{id}', [AdminController::class, 'xoaUser'])->name('tours.xoaUser');
 // Sửa quyền user
 Route::post('/update-usertype',  [AdminController::class, 'updateUsertype'])->name('tours.suaUser');
