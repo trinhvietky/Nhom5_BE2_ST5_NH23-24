@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('guides', function (Blueprint $table) {
             $table->increments('guide_Id');
-            $table->string('guide_Name');
-            $table->string('guide_Pno');
-            $table->string('guide_Img');
+            $table->text('guide_Name');
+            $table->text('guide_Pno');
+            $table->text('guide_Img');
+            $table->text('guide_Mail');
+            $table->text('guide_Intro');
             $table->timestamps();
         });
     }
