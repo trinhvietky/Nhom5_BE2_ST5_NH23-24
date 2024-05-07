@@ -89,7 +89,7 @@
 
 
                 </div>
-                <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Đặt ngay</a>
+                <a id="bookingButton" class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Đặt ngay</a>
             </div>
         </div>
     </div>
@@ -175,5 +175,11 @@
     function formatCurrency(amount) {
         return amount.toFixed(0).replace(/\d(?=(\d{3})+$)/g, '$&,');
     }
+
+    document.getElementById("bookingButton").addEventListener("click", function(event) {
+        event.preventDefault();
+            alert("Bạn cần đăng nhập để đặt vé.");
+
+    });
 </script>
 @endsection

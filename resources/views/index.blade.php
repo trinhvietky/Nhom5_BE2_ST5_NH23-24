@@ -55,7 +55,7 @@
                         <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Dịch vụ 24/7</p>
                     </div>
                 </div>
-                <a class="btn btn-primary py-3 px-5 mt-2" href="">Đọc tiếp ...</a>
+                <a class="btn btn-primary py-3 px-5 mt-2" href="{{ url('/about') }}">Đọc tiếp ...</a>
             </div>
         </div>
     </div>
@@ -256,7 +256,7 @@
             <h1 class="text-center text-primary px-3">Hướng dẫn viên du lịch</h1>
         </div>
         <div class="row g-4">
-            @foreach($data_guide as $row)
+            @foreach($data_guide->take(4) as $row)
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="team-item">
                     <div class="overflow-hidden">
@@ -290,6 +290,12 @@
             </div>
             @endforeach
         </div>
+        <!--nút show danh sách -->
+        <div class="row justify-content-center py-3">
+            <div class="col-auto">
+                <a class="btn btn-primary rounded-pill py-3 px-4 mt-2" href="{{ url('/team') }}">Xem thêm ...</a>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Team End -->
@@ -302,7 +308,7 @@
             <h1 class="text-center text-primary px-3">Khách hàng nói gì? </h1>
         </div>
         <div class="owl-carousel testimonial-carousel position-relative">
-            @foreach($data_comment as $row)
+            @foreach($data_comment->take(5) as $row)
             <div class="testimonial-item bg-white text-center border p-4">
                 <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3 img-fluid " src="{{asset('img/' . $row->client_image)}}" style="width: 100px; height: 100px;">
                 <h5 class="mb-0">{{$row->client_name}}</h5>
@@ -310,6 +316,12 @@
                 <p class="mb-0">{{$row->client_comment}}</p>
             </div>
             @endforeach
+        </div>
+        <!--nút show danh sách -->
+        <div class="row justify-content-center py-3">
+            <div class="col-auto">
+                <a class="btn btn-primary rounded-pill py-3 px-4 mt-2" href="{{ url('/testimonial') }}">Xem thêm ...</a>
+            </div>
         </div>
     </div>
 </div>

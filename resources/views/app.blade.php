@@ -86,10 +86,10 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Danh mục</a>
                         <div class="dropdown-menu m-0">
                             <a href="{{ url('/destination') }}" class="dropdown-item">Điểm đến</a>
-                            <a href="{{ url('/booking') }}" class="dropdown-item">Đặt vé</a>
+                            <!-- <a href="{{ url('/booking') }}" class="dropdown-item">Đặt vé</a> -->
                             <a href="{{ url('/team') }}" class="dropdown-item">Hướng dẫn viên</a>
                             <a href="{{ url('/testimonial') }}" class="dropdown-item">Đánh giá từ khách hàng</a>
-                            <a href="{{ url('/404') }}" class="dropdown-item">404 Page</a>
+                            <!-- <a href="{{ url('/404') }}" class="dropdown-item">404 Page</a> -->
                         </div>
                     </div>
                     <a href="contact" class="nav-item nav-link">Liên hệ</a>

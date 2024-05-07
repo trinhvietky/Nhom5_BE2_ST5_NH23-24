@@ -8,12 +8,12 @@
         <div class="container py-5">
             <div class="row justify-content-center py-5">
                 <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Gói</h1>
+                    <h1 class="display-3 text-white animated slideInDown">Tour đang triển khai</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
                             <li class="breadcrumb-item"><a href="#">Trang</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Gói</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Tour đang triển khai</li>
                         </ol>
                     </nav>
                 </div>
@@ -28,7 +28,7 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h1 class="text-center text-primary px-3">Tour phổ biến </h1>
+            <h1 class="text-center text-primary px-3">Tour đang triển khai </h1>
         </div>
 
         <div class="row g-4 justify-content-center">
