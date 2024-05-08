@@ -82,12 +82,12 @@
                     <a href="{{ url('/user.home') }}" class="nav-item nav-link active">Trang chủ</a>
                     <a href="{{ url('/user.about') }}" class="nav-item nav-link">Giới thiệu</a>
                     <a href="{{ url('/user.service') }}" class="nav-item nav-link">Dịch vụ</a>
-                    <a href="{{ url('/user.package') }}" class="nav-item nav-link">Gói</a>
+                    <a href="{{ url('/user.package') }}" class="nav-item nav-link">Tour</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Trang</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Danh mục</a>
                         <div class="dropdown-menu m-0">
-                            <a href="{{ url('/user.destination') }}" class="dropdown-item">Điểm đến</a>
-                            <a href="{{ url('/user.booking') }}" class="dropdown-item">Đặt chuyến đi</a>
+                            <a href="{{ url('/user.destination') }}" class="dropdown-item">Điểm đến phổ biến</a>
+                            <!-- <a href="{{ url('/user.booking') }}" class="dropdown-item">Đặt chuyến đi</a> -->
                             <a href="{{ url('/user.team') }}" class="dropdown-item">Hướng dẫn viên du lịch</a>
                             <a href="{{ url('/user.testimonial') }}" class="dropdown-item">Lời chứng thực</a>
                             <a href="{{ url('/user.404') }}" class="dropdown-item">404 Page</a>
@@ -239,7 +239,7 @@
                     <form action="{{ route('notice.store') }}" method="POST">
                         @csrf
                         <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" id="notice_email" name="notice_email" placeholder="Your email">
                             <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Đăng ký</button>
                         </div>
                     </form>

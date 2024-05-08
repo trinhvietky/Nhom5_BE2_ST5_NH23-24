@@ -23,9 +23,31 @@
 </div>
 <!-- Navbar & Hero End -->
 
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            @foreach($data_comment as $row)
+            <div class="col-lg-2 wow fadeInUp mt-0 mb-0" data-wow-delay="0.1s" style="min-height: 200px;">
+                <div class="position-relative h-20">
+                    <img class="img-fluid position-absolute" src="{{asset('img/' . $row->client_image)}}" alt="" style="width: 200px; height: 200px;">
+                    <hr>
+                </div>
+            </div>
+            <div class="col-lg-10 wow fadeInUp mt-3 mb-0" data-wow-delay="0.3s">
+                <h1 class="mb-4"><span class="text-primary">{{$row->client_name}}</span></h1>
+                <h3 class="mb-4"><span class="text-primary">{{$row->client_address}}</span></h3>
+                <p class="mb-0" style="font-size: 25px;">{{$row->client_comment}}</p>
+            </div>
+            <hr>
+            @endforeach
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
 
 <!-- Testimonial Start -->
-<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+<!-- <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
         <div class="text-center">
             <h1 class="text-center text-primary px-3">Khách hàng nói gì? </h1>
@@ -57,7 +79,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Testimonial End -->
 
 @endsection

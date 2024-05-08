@@ -27,7 +27,7 @@
 <div class="container-xxl py-5 destination">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h1 class="text-center text-primary px-3">Điểm đến phổ biến</h1>
+            <h1 class="text-center text-primary px-3">Điểm đến theo vùng miền</h1>
         </div>
 
         <div class="row g-3">
