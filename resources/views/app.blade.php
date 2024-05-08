@@ -86,10 +86,12 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Danh mục</a>
                         <div class="dropdown-menu m-0">
                             <a href="{{ url('/destination') }}" class="dropdown-item">Điểm đến</a>
+<<<<<<< HEAD
                             <!-- <a href="{{ url('/booking') }}" class="dropdown-item">Đặt vé</a> -->
+=======
+>>>>>>> 5277d6b061aee23fa46e80774f2605ec7cd33435
                             <a href="{{ url('/team') }}" class="dropdown-item">Hướng dẫn viên</a>
                             <a href="{{ url('/testimonial') }}" class="dropdown-item">Đánh giá từ khách hàng</a>
-                            <!-- <a href="{{ url('/404') }}" class="dropdown-item">404 Page</a> -->
                         </div>
                     </div>
                     <a href="contact" class="nav-item nav-link">Liên hệ</a>
@@ -107,7 +109,7 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Công ty</h4>
+                    <h4 class="text-white mb-3">Discovery</h4>
                     <a class="btn btn-link" href="">Giới thiệu</a>
                     <a class="btn btn-link" href="">Liên hệ chúng tôi</a>
                     <a class="btn btn-link" href="">Chính sách bảo mật</a>
@@ -115,7 +117,7 @@
                     <a class="btn btn-link" href="">Câu hỏi và trợ giúp</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Contact</h4>
+                    <h4 class="text-white mb-3">Liên hệ</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>39 Nguyễn Huệ, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+0924 242 424</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>discovery@mail.tour.com</p>

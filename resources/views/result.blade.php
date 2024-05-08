@@ -78,11 +78,6 @@
 </div>
 <!-- Package End -->
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> b6794b8c6c058fcf7c3e39854185e7c612441967
 <!-- Process Start -->
 <div class="container-xxl py-5">
     <div class="container">
