@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Tour;
+use App\Models\Guide;
 use App\Models\Notification;
 
 class AddTourController extends Controller
@@ -84,5 +85,64 @@ class AddTourController extends Controller
         $tour->update($validatedData);
 
         return redirect()->back()->with('success', 'Tour đã được cập nhật thành công!');
+    }
+    //-------------------------------------------------------------------------------------
+
+
+    public function storeGuide(Request $request)
+    {
+        // Validate form data
+        $validatedData = $request->validate([
+            'guide_name' => 'required|string|max:255',
+            'guide_pno' => 'required|string',
+            'guide_image' => 'required|string',
+            'guide_mail' => 'required|string',
+            'guide_intro' => 'required|string',
+        ]);
+
+        // Create a new tour instance
+        $guide = new Guide;
+        $guide->guide_Name = $validatedData['guide_name'];
+        $guide->guide_Pno = $validatedData['guide_pno'];
+        $guide->guide_Img = $validatedData['guide_image'];
+        $guide->guide_Mail = $validatedData['guide_mail'];
+        $guide->guide_Intro = $validatedData['guide_intro'];
+        $guide->save();
+
+        // Redirect back or to a success page
+        return redirect()->back()->with('success', 'Đã thêm hướng dẫn viên mới!');
+    }
+
+    public function destroyGuide($id)
+    {
+        $guide = Guide::findOrFail($id);
+        $guide->delete();
+
+        return redirect()->back()->with('success', 'Hướng dẫn viên đã bị đuổi!');
+    }
+
+    public function editGuide($id)
+    {
+        $guide = Guide::findOrFail($id);
+        return view('admin.editGuide', compact('guide'));
+    }
+
+    public function updateGuide(Request $request, $id)
+    {
+    // Validate the incoming request data
+    $validatedData = $request->validate([
+        'guide_Name' => 'required|string|max:255',
+        'guide_Pno' => 'required|string',
+        'guide_Img' => 'required|string',
+        'guide_Mail' => 'required|string',
+        'guide_Intro' => 'required|string',
+    ]);
+    // Tìm guide dựa trên id hoặc trả về null nếu không tìm thấy
+    $guide = Guide::findOrFail($id);
+
+    // Cập nhật thông tin của guide
+    $guide->update($validatedData);
+
+    return redirect()->back()->with('success', 'Thông tin hướng dẫn viên đã được cập nhật thành công!');
     }
 }

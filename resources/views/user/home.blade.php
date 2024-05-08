@@ -289,7 +289,7 @@
             <h1 class="mb-5">Gặp gỡ hướng dẫn của chúng tôi</h1>
         </div>
         <div class="row g-4">
-            @foreach($data_guide as $row)
+        @foreach($data_guide->take(4) as $row)
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="team-item">
                     <div class="overflow-hidden">
@@ -301,12 +301,33 @@
                         <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
                     </div>
                     <div class="text-center p-4">
-                        <h5 class="mb-0">{{$row->guide_Name}}</h5>
-                        <small>{{$row->guide_Pno}}</small>
+                    <h5 class="mb-0">{{$row->guide_Name}}</h5>
+                    </div>
+                    <div class="d-flex border " >
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-phone text-primary me-2"></i>{{ $row->guide_Pno}}</small>
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-envelope text-primary me-2"></i>{{ $row->guide_Mail}}</small>
+                    </div>
+                    <div class="text-center">
+                    <?php
+                        $guideIntro = $row->guide_Intro;
+
+                        // Chia chuỗi thành mảng các từ
+                        $words = explode(' ', $guideIntro);
+
+                        // Lấy 100 từ đầu tiên
+                        $motaGuide = implode(' ', array_slice($words, 0, 50));
+                        ?>
+                        <p style="height: auto;">{{$motaGuide}}</p>
                     </div>
                 </div>
             </div>
             @endforeach
+        </div>
+        <!--nút show danh sách -->
+        <div class="row justify-content-center py-3">
+            <div class="col-auto">
+                <a class="btn btn-primary rounded-pill py-3 px-4 mt-2" href="{{ url('/team') }}">Xem thêm ...</a>
+            </div>
         </div>
     </div>
 </div>
