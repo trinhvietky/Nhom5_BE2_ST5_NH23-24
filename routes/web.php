@@ -7,6 +7,7 @@ use App\Models\Tour;
 use App\Http\Controllers\LienKetTrangController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\NoticeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,3 +59,5 @@ Route::put('/tours/{id}', [AddTourController::class, 'update'])->name('tours.upd
 Route::delete('/xoaUser/{id}', [AdminController::class, 'xoaUser'])->name('tours.xoaUser');
 // Sửa quyền user
 Route::post('/update-usertype',  [AdminController::class, 'updateUsertype'])->name('tours.suaUser');
+// Đăng ký thông báo user
+Route::post('/notice', [NoticeController::class, 'store'])->name('notice.store');

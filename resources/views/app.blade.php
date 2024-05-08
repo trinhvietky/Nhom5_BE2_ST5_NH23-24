@@ -86,7 +86,6 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Danh mục</a>
                         <div class="dropdown-menu m-0">
                             <a href="{{ url('/destination') }}" class="dropdown-item">Điểm đến</a>
-                            <a href="{{ url('/booking') }}" class="dropdown-item">Đặt vé</a>
                             <a href="{{ url('/team') }}" class="dropdown-item">Hướng dẫn viên</a>
                             <a href="{{ url('/testimonial') }}" class="dropdown-item">Đánh giá từ khách hàng</a>
                             <a href="{{ url('/404') }}" class="dropdown-item">404 Page</a>
@@ -101,9 +100,6 @@
     </div>
     @yield('content')
     <!-- Navbar & Hero End -->
-
-
-    <!--  -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -155,10 +151,14 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Bản tin</h4>
                     <p>Để nhận được các bản tin về du lịch, bạn vui lòng nhập email đăng ký với chúng tôi</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Đăng ký</button>
-                    </div>
+                    <form action="{{ route('notice.store') }}" method="POST">
+                        @csrf
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" id="notice_email" name="notice_email" placeholder="Your email">
+                            <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Đăng ký</button>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>

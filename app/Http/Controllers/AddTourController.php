@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Tour;
+use App\Models\Notification;
 
 class AddTourController extends Controller
 {

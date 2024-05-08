@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tour;
+use App\Models\Notification;
 use App\Models\Guide;
 use App\Models\Location;
 use App\Models\User;
