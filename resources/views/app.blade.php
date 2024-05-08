@@ -86,6 +86,10 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Danh mục</a>
                         <div class="dropdown-menu m-0">
                             <a href="{{ url('/destination') }}" class="dropdown-item">Điểm đến</a>
+<<<<<<< HEAD
+                            <!-- <a href="{{ url('/booking') }}" class="dropdown-item">Đặt vé</a> -->
+=======
+>>>>>>> 5277d6b061aee23fa46e80774f2605ec7cd33435
                             <a href="{{ url('/team') }}" class="dropdown-item">Hướng dẫn viên</a>
                             <a href="{{ url('/testimonial') }}" class="dropdown-item">Đánh giá từ khách hàng</a>
                         </div>
