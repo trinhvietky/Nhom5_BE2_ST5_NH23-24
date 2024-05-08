@@ -7,6 +7,8 @@ use App\Models\Tour;
 use App\Http\Controllers\LienKetTrangController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\ClientController;
 /*
@@ -30,7 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 
 Route::get('/{page?}', [LienKetTrangController::class, 'index']);
@@ -92,3 +94,9 @@ Route::post('/update-usertype',  [AdminController::class, 'updateUsertype'])->na
 Route::post('/notice', [NoticeController::class, 'store'])->name('notice.store');
 // comment
 Route::post('/submit-comment', [ClientController::class, 'store'])->name('submit_comment');
+
+// booking
+Route::get('/user/{id}', [BookingController::class, 'show'])->name('booking.show');
+Route::post('/user/{id}/{abc?}', [BookingController::class, 'store'])->name('booking.store');
+
+Route::post('/vnpay_payment', [CheckoutController::class, 'vnpay_payment']);
