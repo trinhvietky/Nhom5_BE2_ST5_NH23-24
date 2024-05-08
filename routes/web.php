@@ -8,6 +8,7 @@ use App\Http\Controllers\LienKetTrangController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\NoticeController;
+use App\Http\Controllers\ClientController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,3 +62,5 @@ Route::delete('/xoaUser/{id}', [AdminController::class, 'xoaUser'])->name('tours
 Route::post('/update-usertype',  [AdminController::class, 'updateUsertype'])->name('tours.suaUser');
 // Đăng ký thông báo user
 Route::post('/notice', [NoticeController::class, 'store'])->name('notice.store');
+// comment
+Route::post('/submit-comment', [ClientController::class, 'store'])->name('submit_comment');
