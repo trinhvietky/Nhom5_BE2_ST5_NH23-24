@@ -85,7 +85,7 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="quantity buttons_added">
-                                <input name="booking_customer_phone" id="quantityInput" type="text" class="input-text qty text border-1">
+                                <input name="booking_customer_phone" id="phoneInput" type="text" class="input-text qty text border-1">
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -187,6 +187,20 @@
     function formatCurrency(amount) {
         return amount.toFixed(0).replace(/\d(?=(\d{3})+$)/g, '$&,');
     }
+
+    document.getElementById("bookingButton").addEventListener("click", function(event) {
+        const quantityInput = document.getElementById('quantityInput');
+        const phoneInput = document.getElementById('phoneInput');
+
+        if (phoneInput.value == "" && quantityInput.value == 0) {
+            alert("Bạn cần nhập số lượng và số điện thoại để đặt vé.");
+        } else if (quantityInput.value == 0) {
+            alert("Bạn cần nhập số lượng để đặt vé.");
+        } else if (phoneInput.value == "") {
+            alert("Bạn cần nhập số điện thoại để đặt vé.");
+        }
+
+    });
 </script>
 
 @endsection
