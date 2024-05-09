@@ -89,12 +89,48 @@
 
 
                 </div>
-                <a id="bookingButton" class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Đặt ngay</a>
+                <!-- <a id="btn-dang-nhap" class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Đặt ngay</a> -->
+                <button id="btn-dang-nhap" class="btn btn-primary rounded-pill py-3 px-5 mt-2">Đặt Ngay</button>
             </div>
         </div>
     </div>
 </div>
 <!-- About End -->
+<!-- Modal Đăng Nhập -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Bạn chưa đăng nhập</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Vui lòng đăng nhập để đặt chuyến</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <a href="{{route('login')}}" class="btn btn-primary rounded-pill py-2 px-4 m-2">Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<script>
+    // Xử lý sự kiện click vào nút Đặt Ngay
+    $('#btn-dang-nhap').click(function() {
+        $('#loginModal').modal('show'); // Hiển thị modal Đăng Nhập
+    });
+
+    // Xử lý sự kiện click nút Đăng Nhập
+    $('#btn-login').click(function() {
+        // Thực hiện các thao tác đăng nhập ở đây (nếu cần)
+        // Sau đó ẩn modal Đăng Nhập
+        $('#loginModal').modal('hide');
+    });
+</script>
 
 
 <!-- Team Start -->
