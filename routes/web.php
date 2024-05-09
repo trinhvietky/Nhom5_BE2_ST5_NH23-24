@@ -38,6 +38,36 @@ Route::get('/{page?}', [LienKetTrangController::class, 'index']);
 Route::get('/user/home', [UserController::class, 'index'])->name('user.home');
 Route::get('/admin/home', [UserController::class, 'index'])->name('home');
 
+//USER CHƯA CÓ TÀI KHOẢN
+
+//-------Hiển thị tour theo địa điểm
+Route::get('/tour_location/{location_id}', [LienKetTrangController::class, 'hienThiTourTheoDiaDiem'])->name('tour.location');
+
+//-------Hiển thị chi tiết tour
+Route::get('/user/tour/{tour_id}', [LienKetTrangController::class, 'hienThiUser'])->name('tour.readmore');
+
+//-------Tìm và hiển thị kết quả tìm kiếm
+Route::get('/search', [LienKetTrangController::class, 'search']);
+
+
+
+
+
+//USER ĐÃ CÓ TÀI KHOẢN
+
+//-------Hiển thị tour theo địa điểm
+Route::get('/user/tour_location/{location_id}', [LienKetTrangController::class, 'userHienThiTourTheoDiaDiem'])->name('user.tour.location');
+
+//-------Hiển thị chi tiết tour
+Route::get('/user/booking/{tour_id}', [LienKetTrangController::class, 'userHienThiChiTietTuor'])->name('user.tour.readmore');
+
+//-------Tìm và hiển thị kết quả tìm kiếm
+Route::get('/user/result', [LienKetTrangController::class, 'userSearch'])->name('searchUser');
+
+
+
+
+
 
 
 // Route::get('/booking/{tour_id}', [BookingController::class, 'showBooking'])->name('booking');
@@ -45,9 +75,7 @@ Route::get('/admin/home', [UserController::class, 'index'])->name('home');
 Route::get('/tour/{tour_id}', [LienKetTrangController::class, 'hienThi'])->name('tourShow.booking');
 Route::get('/user/tour/{tour_id}', [LienKetTrangController::class, 'show'])->name('tour.booking');
 
-Route::get('/tour_location/{location_id}', [LienKetTrangController::class, 'hienThiTourTheoDiaDiem'])->name('tour.location');
 
-Route::get('/user/tour/{tour_id}', [LienKetTrangController::class, 'hienThiUser'])->name('tour.readmore');
 
 // thêm tour
 Route::post('/tours', [AddTourController::class, 'store'])->name('tours.store');

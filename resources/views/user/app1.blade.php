@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Tourist - Travel Agency HTML Template</title>
+    <title>Discovery</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -48,9 +48,9 @@
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
-                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>discovery@example.com</small>
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>39 Nguyễn Huệ, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>0924 242 424</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>discovery@mail.tour.com</small>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
@@ -86,11 +86,9 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Danh mục</a>
                         <div class="dropdown-menu m-0">
-                            <a href="{{ url('/user.destination') }}" class="dropdown-item">Điểm đến phổ biến</a>
-                            <!-- <a href="{{ url('/user.booking') }}" class="dropdown-item">Đặt chuyến đi</a> -->
-                            <a href="{{ url('/user.team') }}" class="dropdown-item">Hướng dẫn viên du lịch</a>
-                            <a href="{{ url('/user.testimonial') }}" class="dropdown-item">Lời chứng thực</a>
-                            <a href="{{ url('/user.404') }}" class="dropdown-item">404 Page</a>
+                            <a href="{{ url('/user.destination') }}" class="dropdown-item">Điểm đến</a>
+                            <a href="{{ url('/user.team') }}" class="dropdown-item">Hướng dẫn viên</a>
+                            <a href="{{ url('/user.testimonial') }}" class="dropdown-item">Đánh giá từ khách hàng</a>
                         </div>
                     </div>
                     <a href="{{ url('/user.contact') }}" class="nav-item nav-link">Liên hệ</a>
@@ -191,18 +189,18 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Công ty</h4>
-                    <a class="btn btn-link" href="">Về chúng tôi</a>
+                    <h4 class="text-white mb-3">Discovery</h4>
+                    <a class="btn btn-link" href="">Giới thiệu</a>
                     <a class="btn btn-link" href="">Liên hệ chúng tôi</a>
                     <a class="btn btn-link" href="">Chính sách bảo mật</a>
                     <a class="btn btn-link" href="">Điều khoản & Điều kiện</a>
-                    <a class="btn btn-link" href="">Câu hỏi thường gặp và trợ giúp</a>
+                    <a class="btn btn-link" href="">Câu hỏi và trợ giúp</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Contact</h4>
+                    <h4 class="text-white mb-3">Liên hệ</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>39 Nguyễn Huệ, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+0924 242 424</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>discovery@example.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>discovery@mail.tour.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -211,7 +209,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Phòng trưng bày</h4>
+                    <h4 class="text-white mb-3">Sản phẩm của chúng tôi</h4>
                     <div class="row g-2 pt-2">
                         <div class="col-4">
                             <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt="">
@@ -235,7 +233,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Bản tin</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <p>Để nhận được bản tin về du lịch, bạn vui lòng nhập email đăng ký với chúng tôi.</p>
                     <form action="{{ route('notice.store') }}" method="POST">
                         @csrf
                         <div class="position-relative mx-auto" style="max-width: 400px;">

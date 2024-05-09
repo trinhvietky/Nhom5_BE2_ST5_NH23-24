@@ -81,7 +81,7 @@
             <h1 class="text-center text-primary px-3">Khách hàng nói gì? </h1>
         </div>
         <div class="owl-carousel testimonial-carousel position-relative">
-            @foreach($data_comment as $row)
+            @foreach($data_comment->take(5) as $row)
             <div class="testimonial-item bg-white text-center border p-4">
                 <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3 img-fluid " src="{{asset('img/' . $row->client_image)}}" style="width: 100px; height: 100px;">
                 <h5 class="mb-0">{{$row->client_name}}</h5>
@@ -89,6 +89,12 @@
                 <p class="mb-0">{{$row->client_comment}}</p>
             </div>
             @endforeach
+        </div>
+        <!--nút show danh sách -->
+        <div class="row justify-content-center py-3">
+            <div class="col-auto">
+                <a class="btn btn-primary rounded-pill py-3 px-4 mt-2" href="{{ url('/testimonial') }}">Xem thêm ...</a>
+            </div>
         </div>
     </div>
 </div>
