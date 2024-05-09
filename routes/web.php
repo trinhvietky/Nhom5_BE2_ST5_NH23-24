@@ -33,7 +33,8 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
-
+// Tìm kiếm của user không tài khoản
+Route::get('/search', [LienKetTrangController::class, 'search']);
 
 Route::get('/{page?}', [LienKetTrangController::class, 'index']);
 Route::get('/user/home', [UserController::class, 'index'])->name('user.home');
@@ -78,13 +79,23 @@ Route::get('/user/tour/{tour_id}', [LienKetTrangController::class, 'show'])->nam
 
 
 
+// thêm tour
 Route::post('/tours', [AddTourController::class, 'store'])->name('tours.store');
-
+// xóa tour
 Route::delete('/tours/{id}', [AddTourController::class, 'destroy'])->name('tours.destroy');
-
-
+// chỉnh sửa tour
 Route::get('/tours/{id}/edit', [AddTourController::class, 'edit'])->name('tours.edit');
+// cập nhật tour
 Route::put('/tours/{id}', [AddTourController::class, 'update'])->name('tours.update');
+
+// thêm guide
+Route::post('/guide', [AddTourController::class, 'storeGuide'])->name('guide.store');
+// xóa guide
+Route::delete('/guide/{id}', [AddTourController::class, 'destroyGuide'])->name('guide.destroy');
+// chỉnh sửa guide
+Route::get('/guide/{id}/edit', [AddTourController::class, 'editGuide'])->name('guide.edit');
+// cập nhật guide
+Route::put('/guide/{id}', [AddTourController::class, 'updateGuide'])->name('guide.update');
 
 // Xóa thông tin user
 Route::delete('/xoaUser/{id}', [AdminController::class, 'xoaUser'])->name('tours.xoaUser');
