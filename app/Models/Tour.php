@@ -31,4 +31,9 @@ class Tour extends Model
     {
         return $this->belongsTo(Guide::class, 'guide_id', 'guide_Id');
     }
+    // Mối quan hệ ngược từ Tour tới Client
+    public function clients()
+    {
+        return $this->hasMany(Client::class);
+    }
 }

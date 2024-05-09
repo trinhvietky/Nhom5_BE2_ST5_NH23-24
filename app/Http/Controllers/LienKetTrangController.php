@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use App\Models\Tour;
 use App\Models\User;
 use App\Models\Guide;
@@ -15,12 +15,13 @@ class LienKetTrangController extends Controller
 
     public function index($page = "index")
     {
+        $user_main = Auth::user(); // Lấy thông tin người dùng đã đăng nhập
         $tours = Tour::orderBy('tour_id')->get();
         $user = User::orderBy('id')->get();
         $guide = Guide::orderBy('guide_Id')->get();
         $location = Location::orderBy('location_id')->get();
         $client = Client::orderBy('client_id')->get();
-        return view($page, ['data' => $tours, 'data_guide' => $guide, 'data_location' => $location, 'decentralization' => $user, 'data_comment' => $client]);
+        return view($page, ['user_main' => $user_main,'data' => $tours, 'data_guide' => $guide, 'data_location' => $location, 'decentralization' => $user, 'data_comment' => $client]);
     }
     public function hienThi($id)
     {
@@ -56,9 +57,11 @@ class LienKetTrangController extends Controller
 
     public function userHienThiChiTietTuor($id)
     {
+        $client = Client::orderBy('client_id')->get();
+        $user_main = Auth::user(); // Lấy thông tin người dùng đã đăng nhập
         $tours = Tour::orderBy('tour_id')->get();
         $tour = Tour::findOrFail($id);
-        return view('user.booking', ['value' => $tour, 'data' => $tours]);
+        return view('user.booking', ['user_main' => $user_main,'value' => $tour, 'data' => $tours, 'data_comment' => $client]);
     }
 
     public function userSearch(Request $request)

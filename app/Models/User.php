@@ -41,4 +41,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // Mối quan hệ ngược từ User tới Client
+    public function clients()
+    {
+        return $this->hasMany(Client::class);
+    }
 }
