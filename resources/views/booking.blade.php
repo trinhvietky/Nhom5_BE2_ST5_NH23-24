@@ -79,6 +79,12 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-users text-primary me-2"></i>Voucher: </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0 text-danger" id="voucher"></p>
+                    </div>
+                    <div class="col-sm-6">
                         <p class="mb-0"><i class="fa fa-money-check text-primary me-2"></i>Thành tiền</p>
                     </div>
                     <div class="col-sm-6">
@@ -187,7 +193,10 @@
                         // Lấy 100 từ đầu tiên
                         $mota = implode(' ', array_slice($words, 0, 50));
                         ?>
-                        <p style="height: 130px;">{{$mota}} ... </p>
+                        <p style="height: 110px;">{{$mota}} ... </p>
+
+                        <p class="text-danger" style="font-size: 20px; font-weight: bold;">Số chỗ còn trống: {{$row->total_seats - $row->booked_seats}} chỗ</p>
+
                         <div class="d-flex justify-content-center mb-2 pb-2">
                             <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
                             <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
@@ -204,7 +213,29 @@
     document.getElementById('quantityInput').addEventListener('input', function() {
         var quantity = parseInt(this.value);
         var price = parseFloat("{{$value->price}}");
-        var subtotal = quantity * price;
+        let voucher = 0;
+        if (quantity == 0) {
+
+            document.getElementById('voucher').textContent = '';
+        }
+        if (quantity == 1) {
+            voucher = 0.9;
+            document.getElementById('voucher').textContent = 'Giảm giá 10%';
+        } else if (quantity == 2) {
+            voucher = 0.85;
+            document.getElementById('voucher').textContent = 'Giảm giá 15%';
+        } else {
+            voucher = 0.8;
+            document.getElementById('voucher').textContent = 'Giảm giá 20%';
+        }
+
+        if (quantity == 0) {
+
+            document.getElementById('voucher').textContent = '';
+        }
+
+        var subtotal = quantity * price * voucher;
+
         document.getElementById('subtotal').textContent = formatCurrency(subtotal) + ' vnđ';
     });
 
@@ -214,7 +245,7 @@
 
     document.getElementById("bookingButton").addEventListener("click", function(event) {
         event.preventDefault();
-            alert("Bạn cần đăng nhập để đặt vé.");
+        alert("Bạn cần đăng nhập để đặt vé.");
 
     });
 </script>
