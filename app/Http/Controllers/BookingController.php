@@ -43,21 +43,21 @@ class BookingController extends Controller
     {
         $user = User::findOrFail($booking_user_id);
         $tour = Tour::findOrFail($booking_tour_id);
-        $amount = $tour->price * 3;
+        $amount = $tour->price * $request->input('booking_quantity');
         $booking = new Booking();
         $booking->booking_customer_name = $user->name;
         $booking->booking_customer_email = $user->email;
-        $booking->booking_customer_quantity = 3;
+        $booking->booking_customer_quantity = $request->input('booking_quantity');
         $booking->booking_customer_phone = $request->input('booking_customer_phone');
         $booking->booking_amount = $amount;
         $booking->booking_tour_id = $booking_tour_id;
         $booking->booking_user_id = $booking_user_id;
 
-        session_start();
+        // session_start();
 
 
-        // $checkoutController = new CheckoutController();
-        // $checkoutController->vnpay_payment($booking);
+        $checkoutController = new CheckoutController();
+        $checkoutController->vnpay_payment($booking);
 
         // Redirect back or to a success page
         // return redirect('/user/tour/1');

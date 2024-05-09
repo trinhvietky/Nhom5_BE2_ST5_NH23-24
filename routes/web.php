@@ -96,7 +96,7 @@ Route::post('/notice', [NoticeController::class, 'store'])->name('notice.store')
 Route::post('/submit-comment', [ClientController::class, 'store'])->name('submit_comment');
 
 // booking
-Route::get('/user/{id}', [BookingController::class, 'show'])->name('booking.show');
-Route::post('/user/{id}/{abc?}', [BookingController::class, 'store'])->name('booking.store');
+// Route::get('/user/{id}', [BookingController::class, 'show'])->name('booking.show');
+Route::post('/user/{booking_tour_id}/{booking_user_id?}', [BookingController::class, 'store'])->name('booking.store');
 
 Route::post('/vnpay_payment', [CheckoutController::class, 'vnpay_payment']);

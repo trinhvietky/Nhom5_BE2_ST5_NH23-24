@@ -83,12 +83,12 @@
                     <div class="text-center p-4">
                         <h5 class="mb-0">{{$row->guide_Name}}</h5>
                     </div>
-                    <div class="d-flex border " >
+                    <div class="d-flex border ">
                         <small class="flex-fill text-center border-end py-2"><i class="fa fa-phone text-primary me-2"></i>{{ $row->guide_Pno}}</small>
                         <small class="flex-fill text-center border-end py-2"><i class="fa fa-envelope text-primary me-2"></i>{{ $row->guide_Mail}}</small>
                     </div>
                     <div class="text-center">
-                    <?php
+                        <?php
                         $guideIntro = $row->guide_Intro;
 
                         // Chia chuỗi thành mảng các từ
@@ -112,5 +112,7 @@
     </div>
 </div>
 <!-- Team End -->
+
+
 
 @endsection

@@ -14,7 +14,7 @@ class CheckoutController extends Controller
             date_default_timezone_set('Asia/Ho_Chi_Minh');
 
             $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-            $vnp_Returnurl = "http://127.0.0.1:8000/user/tour/1";
+            $vnp_Returnurl = "http://127.0.0.1:8000/user.home";
             $vnp_TmnCode = "VLQ7W9CS"; //Mã website tại VNPAY 
             $vnp_HashSecret = "F1ZHK1GCTWQAES1CZH1ZVNUJO8YSRVCZ"; //Chuỗi bí mật
 

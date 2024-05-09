@@ -77,7 +77,7 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="quantity buttons_added">
-                                <input id="quantityInput" style="text-align: center;" type="number" size="4" class="input-text qty text border-1" title="Qty" value="0" min="0" step="1">
+                                <input name="booking_quantity" id="quantityInput" style="text-align: center;" type="number" size="4" class="input-text qty text border-1" title="Qty" value="0" min="0" step="1">
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -164,8 +164,8 @@
                         <p style="height: 150px;">{{$mota}} ... </p>
 
                         <div class="d-flex justify-content-center mb-2">
-                            <a href="{{ route('tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
-                            <a href="{{ route('tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
+                            <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
+                            <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
                         </div>
                     </div>
                 </div>
