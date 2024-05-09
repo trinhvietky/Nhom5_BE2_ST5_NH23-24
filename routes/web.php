@@ -36,7 +36,7 @@ require __DIR__ . '/auth.php';
 // Tìm kiếm của user không tài khoản
 Route::get('/search', [LienKetTrangController::class, 'search']);
 
-Route::get('/{page?}', [LienKetTrangController::class, 'index']);
+
 Route::get('/user/home', [UserController::class, 'index'])->name('user.home');
 Route::get('/admin/home', [UserController::class, 'index'])->name('home');
 
@@ -111,3 +111,5 @@ Route::post('/submit-comment', [ClientController::class, 'store'])->name('submit
 Route::post('/user/{booking_tour_id}/{booking_user_id?}', [BookingController::class, 'store'])->name('booking.store');
 
 Route::post('/vnpay_payment', [CheckoutController::class, 'vnpay_payment']);
+
+Route::get('/{page?}', [LienKetTrangController::class, 'index']);
