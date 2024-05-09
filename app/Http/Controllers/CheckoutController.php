@@ -111,7 +111,7 @@ class CheckoutController extends Controller
             if (isset($_POST['redirect'])) {
 
                 header('Location: ' . $vnp_Url);
-                // $booking->save();
+                $booking->save();
                 die();
             } else {
                 echo json_encode($returnData);
