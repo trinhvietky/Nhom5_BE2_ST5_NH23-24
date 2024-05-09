@@ -53,6 +53,8 @@ class TourSeeder extends Seeder
                 <p>Trưa: Đến Yên Minh, ăn trưa tại nhà hàng. Sau bữa trưa, Quý khách tiếp tục lên xe về .</p>
                 <p>Trong trường hợp kịp thời gian, xe và hướng dẫn viên sẽ đưa Quý khách vào thăm quan Làng dệt Lanh Lùng Tám nổi tiếng với kỹ thuật dệt lanh của người HMông trắng ( lưu ý: đây là điểm không bắt buộc phải đi).</p>',
                 'tour_sale' => '10%',
+                'total_seats' => 45,
+                'booked_seats' => 0,
                 'location_id' => 1,
                 'guide_id' => 1,
                 'created_at' => now(),
@@ -107,6 +109,8 @@ class TourSeeder extends Seeder
                 <p>Đến giờ hẹn đoàn khởi hành ra sân bay Đà Nẵng làm thủ tục bay về TP. Hồ Chí Minh, trên chuyến bay VJ633 17:40. Kết thúc hành trình tour du lịch Đà Nẵng 3 ngày 2 đêm.</p>',
 
                 'tour_sale' => '15%',
+                'total_seats' => 45,
+                'booked_seats' => 0,
                 'location_id' => 2,
                 'guide_id' => 2,
                 'created_at' => now(),
@@ -154,6 +158,8 @@ class TourSeeder extends Seeder
                 <p>Quý khách dùng bữa sáng, thư giãn tại khách sạn đến giờ trả phòng. Sau đó, xe đưa đoàn tham quan và mua sắm đặc sản nổi tiếng tại Nhà thùng nước mắm Hồng Đức 1 / Khải Hoàn / Phụng Hưng, Đặc sản Đức Thạnh, Cơ sở sản xuất ngọc trai Phú Quốc - Trưng bày các trang sức bằng ngọc trai chính hiệu được nuôi cấy tại Phú Quốc. </p>
                 <p>Xe đưa Quý khách ra sân bay đáp chuyến bay trở về TP Hồ Chí Minh. Chia tay Quý khách và kết thúc chương trình du lịch tại sân bay Tân Sơn Nhất.</p>',
                 'tour_sale' => '15%',
+                'total_seats' => 45,
+                'booked_seats' => 0,
                 'location_id' => 3,
                 'guide_id' => 5,
                 'created_at' => now(),
@@ -191,6 +197,8 @@ class TourSeeder extends Seeder
                 <h3>Ngày 4 - NHA TRANG - TP. HỒ CHÍ MINH (Ăn sáng, trưa)</h3>
                 <p>Sau khi dùng bữa sáng, xe đưa đoàn về lại thành phố Hồ Chí Minh, trên đường Quý khách ghé Ninh Thuận mua các sản phẩm đặc sản (nho, tỏi) của vùng đất nắng và gió nơi đây về làm quà cho người thân. Đến điểm đón ban đầu, chia tay đoàn và kết thúc chương trình du lịch.</p>',
                 'tour_sale' => '5%',
+                'total_seats' => 45,
+                'booked_seats' => 0,
                 'location_id' => 2,
                 'guide_id' => 4,
                 'created_at' => now(),
@@ -253,6 +261,8 @@ class TourSeeder extends Seeder
                 </p>
                 <p>Xe khởi hành đưa Quý khách ra sân bay Nội Bài làm thủ tục đón chuyến bay về Tp.HCM. Chia tay Quý khách và kết thúc chương trình du lịch tại sân bay Tân Sơn Nhất.</p>',
                 'tour_sale' => '10%',
+                'total_seats' => 45,
+                'booked_seats' => 0,
                 'location_id' => 1,
                 'guide_id' => 4,
                 'created_at' => now(),
@@ -288,6 +298,8 @@ class TourSeeder extends Seeder
                 <p>Quý khách dùng bữa sáng tại khách sạn, tự do nghỉ ngơi thư giãn và tắm biển. </p>
                 <p>Xe đưa Quý khách khởi hành ra sân bay Côn Đảo trở về TP.Hồ Chí Minh. Chia tay Quý khách và kết thúc chuyến du lịch tại sân bay Tân Sơn Nhất.</p>',
                 'tour_sale' => '25%',
+                'total_seats' => 45,
+                'booked_seats' => 0,
                 'location_id' => 3,
                 'guide_id' => 4,
                 'created_at' => now(),

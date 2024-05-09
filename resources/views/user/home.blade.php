@@ -183,6 +183,9 @@
                         $mota = implode(' ', array_slice($words, 0, 50));
                         ?>
                         <p style="height: 130px;">{{$mota}} ... </p>
+
+                        <p class="text-danger" style="font-size: 20px; font-weight: bold;">Số chỗ còn trống: {{$row->total_seats - $row->booked_seats}} chỗ</p>
+                        
                         <div class="d-flex justify-content-center mb-2 pb-2">
                             <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
                             <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
