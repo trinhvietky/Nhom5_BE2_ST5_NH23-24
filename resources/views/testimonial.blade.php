@@ -23,18 +23,15 @@
 </div>
 <!-- Navbar & Hero End -->
 <div class="container mt-5">
-    <form method="POST" action="{{ route('submit_comment') }}">
+<form method="POST" action="{{ route('submit_comment') }}">
         @csrf
         <div class="mb-3">
-            <label for="commentContent" class="form-label">Nhập nội dung bình luận...</label>
-            <textarea class="form-control" id="commentContent" name="client_comment" rows="3"></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="name" class="form-label">Nhập tên</label>
+            <label for="name" class="form-label text-primary" style="font-weight: bold; font-size: 25px;">Họ và tên của bạn</label>
             <input type="text" class="form-control" name="client_name" id="name">
         </div>
+
         <div class="mb-3">
-            <label for="province" class="form-label">Chọn tỉnh/Thành phố</label>
+            <label for="province" class="form-label text-primary" style="font-weight: bold; font-size: 25px;">Bạn đến từ đâu</label>
             <select class="form-select" id="province" name="client_address">
                 <option value="">Chọn tỉnh/Thành phố</option>
                 <option value="Hà Nội">Hà Nội</option>
@@ -102,11 +99,23 @@
             </select>
 
         </div>
+
         <div class="mb-3">
-            <label for="fileUpload" class="form-label">Tải ảnh lên</label>
+            <label for="commentContent" class="form-label text-primary" style="font-weight: bold; font-size: 25px;">Bạn đang nghĩ gì?</label>
+            <textarea class="form-control" id="commentContent" name="client_comment" rows="3"></textarea>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="fileUpload" class="form-label text-primary" style="font-weight: bold; font-size: 25px;">Chọn một tấm ảnh của bạn mà bạn ưng ý nhất</label>
             <input type="file" class="form-control" id="fileUpload" name="client_image" accept="image/*">
         </div>
-        <button type="submit" class="btn btn-primary">Gửi Bình Luận</button>
+        <div class="row justify-content-center py-3">
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary rounded-pill mt-3 mb-3">Gửi Bình Luận</button>
+            </div>
+        </div>
+
     </form>
 </div>
 
