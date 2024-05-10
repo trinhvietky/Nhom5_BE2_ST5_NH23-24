@@ -319,7 +319,10 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5">
-            @foreach($data_comment as $row)
+            @for($i = count($data_comment) - 1; $i >= 0; $i--)
+            @php
+            $row = $data_comment[$i];
+            @endphp
             @if($value->tour_id == $row->tour_id)
             <div class="col-lg-2 wow fadeInUp mt-0 mb-0" data-wow-delay="0.1s" style="min-height: 200px;">
                 <div class="position-relative h-20">
@@ -334,7 +337,7 @@
             </div>
             <hr>
             @endif
-            @endforeach
+            @endfor
 
         </div>
     </div>

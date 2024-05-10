@@ -25,9 +25,10 @@ class LienKetTrangController extends Controller
     }
     public function hienThi($id)
     {
+        $client = Client::orderBy('client_id')->get();
         $tours = Tour::orderBy('tour_id')->get();
         $tour = Tour::findOrFail($id);
-        return view('booking', ['value' => $tour, 'data' => $tours]);
+        return view('booking', ['value' => $tour, 'data' => $tours, 'data_comment' => $client]);
     }
     public function hienThiUser($id)
     {
