@@ -113,3 +113,5 @@ Route::post('/user/{booking_tour_id}/{booking_user_id?}', [BookingController::cl
 Route::post('/vnpay_payment', [CheckoutController::class, 'vnpay_payment']);
 
 Route::get('/{page?}', [LienKetTrangController::class, 'index']);
+
+Route::get('/user/home', [UserController::class, 'index'])->name('user.home')->middleware('auth');
