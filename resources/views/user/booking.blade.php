@@ -60,15 +60,14 @@
                         <p class="mb-0 text-danger"><i class=""></i>{{ number_format($value->price, 0, ',', '.')}} vnd</p>
                     </div>
 
-                    <!-- <div class="col-sm-6">
-                        <div class="quantity buttons_added">
-                            <input id="#" name="quantity" style="text-align: center;" type="number" size="4" class="input-text qty text border-1" title="Qty" value="1" min="0" step="1" >
-                        </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-chair text-primary me-2"></i>Số chỗ còn trống</p>
 
                     </div>
-                    <td class="product-subtotal">
-                        <span class="amount" id="">{{number_format( $value->price * $value['quantity'],0, ',', '.')}} vnđ</span>
-                    </td> -->
+                    <div class="col-sm-6">
+                        <p class="mb-0 text-danger">{{$value->total_seats - $value->booked_seats}} <i class="fa fa-chair text-primary me-2"></i></p>
+
+                    </div>
 
                     <form action="{{route('booking.store', [$value->tour_id,Auth::user()->id] )}}" class="row gy-2 gx-4 mb-4" method="post">
                         @csrf
@@ -188,6 +187,25 @@
     document.getElementById('quantityInput').addEventListener('input', function() {
         var quantity = parseInt(this.value);
         var price = parseFloat("{{$value->price}}");
+
+        let empty_seats = parseInt("{{$row->total_seats - $row->booked_seats}}");
+        var button = document.getElementById("bookingButton");
+        if (empty_seats < quantity) {
+            button.disabled = true;
+            // document.getElementById("bookingButton").addEventListener("click", function(event) {
+            //     //event.preventDefault();
+            //    if (confirm("Số chỗ còn lại không đủ.")){
+            //     window.history.back();
+            //    }
+            //    else{
+            //     window.history.back();
+            //    }
+
+            // });
+        } else {
+            button.disabled = false;
+        }
+
         let voucher = 0;
         if (quantity == 0) {
 
