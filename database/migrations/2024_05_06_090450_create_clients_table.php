@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('client_image');
             $table->string('client_address'); 
             $table->text('client_comment'); 
+            $table->integer('user_id')->unsigned();
+            $table->integer('tour_id')->unsigned();
             $table->timestamps();
         });
     }

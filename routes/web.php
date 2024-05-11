@@ -113,3 +113,26 @@ Route::post('/user/{booking_tour_id}/{booking_user_id?}', [BookingController::cl
 Route::post('/vnpay_payment', [CheckoutController::class, 'vnpay_payment']);
 
 Route::get('/{page?}', [LienKetTrangController::class, 'index']);
+
+Route::get('/user/home', [UserController::class, 'index'])->name('user.home')->middleware('auth');
+
+
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\ResetPasswordController;
+
+// Route cho trang quên mật khẩu
+Route::get('/auth/otp', [ForgotPasswordController::class, 'showOtpForm'])->name('auth.otp');
+Route::get('/forgot-password', [ForgotPasswordController::class, 'showLinkRequestForm'])
+    ->name('password.request');
+Route::post('/forgot-password', [ForgotPasswordController::class, 'sendResetLinkEmail'])
+    ->name('password.email');
+
+// Route cho trang nhập mã OTP
+Route::get('/auth/reset-password', [ForgotPasswordController::class, 'showResetForm'])
+    ->name('password.reset');
+Route::post('/check-otp', [ForgotPasswordController::class, 'checkOtp'])
+    ->name('password.checkOtp');
+
+// Route cho trang đặt lại mật khẩu
+Route::post('/auth/reset-password', [ForgotPasswordController::class, 'update'])
+    ->name('password.update');

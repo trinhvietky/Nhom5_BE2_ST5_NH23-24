@@ -79,6 +79,12 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-users text-primary me-2"></i>Voucher: </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0 text-danger" id="voucher"></p>
+                    </div>
+                    <div class="col-sm-6">
                         <p class="mb-0"><i class="fa fa-money-check text-primary me-2"></i>Thành tiền</p>
                     </div>
                     <div class="col-sm-6">
@@ -89,12 +95,48 @@
 
 
                 </div>
-                <a id="bookingButton" class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Đặt ngay</a>
+                <!-- <a id="btn-dang-nhap" class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Đặt ngay</a> -->
+                <button id="btn-dang-nhap" class="btn btn-primary rounded-pill py-3 px-5 mt-2">Đặt Ngay</button>
             </div>
         </div>
     </div>
 </div>
 <!-- About End -->
+<!-- Modal Đăng Nhập -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Bạn chưa đăng nhập</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Vui lòng đăng nhập để đặt chuyến</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <a href="{{route('login')}}" class="btn btn-primary rounded-pill py-2 px-4 m-2">Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<script>
+    // Xử lý sự kiện click vào nút Đặt Ngay
+    $('#btn-dang-nhap').click(function() {
+        $('#loginModal').modal('show'); // Hiển thị modal Đăng Nhập
+    });
+
+    // Xử lý sự kiện click nút Đăng Nhập
+    $('#btn-login').click(function() {
+        // Thực hiện các thao tác đăng nhập ở đây (nếu cần)
+        // Sau đó ẩn modal Đăng Nhập
+        $('#loginModal').modal('hide');
+    });
+</script>
 
 
 <!-- Team Start -->
@@ -151,7 +193,10 @@
                         // Lấy 100 từ đầu tiên
                         $mota = implode(' ', array_slice($words, 0, 50));
                         ?>
-                        <p style="height: 130px;">{{$mota}} ... </p>
+                        <p style="height: 110px;">{{$mota}} ... </p>
+
+                        <p class="text-danger" style="font-size: 20px; font-weight: bold;">Số chỗ còn trống: {{$row->total_seats - $row->booked_seats}} chỗ</p>
+
                         <div class="d-flex justify-content-center mb-2 pb-2">
                             <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
                             <a href="{{ route('tourShow.booking', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
@@ -163,12 +208,60 @@
         </div>
     </div>
 </div>
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            @for($i = count($data_comment) - 1; $i >= 0; $i--)
+            @php
+            $row = $data_comment[$i];
+            @endphp
+            @if($value->tour_id == $row->tour_id)
+            <div class="col-lg-2 wow fadeInUp mt-0 mb-0" data-wow-delay="0.1s" style="min-height: 200px;">
+                <div class="position-relative h-20">
+                    <img class="img-fluid position-absolute" src="{{ asset('img/' . $row->client_image) }}" alt="" style="width: 200px; height: 200px;">
+                    <hr>
+                </div>
+            </div>
+            <div class="col-lg-10 wow fadeInUp mt-3 mb-0" data-wow-delay="0.3s">
+                <h1 class="mb-4"><span class="text-primary">{{ $row->client_name }}</span></h1>
+                <h3 class="mb-4"><span class="text-primary">{{ $row->client_address }}</span></h3>
+                <p class="mb-0" style="font-size: 25px;">{{ $row->client_comment }}</p>
+            </div>
+            <hr>
+            @endif
+            @endfor
+
+        </div>
+    </div>
+</div>
 <!-- Package End -->
 <script>
     document.getElementById('quantityInput').addEventListener('input', function() {
         var quantity = parseInt(this.value);
         var price = parseFloat("{{$value->price}}");
-        var subtotal = quantity * price;
+        let voucher = 0;
+        if (quantity == 0) {
+
+            document.getElementById('voucher').textContent = '';
+        }
+        if (quantity == 1) {
+            voucher = 0.9;
+            document.getElementById('voucher').textContent = 'Giảm giá 10%';
+        } else if (quantity == 2) {
+            voucher = 0.85;
+            document.getElementById('voucher').textContent = 'Giảm giá 15%';
+        } else {
+            voucher = 0.8;
+            document.getElementById('voucher').textContent = 'Giảm giá 20%';
+        }
+
+        if (quantity == 0) {
+
+            document.getElementById('voucher').textContent = '';
+        }
+
+        var subtotal = quantity * price * voucher;
+
         document.getElementById('subtotal').textContent = formatCurrency(subtotal) + ' vnđ';
     });
 
@@ -178,7 +271,7 @@
 
     document.getElementById("bookingButton").addEventListener("click", function(event) {
         event.preventDefault();
-            alert("Bạn cần đăng nhập để đặt vé.");
+        alert("Bạn cần đăng nhập để đặt vé.");
 
     });
 </script>
