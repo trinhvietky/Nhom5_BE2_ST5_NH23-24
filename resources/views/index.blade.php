@@ -260,7 +260,7 @@
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="team-item">
                     <div class="overflow-hidden">
-                        <img class="img-fluid" src="{{asset('img/' . $row->guide_Img)}}" alt="">
+                        <img class="img-fluid img-guide" src="{{asset('img/' . $row->guide_Img)}}" alt="">
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
                         <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>

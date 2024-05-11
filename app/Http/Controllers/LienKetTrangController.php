@@ -8,6 +8,8 @@ use App\Models\Guide;
 use App\Models\Location;
 use App\Models\Client;
 use Illuminate\Http\Request;
+use Ramsey\Uuid\Guid\Guid;
+
 // use Ramsey\Uuid\Guid\Guide;
 
 class LienKetTrangController extends Controller
