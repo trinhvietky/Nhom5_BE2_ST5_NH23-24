@@ -5,15 +5,18 @@
     <div class="container py-5">
         <div class="row justify-content-center py-5">
             <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                <h1 class="display-3 text-white mb-3 animated slideInDown">Thông tin tour list của Admin</h1>
-                <p class="fs-4 text-white mb-4 animated slideInDown">Thêm, xóa, sửa thông tin tour list</p>
-                
+                <h1 class="display-3 text-white mb-3 animated slideInDown">QUẢN LÝ TOUR</h1>
+                <p class="fs-4 text-white mb-4 animated slideInDown">Thêm Tour - Xóa Tour - Sửa Thông Tin Tour</p>
+
             </div>
         </div>
     </div>
 </div>
 
 <div class="container-xxl py-5">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h1 class="text-center text-primary px-3">Thêm tour</h1>
+    </div>
     <div class="row justify-content-center">
         <div class="col-md-6">
             <form action="{{ route('tours.store') }}" method="POST">
@@ -21,53 +24,53 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3">
-                            <label for="tour_name" class="form-label">Tên tour</label>
+                            <label for="tour_name" class="form-label text-primary">Tên tour</label>
                             <input type="text" class="form-control" id="tour_name" name="tour_name" placeholder="Tên tour">
                         </div>
                         <div class="mb-3">
-                            <label for="start_day" class="form-label">Ngày bắt đầu</label>
+                            <label for="start_day" class="form-label text-primary">Ngày bắt đầu</label>
                             <input type="date" class="form-control" id="start_day" name="start_day" placeholder="Ngày bắt đầu">
                         </div>
                         <div class="mb-3">
-                            <label for="star_from" class="form-label">Nơi khởi hành</label>
+                            <label for="star_from" class="form-label text-primary">Nơi khởi hành</label>
                             <input type="text" class="form-control" id="star_from" name="star_from" placeholder="Nơi khởi hành">
                         </div>
                         <div class="mb-3">
-                            <label for="price" class="form-label">Giá tour</label>
+                            <label for="price" class="form-label text-primary">Giá tour</label>
                             <input type="text" class="form-control" id="price" name="price" placeholder="Giá tour">
                         </div>
                         <div class="mb-3">
-                            <label for="tour_image" class="form-label text-primary text-xl">Hình ảnh tour</label>
+                            <label for="tour_image" class="form-label text-primary">Hình ảnh tour</label>
                             <input type="file" class="form-control" id="tour_image" name="tour_image">
                         </div>
                         <div class="mb-3">
-                            <label for="time" class="form-label">Thời gian</label>
+                            <label for="time" class="form-label text-primary">Thời gian</label>
                             <input type="text" class="form-control" id="time" name="time" placeholder="Thời gian">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
-                            <label for="vehicle" class="form-label">Phương tiện di chuyển</label>
+                            <label for="vehicle" class="form-label text-primary">Phương tiện di chuyển</label>
                             <input type="text" class="form-control" id="vehicle" name="vehicle" placeholder="Phương tiện di chuyển">
                         </div>
                         <div class="mb-3">
-                            <label for="tour_description" class="form-label">Giới thiệu tour</label>
+                            <label for="tour_description" class="form-label text-primary">Giới thiệu tour</label>
                             <textarea class="form-control" id="tour_description" name="tour_description" placeholder="Giới thiệu tour"></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="tour_schedule" class="form-label">Lịch trình tour</label>
+                            <label for="tour_schedule" class="form-label text-primary">Lịch trình tour</label>
                             <textarea class="form-control" id="tour_schedule" name="tour_schedule" placeholder="Lịch trình tour"></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="tour_sale" class="form-label">Giảm giá tour</label>
+                            <label for="tour_sale" class="form-label text-primary">Giảm giá tour</label>
                             <input type="text" class="form-control" id="tour_sale" name="tour_sale" placeholder="Giảm giá tour">
                         </div>
                         <div class="mb-3">
-                            <label for="location_id" class="form-label">Location ID</label>
+                            <label for="location_id" class="form-label text-primary">Location ID</label>
                             <input type="number" class="form-control" id="location_id" name="location_id" placeholder="Location ID">
                         </div>
                         <div class="mb-3">
-                            <label for="guide_id" class="form-label">Guide ID</label>
+                            <label for="guide_id" class="form-label text-primary">Guide ID</label>
                             <input type="number" class="form-control" id="guide_id" name="guide_id" placeholder="Guide ID">
                         </div>
                         <div class="text-end">
@@ -114,7 +117,7 @@
                             <td class="text-center">{{ $row->start_day}}</td>
                             <td class="text-center">{{ $row->time}}</td>
                             <td class="text-center">{{ $row->star_from}}</td>
-                            <td class="text-center">{{ $row->price}}</td>
+                            <td class="text-center">{{number_format($row->price, 0, ',', '.')}}</td>
                             <td class="text-center">{{ $row->vehicle}}</td>
                             <?php
                             $tourDescription = $row->tour_description;
@@ -140,15 +143,18 @@
                             <td class="text-center">{{ $row->guide_id}}</td>
                             <!-- Nút xóa -->
                             <td class="text-center">
-                                <form action="{{ route('tours.destroy', $row->tour_id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Xóa</button>
-                                </form>
+                                <div class="btn-group" style="line-height: 10px;" role="group" aria-label="Basic example">
+                                    <form action="{{ route('tours.destroy', $row->tour_id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn" style="margin-right: 10px;"><i class="fa fa-trash-alt text-danger"></i></button>
+                                    </form>
+                                    <a href="{{ route('tours.edit', $row->tour_id) }}" class="btn"><i class="fa fa-edit text-primary"></i></a>
+                                </div>
                             </td>
-                            <td>
+                            <!-- <td>
                                 <a href="{{ route('tours.edit', $row->tour_id) }}" class="btn btn-sm btn-primary">edit</a>
-                            </td>
+                            </td> -->
                         </tr>
                         @endforeach
                     </tbody>

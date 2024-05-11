@@ -57,16 +57,28 @@ Route::get('/search', [LienKetTrangController::class, 'search']);
 
 //USER ĐÃ CÓ TÀI KHOẢN
 
-//-------Hiển thị tour theo địa điểm
+//-------Hiển thị tour theo địa điểm - user
 Route::get('/user/tour_location/{location_id}', [LienKetTrangController::class, 'userHienThiTourTheoDiaDiem'])->name('user.tour.location');
 
-//-------Hiển thị chi tiết tour
+
+//-------Hiển thị chi tiết tour - user
 Route::get('/user/booking/{tour_id}', [LienKetTrangController::class, 'userHienThiChiTietTuor'])->name('user.tour.readmore');
 
-//-------Tìm và hiển thị kết quả tìm kiếm
+
+//-------Tìm và hiển thị kết quả tìm kiếm - admin
 Route::get('/user/result', [LienKetTrangController::class, 'userSearch'])->name('searchUser');
 
 
+//ADMIN
+
+//-------Hiển thị tour theo địa điểm - admin
+Route::get('/admin/tour_location/{location_id}', [LienKetTrangController::class, 'adminHienThiTourTheoDiaDiem'])->name('admin.tour.location');
+
+// -------Hiển thị chi tiết tour - admin
+Route::get('/admin/booking/{tour_id}', [LienKetTrangController::class, 'adminHienThiChiTietTuor'])->name('admin.tour.readmore');
+
+//-------Tìm và hiển thị kết quả tìm kiếm - admin
+Route::get('/admin/result', [LienKetTrangController::class, 'adminSearch'])->name('searchAdmin');
 
 
 
