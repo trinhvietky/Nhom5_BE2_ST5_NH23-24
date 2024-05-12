@@ -1,35 +1,35 @@
 @extends('admin.app2')
 @section('content2')
 
-    <!-- Navbar & Hero Start -->
-    <div class="container-fluid position-relative p-0">
-        <div class="container-fluid bg-primary py-5 mb-5 hero-header">
-            <div class="container py-5">
-                <div class="row justify-content-center py-5">
-                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-3 text-white animated slideInDown">Discovery</h1>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                                <li class="breadcrumb-item"><a href="#">Trang</a></li>
-                                <li class="breadcrumb-item text-white active" aria-current="page">Giới thiệu</li>
-                            </ol>
-                        </nav>
-                    </div>
+<!-- Navbar & Hero Start -->
+<div class="container-fluid position-relative p-0">
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-center py-5">
+                <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Discovery</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                            <li class="breadcrumb-item"><a href="#">Trang</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Giới thiệu</li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Navbar & Hero End -->
+</div>
+<!-- Navbar & Hero End -->
 
 
-    <!-- About Start -->
+<!-- About Start -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="/img/about_us.jpg" alt="" style="object-fit: cover;">
+                <div class="position-relative h-100" id="imageDiv">
+                    <img class="img-fluid position-absolute w-100 h-100" src="img/about_us.jpg" alt="" style="object-fit: cover;">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -63,7 +63,7 @@
 <!-- About End -->
 
 
-    <!-- Team Start -->
+<!-- Team Start -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -113,6 +113,21 @@
     </div>
 </div>
 <!-- Team End -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        const images = ["img/about_us.jpg", "img/duLich1.jpg", "img/duLich2.jpg", "img/duLich3.jpg", "img/duLich4.jpg", "img/duLich5.jpg"];
+        let currentIndex = 0;
 
-        
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            $('#imageDiv img').fadeOut(400, function() {
+                $(this).attr('src', images[currentIndex]).fadeIn(400);
+            });
+        }
+
+        setInterval(changeImage, 2000);
+    });
+</script>
+
 @endsection

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -43,11 +44,17 @@ class AddTourController extends Controller
         $tour->tour_sale = $validatedData['tour_sale'];
         $tour->location_id = $validatedData['location_id'];
         $tour->guide_id = $validatedData['guide_id'];
+
+        // Set total_seats and booked_seats
+        $tour->total_seats = 45;
+        $tour->booked_seats = 0;
+
         $tour->save();
 
         // Redirect back or to a success page
         return redirect()->back()->with('success', 'Tour đã được thêm thành công!');
     }
+
 
     public function destroy($id)
     {
@@ -129,20 +136,20 @@ class AddTourController extends Controller
 
     public function updateGuide(Request $request, $id)
     {
-    // Validate the incoming request data
-    $validatedData = $request->validate([
-        'guide_Name' => 'required|string|max:255',
-        'guide_Pno' => 'required|string',
-        'guide_Img' => 'required|string',
-        'guide_Mail' => 'required|string',
-        'guide_Intro' => 'required|string',
-    ]);
-    // Tìm guide dựa trên id hoặc trả về null nếu không tìm thấy
-    $guide = Guide::findOrFail($id);
+        // Validate the incoming request data
+        $validatedData = $request->validate([
+            'guide_Name' => 'required|string|max:255',
+            'guide_Pno' => 'required|string',
+            'guide_Img' => 'required|string',
+            'guide_Mail' => 'required|string',
+            'guide_Intro' => 'required|string',
+        ]);
+        // Tìm guide dựa trên id hoặc trả về null nếu không tìm thấy
+        $guide = Guide::findOrFail($id);
 
-    // Cập nhật thông tin của guide
-    $guide->update($validatedData);
+        // Cập nhật thông tin của guide
+        $guide->update($validatedData);
 
-    return redirect()->back()->with('success', 'Thông tin hướng dẫn viên đã được cập nhật thành công!');
+        return redirect()->back()->with('success', 'Thông tin hướng dẫn viên đã được cập nhật thành công!');
     }
 }
