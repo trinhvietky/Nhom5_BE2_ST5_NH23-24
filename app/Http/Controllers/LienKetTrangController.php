@@ -85,4 +85,33 @@ class LienKetTrangController extends Controller
         })->get();
         return view('result', compact('tours'));
     }
+
+    // AMIN
+    public function adminHienThiTourTheoDiaDiem($id)
+    {
+        // $tours = Tour::orderBy('location_id')->get();
+        // $tour = Tour::findOrFail($id);
+        // return view('tour_location', ['value'=>$tour,'data'=>$tours]);
+        $tours = Tour::where('location_id', $id)->get();
+        $location = Location::find($id);
+        return view('admin.tour_location', compact('tours', 'location'));
+    }
+
+    public function adminHienThiChiTietTuor($id)
+    {
+        $client = Client::orderBy('client_id')->get();
+        $user_main = Auth::user(); // Lấy thông tin người dùng đã đăng nhập
+        $tours = Tour::orderBy('tour_id')->get();
+        $tour = Tour::findOrFail($id);
+        return view('admin.booking', ['user_main' => $user_main,'value' => $tour, 'data' => $tours, 'data_comment' => $client]);
+    }
+
+    public function adminSearch(Request $request)
+    {
+        $search = $request->searchadmin;
+        $tours = Tour::where(function ($query) use ($search) {
+            $query->where('tour_name', 'like', "%$search%");
+        })->get();
+        return view('admin.result', compact('tours'));
+    }
 }
