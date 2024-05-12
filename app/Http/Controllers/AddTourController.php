@@ -48,11 +48,17 @@ class AddTourController extends Controller
         $tour->booked_seats = 0;
         $tour->location_id = $validatedData['location_id'];
         $tour->guide_id = $validatedData['guide_id'];
+
+        // Set total_seats and booked_seats
+        $tour->total_seats = 45;
+        $tour->booked_seats = 0;
+
         $tour->save();
 
         // Redirect back or to a success page
         return redirect()->back()->with('success', 'Tour đã được thêm thành công!');
     }
+
 
     public function destroy($id)
     {

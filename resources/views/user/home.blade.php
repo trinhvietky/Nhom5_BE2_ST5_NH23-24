@@ -27,8 +27,8 @@
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="/img/about_us.jpg" alt="" style="object-fit: cover;">
+                <div class="position-relative h-100" id="imageDiv">
+                    <img class="img-fluid position-absolute w-100 h-100" src="img/about_us.jpg" alt="" style="object-fit: cover;">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -185,7 +185,7 @@
                         <p style="height: 130px;">{{$mota}} ... </p>
 
                         <p class="text-danger" style="font-size: 20px; font-weight: bold;">Số chỗ còn trống: {{$row->total_seats - $row->booked_seats}} chỗ</p>
-                        
+
                         <div class="d-flex justify-content-center mb-2 pb-2">
                             <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
                             <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
@@ -327,5 +327,20 @@
     </div>
 </div>
 <!-- Testimonial End -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        const images = ["img/about_us.jpg", "img/duLich1.jpg", "img/duLich2.jpg", "img/duLich3.jpg", "img/duLich4.jpg", "img/duLich5.jpg"];
+        let currentIndex = 0;
 
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            $('#imageDiv img').fadeOut(400, function() {
+                $(this).attr('src', images[currentIndex]).fadeIn(400);
+            });
+        }
+
+        setInterval(changeImage, 2000);
+    });
+</script>
 @endsection
