@@ -35,7 +35,7 @@
                         @foreach($decentralization as $row)
                         <tr>
                             <td class="text-center">{{ $row->id}}</td>
-                            <td class="text-center">>{{ $row->name}}</td>
+                            <td class="text-center">{{ $row->name}}</td>
                             <td class="text-center">{{ $row->email}}</td>
                             <td class="text-center"><input type="text" value="{{ $row->usertype}}" class="usertype-input" data-id="{{ $row->id }}"></td>
                             <td class="text-center">
