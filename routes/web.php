@@ -91,6 +91,8 @@ Route::get('/tour/{tour_id}', [LienKetTrangController::class, 'hienThi'])->name(
 Route::get('/user/tour/{tour_id}', [LienKetTrangController::class, 'show'])->name('tour.booking');
 
 
+Route::get('/history/{user_id}', [LienKetTrangController::class, 'history'])->name('history');
+
 
 // thêm tour
 Route::post('/tours', [AddTourController::class, 'store'])->name('tours.store');
@@ -150,5 +152,5 @@ Route::post('/check-otp', [ForgotPasswordController::class, 'checkOtp'])
 Route::post('/auth/reset-password', [ForgotPasswordController::class, 'update'])
     ->name('password.update');
 
-// tour yêu thích
-Route::post('/favorite/add', 'App\Http\Controllers\FavoriteTourController@add')->name('favorite.add');
+
+Route::post('/favorite/add', [FavoriteTourController::class, 'add'])->name('favorite.add');

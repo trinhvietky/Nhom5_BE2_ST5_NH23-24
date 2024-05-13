@@ -89,6 +89,13 @@
                         </div>
 
                         <div class="mb-3">
+<<<<<<< HEAD
+                            <!-- <label for="location_id" class="form-label">Location ID</label>
+                            <input type="number" class="form-control" id="location_id" name="location_id" placeholder="Location ID"> -->
+                            <select name="" id="" style="width: 312px;">
+                                @foreach ($data as $row)
+                                <option value="{{$row->location_id}}">{{$row->location_id}}</option>                                
+=======
                             <label for="guide_id" class="form-label text-primary">Guide ID</label> <br>
                             <!-- <input type="number" class="form-control" id="guide_id" name="guide_id" placeholder="Guide ID"> -->
 
@@ -96,6 +103,7 @@
                                 <option value="" disabled selected>Chọn hướng dẫn viên</option>
                                 @foreach($data_guide as $row)
                                 <option value="{{ $row->guide_Id }}">{{ $row->guide_Name }}</option>
+>>>>>>> 9aed3f03fcb40c0cc0d8b02c8ba213d8501a0340
                                 @endforeach
                             </select>
                         </div>

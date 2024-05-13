@@ -84,7 +84,7 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="quantity buttons_added">
-                                <input name="booking_customer_phone" id="quantityInput" type="text" class="input-text qty text border-1">
+                                <input name="booking_customer_phone" id="phoneInput" type="text" class="input-text qty text border-1">
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -97,7 +97,7 @@
                             <p class="mb-0"><i class="fa fa-money-check text-primary me-2"></i>Thành tiền</p>
                         </div>
                         <div class="col-sm-6">
-                            <td class="product-subtotal ">
+                            <td class="product-subtotal">
                                 <span class="amount mb-0 text-danger" id="subtotal">0 vnđ</span>
                             </td>
                         </div>
@@ -170,7 +170,7 @@
                         <p style="height: 130px;">{{$mota}} ... </p>
 
                         <p class="text-danger" style="font-size: 20px; font-weight: bold;">Số chỗ còn trống: {{$row->total_seats - $row->booked_seats}} chỗ</p>
-                        
+
                         <div class="d-flex justify-content-center mb-2 pb-2">
                             <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
                             <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
@@ -242,6 +242,23 @@
     function formatCurrency(amount) {
         return amount.toFixed(0).replace(/\d(?=(\d{3})+$)/g, '$&,');
     }
+
+    document.getElementById("bookingButton").addEventListener("click", function(event) {
+        const quantityInput = document.getElementById('quantityInput');
+        const phoneInput = document.getElementById('phoneInput');
+
+        if (phoneInput.value == "" && quantityInput.value == 0) {
+            event.preventDefault();
+            alert("Bạn cần nhập số lượng và số điện thoại để đặt vé.");
+        } else if (quantityInput.value == 0) {
+            event.preventDefault();
+            alert("Bạn cần nhập số lượng để đặt vé.");
+        } else if (phoneInput.value == "") {
+            event.preventDefault();
+            alert("Bạn cần nhập số điện thoại để đặt vé.");
+        }
+
+    });
 </script>
 <!-- Navbar & Hero End -->
 <div class="container mt-5">

@@ -63,7 +63,7 @@ class ForgotPasswordController extends Controller
 
         // Lưu mã OTP, địa chỉ email, thời gian tạo và thời gian hết hạn vào cơ sở dữ liệu
         $now = now();
-        $expiry = $now->addMinutes(10); // Thêm 10 phút vào thời gian hiện tại
+        $expiry = $now->addMinutes(15); // Thêm 15 phút vào thời gian hiện tại
         DB::table('password_resets')->updateOrInsert(
             ['email' => $email],
             ['email' => $email, 'otp' => $otp, 'created_at' => $now, 'expiry' => $expiry]
