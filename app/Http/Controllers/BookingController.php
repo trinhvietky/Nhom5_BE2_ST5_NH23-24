@@ -32,7 +32,19 @@ class BookingController extends Controller
     public function create()
     {
     }
+    public function total($booking_quantity, $tour_price)
+    {
 
+        if ($booking_quantity == 1) {
+            $voucher = 0.9;
+        } else if ($booking_quantity == 2) {
+            $voucher = 0.85;
+        } else {
+            $voucher = 0.8;
+        }
+        $amount = $tour_price * $booking_quantity * $voucher;
+        return $amount;
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -41,19 +53,24 @@ class BookingController extends Controller
      */
     public function store(Request $request, $booking_tour_id, $booking_user_id)
     {
+
         $user = User::findOrFail($booking_user_id);
         $tour = Tour::findOrFail($booking_tour_id);
-        $amount = $tour->price * $request->input('booking_quantity');
+        $booking_quantity = $request->input('booking_quantity');
+        $amount = self::total($booking_quantity, $tour->price);
         $booking = new Booking();
         $booking->booking_customer_name = $user->name;
         $booking->booking_customer_email = $user->email;
-        $booking->booking_customer_quantity = $request->input('booking_quantity');
+        $booking->booking_customer_quantity = $booking_quantity;
         $booking->booking_customer_phone = $request->input('booking_customer_phone');
         $booking->booking_amount = $amount;
         $booking->booking_tour_id = $booking_tour_id;
         $booking->booking_user_id = $booking_user_id;
 
-        // session_start();
+        $tour->booked_seats = $user->booked_seats + $request->input('booking_quantity');
+
+        $tour->save();
+        // $booking->save();
 
 
         $checkoutController = new CheckoutController();
