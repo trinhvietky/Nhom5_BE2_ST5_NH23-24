@@ -5,8 +5,8 @@
     <div class="container py-5">
         <div class="row justify-content-center py-5">
             <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                <h1 class="display-3 text-white mb-3 animated slideInDown">Thông tin user của Admin</h1>
-                <p class="fs-4 text-white mb-4 animated slideInDown">Phân quyền</p>
+                <h1 class="display-3 text-white mb-3 animated slideInDown">QUẢN LÝ USER</h1>
+                <p class="fs-4 text-white mb-4 animated slideInDown">Phân quyền cho các user của bạn</p>
                 <div class="position-relative w-75 mx-auto animated slideInDown">
                     <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Eg: Thailand">
                     <button type="button" class="btn btn-primary rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px;">Search</button>
@@ -27,6 +27,7 @@
                             <th class="text-center" scope="col">Name</th>
                             <th class="text-center" scope="col">Email</th>
                             <th class="text-center" scope="col">Quyền</th>
+                            <th class="text-center" scope="col">Xử lý</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,22 +35,23 @@
                         @foreach($decentralization as $row)
                         <tr>
                             <td class="text-center">{{ $row->id}}</td>
-                            <td>{{ $row->name}}</td>
+                            <td class="text-center">{{ $row->name}}</td>
                             <td class="text-center">{{ $row->email}}</td>
                             <td class="text-center"><input type="text" value="{{ $row->usertype}}" class="usertype-input" data-id="{{ $row->id }}"></td>
                             <td class="text-center">
-                                <form action="{{ route('tours.xoaUser', $row->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Xóa</button>
-                                </form>
-                            </td>
-                            <td class="text-center">
-                                <form action="{{ route('tours.suaUser', $row->id) }}" method="POST">
-                                    @csrf
-                                    @method('UPDATE')
-                                    <button type="button" class="btn btn-primary" data-id="{{ $row->id }}">Sửa</button>
-                                </form>
+                                <div class="btn-group" style="line-height: 10px;" role="group" aria-label="Basic example">
+                                    <form action="{{ route('tours.xoaUser', $row->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn" style="margin-right: 10px;"><i class="fa fa-trash-alt text-danger"></i></button>
+                                    </form>
+
+                                    <form action="{{ route('tours.suaUser', $row->id) }}" method="POST">
+                                        @csrf
+                                        @method('UPDATE')
+                                        <button type="button" data-id="{{ $row->id }}" class="btn"><i class="fa fa-edit text-primary"></i></button>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                         @endforeach

@@ -27,8 +27,8 @@
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="/img/about_us.jpg" alt="" style="object-fit: cover;">
+                <div class="position-relative h-100" id="imageDiv">
+                    <img class="img-fluid position-absolute w-100 h-100" src="img/about_us.jpg" alt="" style="object-fit: cover;">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -67,7 +67,7 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h1 class="text-center text-primary px-3">Dịch vụ của chúng tôi {{ $user_main->name }}</h1>
+            <h1 class="text-center text-primary px-3">Dịch vụ của chúng tôi</h1>
         </div>
         <div class="row g-4">
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -185,7 +185,7 @@
                         <p style="height: 130px;">{{$mota}} ... </p>
 
                         <p class="text-danger" style="font-size: 20px; font-weight: bold;">Số chỗ còn trống: {{$row->total_seats - $row->booked_seats}} chỗ</p>
-                        
+
                         <div class="d-flex justify-content-center mb-2 pb-2">
                             <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
                             <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
@@ -258,7 +258,7 @@
             <h1 class="text-center text-primary px-3">Hướng dẫn viên du lịch</h1>
         </div>
         <div class="row g-4">
-            @foreach($data_guide as $row)
+            @foreach($data_guide->take(4) as $row)
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="team-item">
                     <div class="overflow-hidden">
@@ -271,11 +271,32 @@
                     </div>
                     <div class="text-center p-4">
                         <h5 class="mb-0">{{$row->guide_Name}}</h5>
-                        <small>{{$row->guide_Pno}}</small>
+                    </div>
+                    <div class="d-flex border ">
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-phone text-primary me-2"></i>{{ $row->guide_Pno}}</small>
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-envelope text-primary me-2"></i>{{ $row->guide_Mail}}</small>
+                    </div>
+                    <div class="text-center">
+                        <?php
+                        $guideIntro = $row->guide_Intro;
+
+                        // Chia chuỗi thành mảng các từ
+                        $words = explode(' ', $guideIntro);
+
+                        // Lấy 100 từ đầu tiên
+                        $motaGuide = implode(' ', array_slice($words, 0, 50));
+                        ?>
+                        <p style="height: auto;">{{$motaGuide}}</p>
                     </div>
                 </div>
             </div>
             @endforeach
+        </div>
+        <!--nút show danh sách -->
+        <div class="row justify-content-center py-3">
+            <div class="col-auto">
+                <a class="btn btn-primary rounded-pill py-3 px-4 mt-2" href="{{ url('/team') }}">Xem thêm ...</a>
+            </div>
         </div>
     </div>
 </div>
@@ -306,5 +327,20 @@
     </div>
 </div>
 <!-- Testimonial End -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        const images = ["img/about_us.jpg", "img/duLich1.jpg", "img/duLich2.jpg", "img/duLich3.jpg", "img/duLich4.jpg", "img/duLich5.jpg"];
+        let currentIndex = 0;
 
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            $('#imageDiv img').fadeOut(400, function() {
+                $(this).attr('src', images[currentIndex]).fadeIn(400);
+            });
+        }
+
+        setInterval(changeImage, 2000);
+    });
+</script>
 @endsection

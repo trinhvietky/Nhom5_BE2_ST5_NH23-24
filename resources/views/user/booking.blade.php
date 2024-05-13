@@ -12,7 +12,7 @@
                         <ol class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
                             <li class="breadcrumb-item"><a href="#">trang</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Giới thiệu</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Đặt vé</li>
                         </ol>
                     </nav>
                 </div>
@@ -131,25 +131,26 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Gói {{ $user_main->name }}</h6>
-            <h1 class="mb-5">Gói tuyệt vời</h1>
+            <h1 class="text-center text-primary px-3">Tour phổ biến </h1>
         </div>
         <div class="row g-4 justify-content-center">
-            @foreach($data as $row)
+            @foreach($data->take(3) as $row)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="position-relative package-item">
-                    <div class="overflow-hidden">
+                <div class="package-item">
+                    <div class="position-relative overflow-hidden">
                         <img class="img-fluid" style="width: 600px; height: 250px" src="{{ asset('img/'.$row->tour_image) }}" alt="">
                         <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">{{$row->tour_sale}}</div>
                     </div>
-                    <div class="d-flex border-bottom">
+                    <div class="d-flex border-bottom" style="height: 50px;">
                         <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>{{ $row->start_day}}</small>
                         <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>{{ $row->time}}</small>
                         <small class="flex-fill text-center py-2"><i class="fa fa-plane-departure text-primary me-2"></i>{{$row->star_from}}</small>
                     </div>
-                    <div class="text-center p-1">
-                        <div class=" text-sm text-primary fw-bold flex-fill text-center py-2" style="font-size: 20px;"></i>{{ $row->tour_name}}</div>
-                        <h3 class="mb-0">{{ $row->price}} vnd</h3>
+                    <h4 class=" text-primary fw-bold flex-fill text-center py-2" style="height: 50px;">{{ $row->tour_name}}</h4>
+                    <div class="text-center pt-2">
+
+                        <h5 class="mb-0 mt-3 text-danger">{{number_format($row->price, 0, ',', '.')}} vnđ</h5>
+
                         <div class="mb-3">
                             <small class="fa fa-star text-primary"></small>
                             <small class="fa fa-star text-primary"></small>
@@ -166,11 +167,11 @@
                         // Lấy 100 từ đầu tiên
                         $mota = implode(' ', array_slice($words, 0, 50));
                         ?>
-                        <p style="height: 150px;">{{$mota}} ... </p>
+                        <p style="height: 130px;">{{$mota}} ... </p>
 
                         <p class="text-danger" style="font-size: 20px; font-weight: bold;">Số chỗ còn trống: {{$row->total_seats - $row->booked_seats}} chỗ</p>
-
-                        <div class="d-flex justify-content-center mb-2">
+                        
+                        <div class="d-flex justify-content-center mb-2 pb-2">
                             <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
                             <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
                         </div>
@@ -179,9 +180,16 @@
             </div>
             @endforeach
         </div>
+        <!--nút show danh sách -->
+        <div class="row justify-content-center py-3">
+            <div class="col-auto">
+                <a class="btn btn-primary rounded-pill py-3 px-4 mt-2" href="{{ url('/user.package') }}">Xem thêm ...</a>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Package End -->
+
 
 <script>
     document.getElementById('quantityInput').addEventListener('input', function() {
