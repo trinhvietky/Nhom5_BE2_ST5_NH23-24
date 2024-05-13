@@ -78,6 +78,9 @@
             @endforeach
         </div>
     </div>
+
+    <!-- Phần phân trang -->
+
     <div class="row justify-content-center">
         <div class="col-auto">
             <ul class="pagination">
