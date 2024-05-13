@@ -26,32 +26,29 @@ class AddTourController extends Controller
             'tour_description' => 'required|string',
             'tour_schedule' => 'required|string',
             'tour_sale' => 'required|string',
-            'total_seats' => 'required|integer',
-            'booked_seats' => 'required|integer',
             'location_id' => 'required|integer',
             'guide_id' => 'required|integer',
         ]);
 
-        // Create a new tour instance
-        $tour = new Tour;
-        $tour->tour_name = $validatedData['tour_name'];
-        $tour->tour_image = $validatedData['tour_image'];
-        $tour->start_day = $validatedData['start_day'];
-        $tour->time = $validatedData['time'];
-        $tour->star_from = $validatedData['star_from'];
-        $tour->price = $validatedData['price'];
-        $tour->vehicle = $validatedData['vehicle'];
-        $tour->tour_description = $validatedData['tour_description'];
-        $tour->tour_schedule = $validatedData['tour_schedule'];
-        $tour->tour_sale = $validatedData['tour_sale'];
-        $tour->total_seats = 40;
-        $tour->booked_seats = 0;
-        $tour->location_id = $validatedData['location_id'];
-        $tour->guide_id = $validatedData['guide_id'];
 
-        // Set total_seats and booked_seats
-        $tour->total_seats = 45;
-        $tour->booked_seats = 0;
+         // Create a new tour instance
+         $tour = new Tour;
+         $tour->tour_name = $validatedData['tour_name'];
+         $tour->tour_image = $validatedData['tour_image'];
+         $tour->start_day = $validatedData['start_day'];
+         $tour->time = $validatedData['time'];
+         $tour->star_from = $validatedData['star_from'];
+         $tour->price = $validatedData['price'];
+         $tour->vehicle = $validatedData['vehicle'];
+         $tour->tour_description = $validatedData['tour_description'];
+         $tour->tour_schedule = $validatedData['tour_schedule'];
+         $tour->tour_sale = $validatedData['tour_sale'];
+         $tour->location_id = $validatedData['location_id'];
+         $tour->guide_id = $validatedData['guide_id'];
+ 
+         // Set total_seats and booked_seats
+         $tour->total_seats = 45;
+         $tour->booked_seats = 0;
 
         $tour->save();
 

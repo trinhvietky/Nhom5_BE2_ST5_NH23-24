@@ -47,4 +47,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Client::class);
     }
+    // Define the relationship with FavoriteTour
+    public function favoriteTours()
+    {
+        return $this->belongsToMany(Tour::class, 'favorite_tours', 'user_id', 'tour_id');
+    }
 }

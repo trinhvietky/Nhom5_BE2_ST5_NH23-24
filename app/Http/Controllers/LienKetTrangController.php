@@ -9,7 +9,7 @@ use App\Models\Location;
 use App\Models\Client;
 use Illuminate\Http\Request;
 // use Ramsey\Uuid\Guid\Guide;
-
+use App\Models\FavoriteTour;
 class LienKetTrangController extends Controller
 {
 
@@ -21,7 +21,20 @@ class LienKetTrangController extends Controller
         $guide = Guide::orderBy('guide_Id')->get();
         $location = Location::orderBy('location_id')->get();
         $client = Client::orderBy('client_id')->get();
-        return view($page, ['user_main' => $user_main,'data' => $tours, 'data_guide' => $guide, 'data_location' => $location, 'decentralization' => $user, 'data_comment' => $client]);
+    
+        
+        // Lấy các tour yêu thích của người dùng hiện tại
+$favoriteTours = FavoriteTour::where('user_id', $user_main->id)->get();
+    
+        return view($page, [
+            'user_main' => $user_main,
+            'data' => $tours,
+            'data_guide' => $guide,
+            'data_location' => $location,
+            'decentralization' => $user,
+            'data_comment' => $client,
+            'favoriteTours' => $favoriteTours, // Truyền danh sách các tour yêu thích vào view
+        ]);
     }
     public function hienThi($id)
     {

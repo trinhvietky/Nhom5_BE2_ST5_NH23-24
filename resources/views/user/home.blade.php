@@ -1,5 +1,16 @@
 @extends('user.app1')
 @section('content1')
+<style>
+    .favorite-icon {
+        color: grey;
+        /* Màu mặc định */
+    }
+
+    .favorite-icon.active {
+        color: red;
+        /* Màu đỏ khi được yêu thích */
+    }
+</style>
 <div class="container-fluid bg-primary py-5 mb-5 hero-header">
     <div class="container py-5">
         <div class="row justify-content-center py-5">
@@ -189,6 +200,15 @@
                         <div class="d-flex justify-content-center mb-2 pb-2">
                             <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
                             <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
+                            <form class="favorite-form" action="{{ route('favorite.add') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="tour_id" value="{{ $row->tour_id }}">
+                                <button type="submit" class="btn btn-sm btn-light favorite-btn">
+                                    <i class="far fa-heart heart-icon favorite-icon"></i>
+                                </button>
+                            </form>
+
+
                         </div>
                     </div>
                 </div>
@@ -343,4 +363,20 @@
         setInterval(changeImage, 2000);
     });
 </script>
+<!-- Thêm Font Awesome -->
+<!-- <script>
+$(document).ready(function() {
+    $('.favorite-btn').on('click', function(event) {
+        event.preventDefault(); // Ngăn chặn hành động mặc định của nút submit
+
+        var $icon = $(this).find('.heart-icon'); // Chọn biểu tượng trái tim
+        $icon.toggleClass('active'); // Thêm hoặc xoá lớp active
+    });
+});
+</script> -->
+
+
+
+
+
 @endsection

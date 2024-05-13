@@ -11,6 +11,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\FavoriteTourController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -148,3 +149,6 @@ Route::post('/check-otp', [ForgotPasswordController::class, 'checkOtp'])
 // Route cho trang đặt lại mật khẩu
 Route::post('/auth/reset-password', [ForgotPasswordController::class, 'update'])
     ->name('password.update');
+
+// tour yêu thích
+Route::post('/favorite/add', 'App\Http\Controllers\FavoriteTourController@add')->name('favorite.add');

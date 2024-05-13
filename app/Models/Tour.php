@@ -36,4 +36,10 @@ class Tour extends Model
     {
         return $this->hasMany(Client::class);
     }
+    // Define the relationship with FavoriteTour
+    public function favoriteByUsers()
+    {
+        return $this->belongsToMany(User::class, 'favorite_tours', 'tour_id', 'user_id');
+    }
+    
 }

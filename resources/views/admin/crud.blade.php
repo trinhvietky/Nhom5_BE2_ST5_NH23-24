@@ -62,8 +62,8 @@
                             <!-- <input type="text" class="form-control" id="vehicle" name="vehicle" placeholder="Phương tiện di chuyển"> -->
                             <select style="width: 306px;" name="vehicle" required>
                                 <option value="" disabled selected>Chọn loại phương tiện</option>
-                                <option value="flight">Máy bay</option>
-                                <option value="bus">Xe khách</option>
+                                <option value="Máy bay">Máy bay</option>
+                                <option value="Xe khách">Xe khách</option>
                             </select>
                         </div>
 
