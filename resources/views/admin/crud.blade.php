@@ -63,8 +63,13 @@
                             <input type="text" class="form-control" id="tour_sale" name="tour_sale" placeholder="Giảm giá tour">
                         </div>
                         <div class="mb-3">
-                            <label for="location_id" class="form-label">Location ID</label>
-                            <input type="number" class="form-control" id="location_id" name="location_id" placeholder="Location ID">
+                            <!-- <label for="location_id" class="form-label">Location ID</label>
+                            <input type="number" class="form-control" id="location_id" name="location_id" placeholder="Location ID"> -->
+                            <select name="" id="" style="width: 312px;">
+                                @foreach ($data as $row)
+                                <option value="{{$row->location_id}}">{{$row->location_id}}</option>                                
+                                @endforeach
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label for="guide_id" class="form-label">Guide ID</label>
