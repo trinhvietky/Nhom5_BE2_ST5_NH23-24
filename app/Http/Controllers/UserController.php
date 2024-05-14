@@ -9,6 +9,8 @@ use App\Models\Location;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Client;
+use App\Models\FavoriteTour;
+
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
@@ -39,5 +41,14 @@ class UserController extends Controller
                 return view('admin/home', ['data' => $tours, 'data_guide' => $guide, 'data_location' => $location, 'data_comment' => $client]);
             }
         }
+    }
+    public function favorite()
+    {
+        
+        $user_main = Auth::user();
+         $favoriteTours = FavoriteTour::where('user_id', $user_main->id)->get();
+        // Sau đó, chuyển hướng người dùng đến trang "Tour yêu thích"
+        return view('user.favorite', ['favoriteTours' => $favoriteTours,]);
+        
     }
 }

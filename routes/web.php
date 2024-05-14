@@ -154,3 +154,6 @@ Route::post('/auth/reset-password', [ForgotPasswordController::class, 'update'])
 
 
 Route::post('/favorite/add', [FavoriteTourController::class, 'add'])->name('favorite.add');
+
+
+Route::get('/user/favorite', [UserController::class, 'favorite'])->name('user.favorite');

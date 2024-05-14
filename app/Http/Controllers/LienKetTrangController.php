@@ -28,7 +28,7 @@ class LienKetTrangController extends Controller
         $client = Client::orderBy('client_id')->get();
 
         // Lấy các tour yêu thích của người dùng hiện tại
-        $favoriteTours = FavoriteTour::where('user_id', $user_main->id)->get();
+        // $favoriteTours = FavoriteTour::where('user_id', $user_main->id)->get();
 
         return view($page, [
             'user_main' => $user_main,
@@ -37,7 +37,7 @@ class LienKetTrangController extends Controller
             'data_location' => $location,
             'decentralization' => $user,
             'data_comment' => $client,
-            'favoriteTours' => $favoriteTours, // Truyền danh sách các tour yêu thích vào view
+            // 'favoriteTours' => $favoriteTours, // Truyền danh sách các tour yêu thích vào view
         ]);
     }
     public function hienThi($id)
