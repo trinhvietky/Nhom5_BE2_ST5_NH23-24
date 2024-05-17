@@ -90,6 +90,7 @@
                             <a href="{{ url('/admin.crud') }}" class="dropdown-item">Tour</a>
                             <a href="{{ url('/admin.crudGuide') }}" class="dropdown-item">Guide</a>
                             <a href="{{ url('/admin.infomation') }}" class="dropdown-item">Users</a>
+                            <a href="{{ url('/admin.location-crud') }}" class="dropdown-item">Location</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">

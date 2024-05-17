@@ -197,6 +197,45 @@
                 </table>
             </div>
         </div>
+        <!-- Phần phân trang -->
+
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <ul class="pagination">
+                {{-- Nút Previous --}}
+                @if ($data->onFirstPage())
+                <li class="page-item disabled">
+                    <span class="page-link" aria-hidden="true">&laquo;</span>
+                </li>
+                @else
+                <li class="page-item">
+                    <a class="page-link" href="{{ $data->previousPageUrl() }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                @endif
+
+                {{-- Các nút số --}}
+                @foreach ($data->getUrlRange(1, $data->lastPage()) as $page => $url)
+                <li class="page-item {{ ($page == $data->currentPage()) ? 'active' : '' }}">
+                    <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+                </li>
+                @endforeach
+
+                {{-- Nút Next --}}
+                @if ($data->hasMorePages())
+                <li class="page-item">
+                    <a class="page-link" href="{{ $data->nextPageUrl() }}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                @else
+                <li class="page-item disabled">
+                    <span class="page-link" aria-hidden="true">&raquo;</span>
+                </li>
+                @endif
+            </ul>
+        </div>
     </div>
 </div>
 

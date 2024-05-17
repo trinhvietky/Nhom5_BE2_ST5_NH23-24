@@ -12,6 +12,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FavoriteTourController;
+use App\Http\Controllers\AddLocationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -159,3 +160,13 @@ Route::post('/favorite/add', [FavoriteTourController::class, 'add'])->name('favo
 
 
 Route::get('/user/favorite', [UserController::class, 'favorite'])->name('user.favorite');
+
+// thêm location
+Route::post('/locations', [AddLocationController::class, 'store'])->name('location.store');
+// xóa location
+Route::delete('/locations/{id}', [AddLocationController::class, 'destroy'])->name('location.destroy');
+// chỉnh sửa location
+Route::get('/locations/{id}/edit', [AddLocationController::class, 'edit'])->name('location.edit');
+// cập nhật location
+Route::put('/locations/{id}', [AddLocationController::class, 'update'])->name('location.update');
+Route::get('/locations/crud', [AddLocationController::class, 'showCRUD'])->name('admin.location-crud');
