@@ -103,6 +103,8 @@ Route::get('/tours/{id}/edit', [AddTourController::class, 'edit'])->name('tours.
 // cập nhật tour
 Route::put('/tours/{id}', [AddTourController::class, 'update'])->name('tours.update');
 
+Route::get('/admin/crud', [AddTourController::class, 'showCRUD'])->name('admin.showcrud');
+
 // thêm guide
 Route::post('/guide', [AddTourController::class, 'storeGuide'])->name('guide.store');
 // xóa guide

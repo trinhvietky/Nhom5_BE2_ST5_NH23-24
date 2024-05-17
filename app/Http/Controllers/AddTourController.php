@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use App\Http\Controllers\Controller;
+use App\Models\Client;
 use Illuminate\Http\Request;
 use App\Models\Tour;
 use App\Models\Guide;
+use App\Models\Location;
 use App\Models\Notification;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class AddTourController extends Controller
 {
@@ -17,7 +22,7 @@ class AddTourController extends Controller
         // Validate form data
         $validatedData = $request->validate([
             'tour_name' => 'required|string|max:255',
-            'tour_image' => 'required|string',
+            'tour_image' => 'required',
             'start_day' => 'required|date',
             'time' => 'required|string',
             'star_from' => 'required|string',
@@ -30,25 +35,32 @@ class AddTourController extends Controller
             'guide_id' => 'required|integer',
         ]);
 
+        $get_imgae = $request->tour_image;
+        $path = 'img/';
+        $get_name_image = $get_imgae->getClientOriginalName();
+        $name_image = current(explode('.', $get_name_image));
+        $new_image = $name_image . rand(0, 999) . '.' . $get_imgae->getClientOriginalExtension();
+        $get_imgae->move($path, $new_image);
 
-         // Create a new tour instance
-         $tour = new Tour;
-         $tour->tour_name = $validatedData['tour_name'];
-         $tour->tour_image = $validatedData['tour_image'];
-         $tour->start_day = $validatedData['start_day'];
-         $tour->time = $validatedData['time'];
-         $tour->star_from = $validatedData['star_from'];
-         $tour->price = $validatedData['price'];
-         $tour->vehicle = $validatedData['vehicle'];
-         $tour->tour_description = $validatedData['tour_description'];
-         $tour->tour_schedule = $validatedData['tour_schedule'];
-         $tour->tour_sale = $validatedData['tour_sale'];
-         $tour->location_id = $validatedData['location_id'];
-         $tour->guide_id = $validatedData['guide_id'];
- 
-         // Set total_seats and booked_seats
-         $tour->total_seats = 45;
-         $tour->booked_seats = 0;
+
+        // Create a new tour instance
+        $tour = new Tour;
+        $tour->tour_name = $validatedData['tour_name'];
+        $tour->tour_image = $new_image;
+        $tour->start_day = $validatedData['start_day'];
+        $tour->time = $validatedData['time'];
+        $tour->star_from = $validatedData['star_from'];
+        $tour->price = $validatedData['price'];
+        $tour->vehicle = $validatedData['vehicle'];
+        $tour->tour_description = $validatedData['tour_description'];
+        $tour->tour_schedule = $validatedData['tour_schedule'];
+        $tour->tour_sale = $validatedData['tour_sale'];
+        $tour->location_id = $validatedData['location_id'];
+        $tour->guide_id = $validatedData['guide_id'];
+
+        // Set total_seats and booked_seats
+        $tour->total_seats = 45;
+        $tour->booked_seats = 0;
 
         $tour->save();
 
@@ -60,6 +72,11 @@ class AddTourController extends Controller
     public function destroy($id)
     {
         $tour = Tour::findOrFail($id);
+        $path = 'img/';
+        if (File::exists(public_path($path . $tour->tour_image))) {
+            File::delete(public_path($path . $tour->tour_image));
+        }
+
         $tour->delete();
 
         return redirect()->back()->with('success', 'Tour đã được xóa thành công!');
@@ -76,7 +93,7 @@ class AddTourController extends Controller
     {
         $validatedData = $request->validate([
             'tour_name' => 'required|string|max:255',
-            'tour_image' => 'required|string',
+            // 'tour_image' => 'required',
             'start_day' => 'required|date',
             'time' => 'required|string',
             'star_from' => 'required|string',
@@ -88,11 +105,60 @@ class AddTourController extends Controller
             'location_id' => 'required|integer',
             'guide_id' => 'required|integer',
         ]);
-
         $tour = Tour::findOrFail($id);
-        $tour->update($validatedData);
+        $get_imgae = $request->tour_image;
+        if ($get_imgae) {
+            $path = 'img/';
+            if (File::exists(public_path($path . $tour->tour_image))) {
+                File::delete(public_path($path . $tour->tour_image));
+            }
+            $get_name_image = $get_imgae->getClientOriginalName();
+            $name_image = current(explode('.', $get_name_image));
+            $new_image = $name_image . rand(0, 999) . '.' . $get_imgae->getClientOriginalExtension();
+            $get_imgae->move($path, $new_image);
+            $tour->tour_image = $new_image;
+        } else {
+            $tour->tour_image = $tour->tour_image;
+        }
+        $tour->tour_name = $validatedData['tour_name'];
+        $tour->start_day = $validatedData['start_day'];
+        $tour->time = $validatedData['time'];
+        $tour->star_from = $validatedData['star_from'];
+        $tour->price = $validatedData['price'];
+        $tour->vehicle = $validatedData['vehicle'];
+        $tour->tour_description = $validatedData['tour_description'];
+        $tour->tour_schedule = $validatedData['tour_schedule'];
+        $tour->tour_sale = $validatedData['tour_sale'];
+        $tour->location_id = $validatedData['location_id'];
+        $tour->guide_id = $validatedData['guide_id'];
 
-        return redirect()->back()->with('success', 'Tour đã được cập nhật thành công!');
+
+        $tour->save();
+
+        return redirect()->route('admin.showcrud')->with('success', 'Tour đã được cập nhật thành công!');
+    }
+
+    public function showCrud()
+    {
+        $user_main = Auth::user(); // Lấy thông tin người dùng đã đăng nhập
+        $tours = Tour::orderBy('tour_id')->get();
+        $user = User::orderBy('id')->get();
+        $guide = Guide::orderBy('guide_Id')->get();
+        $location = Location::orderBy('location_id')->get();
+        $client = Client::orderBy('client_id')->get();
+
+        // Lấy các tour yêu thích của người dùng hiện tại
+        // $favoriteTours = FavoriteTour::where('user_id', $user_main->id)->get();
+
+        return view('admin.crud', [
+            'user_main' => $user_main,
+            'data' => $tours,
+            'data_guide' => $guide,
+            'data_location' => $location,
+            'decentralization' => $user,
+            'data_comment' => $client,
+            // 'favoriteTours' => $favoriteTours, // Truyền danh sách các tour yêu thích vào view
+        ]);
     }
     //-------------------------------------------------------------------------------------
 

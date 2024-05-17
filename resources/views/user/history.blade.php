@@ -30,31 +30,31 @@
         @foreach($booking as $value)
         <div class="row list-group-item d-flex list-group-item-action mb-4" style="margin: auto; border-top-width: 1px;">
             <div class="col-sm-3">
-                <img class="img-fluid w-100 h-100" src="{{ asset('img/'.$tours[$value->booking_tour_id]->tour_image) }}" alt="" style="object-fit: cover;">
+                <img class="img-fluid w-100 h-100" src="{{ asset('img/'.$tours[$value->booking_tour_id - 1]->tour_image) }}" alt="" style="object-fit: cover;">
             </div>
             <div class="col-sm-9">
 
                 <div class="row gy-2 gx-4 mb-2">
                     <div class="col-sm-9">
-                        <h3 class="mb-2 text-primary">{{ $tours[$value->booking_tour_id]->tour_name}} </h3>
+                        <h3 class="mb-2 text-primary">{{ $tours[$value->booking_tour_id - 1]->tour_name}} </h3>
                     </div>
                     <div class="col-sm-3">
                         <p class="mb-0 "><i class="fa fa-history text-primary me-2"></i>Ngày đặt: {{date_format($value->created_at,"d/m/Y ")}} </p>
                     </div>
                     <div class="col-sm-3">
-                        <p class="mb-0"><i class="fa fa-calendar-alt text-primary me-2"></i>Ngày bắt đầu: {{ $tours[$value->booking_tour_id]->start_day}}</p>
+                        <p class="mb-0"><i class="fa fa-calendar-alt text-primary me-2"></i>Ngày bắt đầu: {{ $tours[$value->booking_tour_id - 1]->start_day}}</p>
                     </div>
                     <div class="col-sm-3">
-                        <p class="mb-0"><i class="fa fa-clock text-primary me-2"></i>Thời gian: {{ $tours[$value->booking_tour_id]->time}}</p>
+                        <p class="mb-0"><i class="fa fa-clock text-primary me-2"></i>Thời gian: {{ $tours[$value->booking_tour_id - 1]->time}}</p>
                     </div>
                     <div class="col-sm-3">
-                        <p class="mb-0"><i class="fa fa-plane-departure text-primary me-2"></i>Nơi khởi hành: {{ $tours[$value->booking_tour_id]->star_from }}</p>
+                        <p class="mb-0"><i class="fa fa-plane-departure text-primary me-2"></i>Nơi khởi hành: {{ $tours[$value->booking_tour_id - 1]->star_from }}</p>
                     </div>
                     <div class="col-sm-3">
-                        <p class="mb-0"><i class="fa fa-bus text-primary me-2"></i>Phương tiện: {{ $tours[$value->booking_tour_id]->vehicle }}</p>
+                        <p class="mb-0"><i class="fa fa-bus text-primary me-2"></i>Phương tiện: {{ $tours[$value->booking_tour_id - 1]->vehicle }}</p>
                     </div>
                 </div>
-                <p class="mb-2">{{ $tours[$value->booking_tour_id]->tour_description }}</p>
+                <p class="mb-2">{{ $tours[$value->booking_tour_id - 1]->tour_description }}</p>
                 <div class="row gy-2 gx-4 mb-2">
                     <div class="col-sm-6">
                         <p class="mb-0"><i class="fa fa-users text-primary me-2"></i>Số lượng người: {{$value->booking_customer_quantity}}</p>
