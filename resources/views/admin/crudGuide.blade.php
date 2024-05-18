@@ -19,7 +19,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <form action="{{ route('guide.store') }}" method="POST">
+            <form action="{{ route('guide.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
                     <div class="col-md-12">

@@ -169,16 +169,23 @@ class AddTourController extends Controller
         $validatedData = $request->validate([
             'guide_name' => 'required|string|max:255',
             'guide_pno' => 'required|string',
-            'guide_image' => 'required|string',
+            'guide_image' => 'required',
             'guide_mail' => 'required|string',
             'guide_intro' => 'required|string',
         ]);
+
+        $get_imgae = $request->guide_image;
+        $path = 'img/';
+        $get_name_image = $get_imgae->getClientOriginalName();
+        $name_image = current(explode('.', $get_name_image));
+        $new_image = $name_image . rand(0, 999) . '.' . $get_imgae->getClientOriginalExtension();
+        $get_imgae->move($path, $new_image);
 
         // Create a new tour instance
         $guide = new Guide;
         $guide->guide_Name = $validatedData['guide_name'];
         $guide->guide_Pno = $validatedData['guide_pno'];
-        $guide->guide_Img = $validatedData['guide_image'];
+        $guide->guide_Img = $new_image;
         $guide->guide_Mail = $validatedData['guide_mail'];
         $guide->guide_Intro = $validatedData['guide_intro'];
         $guide->save();
@@ -190,6 +197,10 @@ class AddTourController extends Controller
     public function destroyGuide($id)
     {
         $guide = Guide::findOrFail($id);
+        $path = 'img/';
+        if (File::exists(public_path($path . $guide->guide_Img))) {
+            File::delete(public_path($path . $guide->guide_Img));
+        }
         $guide->delete();
 
         return redirect()->back()->with('success', 'Hướng dẫn viên đã bị đuổi!');
@@ -201,22 +212,51 @@ class AddTourController extends Controller
         return view('admin.editGuide', compact('guide'));
     }
 
+    public function showCRUDGuide() {
+        $guide = Guide::orderBy('guide_Id')->get();
+
+        // Lấy các tour yêu thích của người dùng hiện tại
+        // $favoriteTours = FavoriteTour::where('user_id', $user_main->id)->get();
+
+        return view('admin.crudGuide', [
+            'data_guide' => $guide,
+        ]);
+    }
+
     public function updateGuide(Request $request, $id)
     {
         // Validate the incoming request data
         $validatedData = $request->validate([
             'guide_Name' => 'required|string|max:255',
             'guide_Pno' => 'required|string',
-            'guide_Img' => 'required|string',
+            'guide_Img' => 'required',
             'guide_Mail' => 'required|string',
             'guide_Intro' => 'required|string',
         ]);
         // Tìm guide dựa trên id hoặc trả về null nếu không tìm thấy
         $guide = Guide::findOrFail($id);
+        $get_imgae = $request->guide_image;
+        if ($get_imgae) {
+            $path = 'img/';
+            if (File::exists(public_path($path . $guide->guide_Img))) {
+                File::delete(public_path($path . $guide->guide_Img));
+            }
+            $get_name_image = $get_imgae->getClientOriginalName();
+            $name_image = current(explode('.', $get_name_image));
+            $new_image = $name_image . rand(0, 999) . '.' . $get_imgae->getClientOriginalExtension();
+            $get_imgae->move($path, $new_image);
+            $guide->guide_Img = $new_image;
+        } else {
+            $guide->guide_Img = $guide->guide_Img;
+        }
 
-        // Cập nhật thông tin của guide
-        $guide->update($validatedData);
+        $guide->guide_Name = $validatedData['guide_name'];
+        $guide->guide_Pno = $validatedData['guide_pno'];
+        $guide->guide_Mail = $validatedData['guide_mail'];
+        $guide->guide_Intro = $validatedData['guide_intro'];
 
-        return redirect()->back()->with('success', 'Thông tin hướng dẫn viên đã được cập nhật thành công!');
+        $guide->save();
+
+        return redirect()->route('admin.guide')->with('success', 'Thông tin hướng dẫn viên đã được cập nhật thành công!');
     }
 }

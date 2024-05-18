@@ -13,6 +13,7 @@ use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FavoriteTourController;
 use App\Http\Controllers\AddLocationController;
+use App\Http\Controllers\AddGuideController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -114,6 +115,7 @@ Route::delete('/guide/{id}', [AddTourController::class, 'destroyGuide'])->name('
 Route::get('/guide/{id}/edit', [AddTourController::class, 'editGuide'])->name('guide.edit');
 // cập nhật guide
 Route::put('/guide/{id}', [AddTourController::class, 'updateGuide'])->name('guide.update');
+Route::get('/guide/crud', [AddTourController::class, 'showCRUDGuide'])->name('admin.guide');
 
 // Xóa thông tin user
 Route::delete('/xoaUser/{id}', [AdminController::class, 'xoaUser'])->name('tours.xoaUser');
