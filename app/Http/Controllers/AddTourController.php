@@ -229,7 +229,6 @@ class AddTourController extends Controller
         $validatedData = $request->validate([
             'guide_Name' => 'required|string|max:255',
             'guide_Pno' => 'required|string',
-            'guide_Img' => 'required',
             'guide_Mail' => 'required|string',
             'guide_Intro' => 'required|string',
         ]);
@@ -250,10 +249,10 @@ class AddTourController extends Controller
             $guide->guide_Img = $guide->guide_Img;
         }
 
-        $guide->guide_Name = $validatedData['guide_name'];
-        $guide->guide_Pno = $validatedData['guide_pno'];
-        $guide->guide_Mail = $validatedData['guide_mail'];
-        $guide->guide_Intro = $validatedData['guide_intro'];
+        $guide->guide_Name = $validatedData['guide_Name'];
+        $guide->guide_Pno = $validatedData['guide_Pno'];
+        $guide->guide_Mail = $validatedData['guide_Mail'];
+        $guide->guide_Intro = $validatedData['guide_Intro'];
 
         $guide->save();
 

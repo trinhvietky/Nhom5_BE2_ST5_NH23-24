@@ -14,7 +14,7 @@
 
 <div class="container-xxl py-5">
     <div class="row justify-content-center">
-    <form action="{{ route('guide.update', $guide->guide_Id) }}" method="POST">
+    <form action="{{ route('guide.update', $guide->guide_Id) }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
     <div class="col-md-12" style="width: 500px;">
@@ -28,7 +28,7 @@
         </div>
         <div class="mb-3">
             <label for="guide_Img" class="form-label text-primary">Hình ảnh</label>
-            <input type="file" class="form-control" id="guide_Img" value="{{ $guide->guide_Img }}" name="guide_Img">
+            <input type="file" class="form-control" id="guide_image" value="{{ $guide->guide_Img }}" name="guide_image">
         </div>
         <div class="mb-3">
             <label for="guide_Mail" class="form-label text-primary">Mail</label>
