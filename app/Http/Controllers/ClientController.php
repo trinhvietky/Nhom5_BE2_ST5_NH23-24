@@ -13,7 +13,7 @@ class ClientController extends Controller
     $validatedData = $request->validate([
         'client_comment' => 'required|string',
         'client_address' => 'required|string',
-        'client_image' => 'nullable|string',
+        'client_image' => 'nullable',
         'tour_id'=>'required|integer',
     ]);
 
@@ -22,13 +22,20 @@ class ClientController extends Controller
         $validatedData['client_image'] = 'noAvatar.jpg';
     }
 
+    $get_imgae = $request->client_image;
+        $path = 'img/';
+        $get_name_image = $get_imgae->getClientOriginalName();
+        $name_image = current(explode('.', $get_name_image));
+        $new_image = $name_image . rand(0, 999) . '.' . $get_imgae->getClientOriginalExtension();
+        $get_imgae->move($path, $new_image);
+
     // Create a new client instance
     $client = new Client;
     $client->client_comment = $validatedData['client_comment'];
     $client->client_name = Auth::user()->name; // Lấy tên của người dùng đăng nhập
     
     $client->client_address = $validatedData['client_address'];
-    $client->client_image = $validatedData['client_image'];
+    $client->client_image = $new_image;
     $client->user_id = Auth::user()->id; // Lấy tên của người dùng đăng nhập
     $client->tour_id = $validatedData['tour_id'];
 

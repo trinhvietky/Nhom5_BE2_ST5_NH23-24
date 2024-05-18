@@ -70,11 +70,59 @@
                         <div class="d-flex justify-content-center mb-2 pb-2">
                             <a href="{{ route('admin.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
                             <a href="{{ route('admin.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
+
+                            <form class="favorite-form" action="{{ route('favorite.add') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="tour_id" value="{{ $row->tour_id }}">
+                                <button type="submit" class="btn btn-sm btn-light favorite-btn">
+                                    <i class="far fa-heart heart-icon favorite-icon"></i>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
             @endforeach
+        </div>
+    </div>
+    <!-- Phần phân trang -->
+
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <ul class="pagination">
+                {{-- Nút Previous --}}
+                @if ($data->onFirstPage())
+                <li class="page-item disabled">
+                    <span class="page-link" aria-hidden="true">&laquo;</span>
+                </li>
+                @else
+                <li class="page-item">
+                    <a class="page-link" href="{{ $data->previousPageUrl() }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                @endif
+
+                {{-- Các nút số --}}
+                @foreach ($data->getUrlRange(1, $data->lastPage()) as $page => $url)
+                <li class="page-item {{ ($page == $data->currentPage()) ? 'active' : '' }}">
+                    <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+                </li>
+                @endforeach
+
+                {{-- Nút Next --}}
+                @if ($data->hasMorePages())
+                <li class="page-item">
+                    <a class="page-link" href="{{ $data->nextPageUrl() }}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                @else
+                <li class="page-item disabled">
+                    <span class="page-link" aria-hidden="true">&raquo;</span>
+                </li>
+                @endif
+            </ul>
         </div>
     </div>
 </div>
