@@ -81,6 +81,9 @@ Route::get('/admin/booking/{tour_id}', [LienKetTrangController::class, 'adminHie
 //-------Tìm và hiển thị kết quả tìm kiếm - admin
 Route::get('/admin/result', [LienKetTrangController::class, 'adminSearch'])->name('searchAdmin');
 
+//-------Quay lại trang CRUD sau khi edit tour - admin
+Route::get('/admin/crud', [LienKetTrangController::class, 'index'])->name('crud');
+
 
 
 
@@ -111,6 +114,7 @@ Route::delete('/guide/{id}', [AddTourController::class, 'destroyGuide'])->name('
 Route::get('/guide/{id}/edit', [AddTourController::class, 'editGuide'])->name('guide.edit');
 // cập nhật guide
 Route::put('/guide/{id}', [AddTourController::class, 'updateGuide'])->name('guide.update');
+
 
 // Xóa thông tin user
 Route::delete('/xoaUser/{id}', [AdminController::class, 'xoaUser'])->name('tours.xoaUser');

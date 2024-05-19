@@ -89,7 +89,6 @@
                             <a href="{{ url('/user.destination') }}" class="dropdown-item">Điểm đến</a>
                             <a href="{{ route('user.favorite') }}" class="dropdown-item">Tour yêu thích</a>
                             <a href="{{ url('/user.team') }}" class="dropdown-item">Hướng dẫn viên</a>
-                            <a href="{{ url('/user.testimonial') }}" class="dropdown-item">Đánh giá từ khách hàng</a>
                         </div>
                     </div>
                     <a href="{{ url('/user.contact') }}" class="nav-item nav-link">Liên hệ</a>
@@ -237,16 +236,23 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
+                    @if (session('success'))
+                    <div class="alert alert-success text-center" style="font-size: 30px;">
+                        {{ session('success') }}
+                    </div>
+                    @endif
                     <h4 class="text-white mb-3">Bản tin</h4>
                     <p>Để nhận được bản tin về du lịch, bạn vui lòng nhập email đăng ký với chúng tôi.</p>
                     <form action="{{ route('notice.store') }}" method="POST">
                         @csrf
                         <div class="position-relative mx-auto" style="max-width: 400px;">
                             <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" id="notice_email" name="notice_email" placeholder="Your email">
-                            <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Đăng ký</button>
+                            <button  type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Đăng ký</button>
                         </div>
                     </form>
                 </div>
+
+
             </div>
         </div>
         <div class="container">
@@ -271,7 +277,6 @@
         </div>
     </div>
     <!-- Footer End -->
-
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
