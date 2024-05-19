@@ -173,7 +173,14 @@
 
                         <div class="d-flex justify-content-center mb-2 pb-2">
                             <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
-                            <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
+                            <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" >Đặt ngay</a>
+                            <form class="favorite-form" action="{{ route('favorite.add') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="tour_id" value="{{ $row->tour_id }}">
+                                <button type="submit" class="btn btn-sm btn-primary px-3 favorite-btn" style="border-radius: 0 30px 30px 0;">
+                                    <i class="far fa-heart heart-icon favorite-icon"></i>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
