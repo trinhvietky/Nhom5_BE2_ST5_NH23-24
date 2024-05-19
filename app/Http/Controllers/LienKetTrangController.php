@@ -129,11 +129,4 @@ class LienKetTrangController extends Controller
         })->get();
         return view('admin.result', compact('tours'));
     }
-
-    public function history($user_id)
-    {
-        $booking = Booking::where('booking_user_id', $user_id)->get();
-        $tours = Tour::orderBy('tour_id')->get();
-        return view('user.history', compact('booking', 'tours'));
-    }
 }

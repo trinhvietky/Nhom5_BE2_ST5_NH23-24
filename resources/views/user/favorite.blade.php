@@ -60,7 +60,7 @@
                         <p>{{$favoriteTour->tour->tour_description}}</p>
                         <!-- Liên kết đến trang chi tiết tour -->
                         <a href="{{ route('user.tour.readmore', $favoriteTour->tour->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Đặt ngay</a>
-                        
+
                     </div>
                 </div>
             </div>

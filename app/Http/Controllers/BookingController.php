@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Booking;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\Models\Tour;
 use App\Models\User;
@@ -67,10 +68,19 @@ class BookingController extends Controller
         $booking->booking_tour_id = $booking_tour_id;
         $booking->booking_user_id = $booking_user_id;
 
-        $tour->booked_seats = $user->booked_seats + $request->input('booking_quantity');
+        $tour->booked_seats = $tour->booked_seats + $request->input('booking_quantity');
 
-        $tour->save();
+        // $tour->save();
         // $booking->save();
+        // Lưu thông tin booking vào session
+        // Session::put('booking', $booking);
+        session_start();
+        $_SESSION['booking_session'] = $booking;
+        $_SESSION['tour_session'] = $tour;
+
+        // $booking_session = Session::get('booking');
+        $booking_session = $_SESSION['booking_session'];
+        // dd($booking_session);
 
 
         $checkoutController = new CheckoutController();
@@ -78,6 +88,19 @@ class BookingController extends Controller
 
         // Redirect back or to a success page
         // return redirect('/user/tour/1');
+    }
+
+    public function history(Request $request, $user_id)
+    {
+        // session_start();
+        $data = Booking::where('booking_user_id', $user_id)
+            ->orderByDesc('booking_id')
+            ->paginate(6);
+        $tours = Tour::orderBy('tour_id')->get();
+        // $booking_session = Session::get('booking');
+        // $booking_session = $_SESSION['booking_session'];
+        // dd($booking_session);
+        return view('user.history', compact('data', 'tours'));
     }
 
     /**
