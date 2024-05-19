@@ -96,7 +96,7 @@ Route::get('/tour/{tour_id}', [LienKetTrangController::class, 'hienThi'])->name(
 Route::get('/user/tour/{tour_id}', [LienKetTrangController::class, 'show'])->name('tour.booking');
 
 
-Route::get('/history/{user_id}', [LienKetTrangController::class, 'history'])->name('history');
+Route::get('/history/{user_id}', [BookingController::class, 'history'])->name('history');
 
 
 // thêm tour
