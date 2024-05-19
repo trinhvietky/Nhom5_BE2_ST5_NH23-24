@@ -87,7 +87,6 @@
                         <div class="dropdown-menu m-0">
                             <a href="{{ url('/destination') }}" class="dropdown-item">Điểm đến</a>
                             <a href="{{ url('/team') }}" class="dropdown-item">Hướng dẫn viên</a>
-                            <a href="{{ url('/testimonial') }}" class="dropdown-item">Đánh giá từ khách hàng</a>
                         </div>
                     </div>
                     <a href="contact" class="nav-item nav-link">Liên hệ</a>

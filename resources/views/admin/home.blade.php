@@ -189,12 +189,12 @@
 
                         <div class="d-flex justify-content-center mb-2 pb-2">
                             <a href="{{ route('admin.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
-                            <a href="{{ route('admin.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Đặt ngay</a>
+                            <a href="{{ route('admin.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" >Đặt ngay</a>
 
                             <form class="favorite-form" action="{{ route('favorite.add') }}" method="POST">
                                 @csrf
                                 <input type="hidden" name="tour_id" value="{{ $row->tour_id }}">
-                                <button type="submit" class="btn btn-sm btn-light favorite-btn">
+                                <button type="submit" class="btn btn-sm btn-primary px-3 favorite-btn" style="border-radius: 0 30px 30px 0;">
                                     <i class="far fa-heart heart-icon favorite-icon"></i>
                                 </button>
                             </form>
@@ -311,31 +311,7 @@
 </div>
 <!-- Team End -->
 
-<!-- Testimonial Start -->
-<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container">
-        <div class="text-center">
-            <h1 class="text-center text-primary px-3">Khách hàng nói gì? </h1>
-        </div>
-        <div class="owl-carousel testimonial-carousel position-relative">
-            @foreach($data_comment -> take(5) as $row)
-            <div class="testimonial-item bg-white text-center border p-4">
-                <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3 img-fluid " src="{{asset('img/' . $row->client_image)}}" style="width: 100px; height: 100px;">
-                <h5 class="mb-0">{{$row->client_name}}</h5>
-                <p>{{$row->client_address}}</p>
-                <p class="mb-0">{{$row->client_comment}}</p>
-            </div>
-            @endforeach
-        </div>
-        <!--nút show danh sách -->
-        <div class="row justify-content-center py-3">
-            <div class="col-auto">
-                <a class="btn btn-primary rounded-pill py-3 px-4 mt-2" href="{{ url('/admin.testimonial') }}">Xem thêm ...</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Testimonial End -->
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
