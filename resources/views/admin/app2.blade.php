@@ -90,6 +90,7 @@
                             <a href="{{ url('/admin.crud') }}" class="dropdown-item">Tour</a>
                             <a href="{{ url('/admin.crudGuide') }}" class="dropdown-item">Guide</a>
                             <a href="{{ url('/admin.infomation') }}" class="dropdown-item">Users</a>
+                            <a href="{{ url('/admin.location-crud') }}" class="dropdown-item">Location</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -154,7 +155,7 @@
                     <!-- Responsive Navigation Menu -->
                     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
                         <div class="pt-2 pb-3 space-y-1">
-                            <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('admin')">
+                            <x-responsive-nav-link :href="route('admin.home')" :active="request()->routeIs('admin.home')">
                                 {{ __('Home') }}
                             </x-responsive-nav-link>
                         </div>

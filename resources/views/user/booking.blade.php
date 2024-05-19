@@ -263,7 +263,7 @@
 <!-- Navbar & Hero End -->
 <div class="container mt-5">
     <h2 class="mb-4 text-center"><span class="text-primary">Hãy cho chúng tôi biết bạn cảm thấy dịch vụ của chúng tôi như thế nào?</span></h2>
-    <form method="POST" action="{{ route('submit_comment') }}">
+    <form method="POST" action="{{ route('submit_comment') }}" enctype="multipart/form-data">
         @csrf
         <!-- <div class="mb-3">
             <label for="name" class="form-label text-primary" style="font-weight: bold; font-size: 25px;">Họ và tên của bạn</label>

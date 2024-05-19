@@ -18,10 +18,10 @@
         <h1 class="text-center text-primary px-3">Chỉnh sửa thông tin tour</h1>
     </div>
     <div class="row justify-content-center">
-        <form action="{{ route('tours.update', $tour->tour_id) }}" method="POST">
+        <form action="{{ route('tours.update', $tour->tour_id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
-            <div class="col-md-6" style="width: 500px;">
+            <div class=" col-md-6" style="width: 500px;">
 
                 <div class="mb-3">
                     <label for="tour_name" class="form-label text-primary">Tên tour</label>

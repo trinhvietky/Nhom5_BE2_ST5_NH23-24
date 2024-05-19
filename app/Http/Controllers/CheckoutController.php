@@ -10,7 +10,7 @@ class CheckoutController extends Controller
     public function vnpay_payment($booking)
     {
         if (isset($_POST['redirect'])) {
-            $id = $booking->booking_ir;
+            $id = $booking->booking_id;
             error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
             date_default_timezone_set('Asia/Ho_Chi_Minh');
 
@@ -19,7 +19,7 @@ class CheckoutController extends Controller
             $vnp_TmnCode = "VLQ7W9CS"; //Mã website tại VNPAY 
             $vnp_HashSecret = "F1ZHK1GCTWQAES1CZH1ZVNUJO8YSRVCZ"; //Chuỗi bí mật
 
-            $vnp_TxnRef = rand(00, 999);  //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
+            $vnp_TxnRef = $id;  //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
             $vnp_OrderInfo = 'Thanh toán hóa đơn';
             $vnp_OrderType = 'billpayment';
             $vnp_Amount = $booking->booking_amount * 100;

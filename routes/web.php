@@ -12,6 +12,8 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FavoriteTourController;
+use App\Http\Controllers\AddLocationController;
+use App\Http\Controllers\AddGuideController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,8 +40,8 @@ require __DIR__ . '/auth.php';
 Route::get('/search', [LienKetTrangController::class, 'search']);
 
 
-Route::get('/user/home', [UserController::class, 'index'])->name('user.home');
-Route::get('/admin/home', [UserController::class, 'index'])->name('home');
+Route::get('/users/home', [UserController::class, 'index'])->name('user.home');
+Route::get('/admins/home', [UserController::class, 'index'])->name('admin.home');
 
 //USER CHƯA CÓ TÀI KHOẢN
 
@@ -106,6 +108,8 @@ Route::get('/tours/{id}/edit', [AddTourController::class, 'edit'])->name('tours.
 // cập nhật tour
 Route::put('/tours/{id}', [AddTourController::class, 'update'])->name('tours.update');
 
+Route::get('/admin/crud', [AddTourController::class, 'showCRUD'])->name('admin.showcrud');
+
 // thêm guide
 Route::post('/guide', [AddTourController::class, 'storeGuide'])->name('guide.store');
 // xóa guide
@@ -114,6 +118,7 @@ Route::delete('/guide/{id}', [AddTourController::class, 'destroyGuide'])->name('
 Route::get('/guide/{id}/edit', [AddTourController::class, 'editGuide'])->name('guide.edit');
 // cập nhật guide
 Route::put('/guide/{id}', [AddTourController::class, 'updateGuide'])->name('guide.update');
+Route::get('/guide/crud', [AddTourController::class, 'showCRUDGuide'])->name('admin.guide');
 
 
 // Xóa thông tin user
@@ -161,3 +166,13 @@ Route::post('/favorite/add', [FavoriteTourController::class, 'add'])->name('favo
 
 
 Route::get('/user/favorite', [UserController::class, 'favorite'])->name('user.favorite');
+
+// thêm location
+Route::post('/locations', [AddLocationController::class, 'store'])->name('location.store');
+// xóa location
+Route::delete('/locations/{id}', [AddLocationController::class, 'destroy'])->name('location.destroy');
+// chỉnh sửa location
+Route::get('/locations/{id}/edit', [AddLocationController::class, 'edit'])->name('location.edit');
+// cập nhật location
+Route::put('/locations/{id}', [AddLocationController::class, 'update'])->name('location.update');
+Route::get('/locations/crud', [AddLocationController::class, 'showCRUD'])->name('admin.location-crud');
