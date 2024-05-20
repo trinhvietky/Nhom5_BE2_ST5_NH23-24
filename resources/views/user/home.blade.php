@@ -207,7 +207,7 @@
 
                                 </button>
                             </form> -->
-                            <div class="btn-sm btn-primary px-3 border-end btn-far" data-tour-id="{{ $row->tour_id }}">
+                            <div class="btn-sm btn-primary px-3 border-end btn-far" style="border-radius: 0 30px 30px 0;" data-tour-id="{{ $row->tour_id }}">
                                 <i class="far fa-heart " id="favorite-btn-{{$row->tour_id}}"></i>
                             </div>
                         </div>

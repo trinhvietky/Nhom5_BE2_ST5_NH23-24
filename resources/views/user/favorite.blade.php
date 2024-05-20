@@ -78,7 +78,7 @@
 
                             </form> -->
 
-                            <div class="btn-sm btn-primary px-3 border-end btn-far" data-tour-id="{{ $favoriteTour->tour_id }}">
+                            <div class="btn-sm btn-primary px-3 border-end btn-far" style="border-radius: 0 30px 30px 0;" data-tour-id="{{ $favoriteTour->tour_id }}">
                                 <i class="fas fa-heart " id="favorite-btn-{{$favoriteTour->tour_id}}"></i>
                             </div>
                         </div>
