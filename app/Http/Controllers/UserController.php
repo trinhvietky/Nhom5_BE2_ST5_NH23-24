@@ -32,13 +32,13 @@ class UserController extends Controller
                 $guide = Guide::orderBy('guide_Id')->get();
                 $location = Location::orderBy('location_id')->get();
                 $client = Client::orderBy('client_id')->get();
-                return view('user/home', ['user_main' => $user_main,'data' => $tours, 'data_guide' => $guide, 'data_location' => $location, 'data_comment' => $client]);
+                return view('user.home', ['user_main' => $user_main,'data' => $tours, 'data_guide' => $guide, 'data_location' => $location, 'data_comment' => $client]);
             } else if ($userType == 'admin') {
                 $tours = Tour::orderBy('tour_id')->get();
                 $guide = Guide::orderBy('guide_Id')->get();
                 $location = Location::orderBy('location_id')->get();
                 $client = Client::orderBy('client_id')->get();
-                return view('admin/home', ['data' => $tours, 'data_guide' => $guide, 'data_location' => $location, 'data_comment' => $client]);
+                return view('admin.home', ['data' => $tours, 'data_guide' => $guide, 'data_location' => $location, 'data_comment' => $client]);
             }
         }
     }

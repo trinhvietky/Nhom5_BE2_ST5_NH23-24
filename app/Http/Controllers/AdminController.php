@@ -25,13 +25,13 @@ class AdminController extends Controller
                 $tours = Tour::orderBy('tour_id')->get();
                 $guide = Guide::orderBy('guide_Id')->get();
                 $location = Location::orderBy('location_id')->get();
-                return view('user/home', ['data' => $tours, 'data_guide' => $guide, 'data_location' => $location]);
+                return view('user.home', ['data' => $tours, 'data_guide' => $guide, 'data_location' => $location]);
             }
             else if($userType == 'admin') {
                 $tours = Tour::orderBy('tour_id')->get();
                 $guide = Guide::orderBy('guide_Id')->get();
                 $location = Location::orderBy('location_id')->get();
-                return view('admin/home', ['data' => $tours, 'data_guide' => $guide, 'data_location' => $location]);
+                return view('admin.home', ['data' => $tours, 'data_guide' => $guide, 'data_location' => $location]);
             }
         }
     }
