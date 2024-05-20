@@ -200,21 +200,24 @@
                         <div class="d-flex justify-content-center mb-2 pb-2">
                             <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
                             <a href="{{ route('user.tour.readmore', $row->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 0 0 0 0;">Đặt ngay</a>
-                            <form class="favorite-form" action="{{ route('favorite.add') }}" method="POST">
+                            <!-- <form class="favorite-form" action="{{ route('favorite.add') }}" method="POST">
                                 @csrf
                                 <input type="hidden" name="tour_id" value="{{ $row->tour_id }}">
                                 <button type="submit" class="btn btn-sm btn-primary px-3 favorite-btn" style="border-radius: 0 30px 30px 0;">
-                                    <i class="far fa-heart heart-icon favorite-icon text-white"></i>
+
                                 </button>
-                            </form>
-
-
+                            </form> -->
+                            <div class="btn-sm btn-primary px-3 border-end btn-far" data-tour-id="{{ $row->tour_id }}">
+                                <i class="far fa-heart " id="favorite-btn-{{$row->tour_id}}"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             @endforeach
         </div>
+
+
         <!--nút show danh sách -->
         <div class="row justify-content-center py-3">
             <div class="col-auto">
@@ -325,7 +328,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
-        const images = ["img/about_us.jpg", "img/duLich1.jpg", "img/duLich2.jpg", "img/duLich3.jpg", "img/duLich4.jpg", "img/duLich5.jpg"];
+        const images = ["{{asset('img/about_us.jpg')}}", "{{asset('img/duLich1.jpg')}}", "{{asset('img/duLich2.jpg')}}", "{{asset('img/duLich3.jpg')}}", "{{asset('img/duLich4.jpg')}}", "{{asset('img/duLich5.jpg')}}"];
         let currentIndex = 0;
 
         function changeImage() {
@@ -336,6 +339,69 @@
         }
 
         setInterval(changeImage, 2000);
+    });
+</script>
+
+<!-- Favorite tour javascript -->
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: "{{ route('favorite.favoriteList') }}", // Route của Laravel
+            method: 'POST', // Phương thức HTTP
+            dataType: 'json', // Loại dữ liệu trả về
+            success: function(response) {
+                // const fav_btn = $("#favorite-btn-" + response.tour_id);
+                // Xử lý phản hồi từ máy chủ;
+                $.each(response, function(index, element) {
+                    $("#favorite-btn-" + element.tour_id).removeClass("far").addClass("fas");
+                });
+            },
+            error: function(xhr, status, error) {
+                // Xử lý lỗi nếu có
+                console.error('Error:', error);
+            }
+        });
+        // Sự kiện click hoặc sự kiện khác để kích hoạt Ajax
+        $(".btn-far").each(function() {
+
+            $(this).on("click", function() {
+                const id = $(this).data("tourId");
+                const fav_btn = $("#favorite-btn-" + id);
+                const dataToSend = {
+                    tourId: id,
+                    // Các dữ liệu khác nếu cần
+                };
+                // Gửi yêu cầu Ajax khi button được click
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url: "{{ route('favorite.saveData') }}", // Route của Laravel
+                    method: 'POST', // Phương thức HTTP
+                    data: dataToSend,
+                    dataType: 'json', // Loại dữ liệu trả về
+                    success: function(response) {
+
+                        // Xử lý phản hồi từ máy chủ;
+                        console.log(response);
+                        if (response.tour_id != null) {
+                            fav_btn.removeClass("far").addClass("fas");
+
+                        } else {
+                            console.log("cmm")
+                            fav_btn.removeClass("fas").addClass("far");
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        // Xử lý lỗi nếu có
+                        console.error('Error:', error);
+                    }
+                });
+            });
+        });
     });
 </script>
 <!-- Thêm Font Awesome -->
