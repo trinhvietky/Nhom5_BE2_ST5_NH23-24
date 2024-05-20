@@ -31,7 +31,7 @@
         </div>
         <div class="row g-4 justify-content-center favoriteList-content">
             @foreach($favoriteTours as $favoriteTour)
-            <!-- @if($favoriteTour->tour && $favoriteTour->tour->tour_image) -->
+            @if($favoriteTour->tour && $favoriteTour->tour->tour_image)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="package-item">
                     <div class="position-relative overflow-hidden">
@@ -85,7 +85,7 @@
                     </div>
                 </div>
             </div>
-            <!-- @endif -->
+            @endif
             @endforeach
         </div>
     </div>
