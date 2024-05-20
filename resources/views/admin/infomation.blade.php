@@ -49,7 +49,7 @@
                                     <form action="{{ route('tours.suaUser', $row->id) }}" method="POST">
                                         @csrf
                                         @method('UPDATE')
-                                        <button type="button" data-id="{{ $row->id }}" class="btn"><i class="fa fa-edit text-primary"></i></button>
+                                        <button type="button" data-id="{{ $row->id }}" class="btn edit-button"><i class="fa fa-edit text-primary"></i></button>
                                     </form>
                                 </div>
                             </td>
@@ -81,6 +81,7 @@
                     if (xhr.status >= 200 && xhr.status < 300) {
                         console.log('Cập nhật phân quyền thành công');
                         // Thực hiện các hành động sau khi cập nhật thành công
+                        alert('Phân quyền thành công');
                     } else {
                         console.error('Lỗi khi cập nhật phân quyền: ' + xhr.status);
                         // Xử lý lỗi nếu có

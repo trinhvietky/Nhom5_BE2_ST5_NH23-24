@@ -22,17 +22,17 @@
             <form action="{{ route('location.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
-                        <div class="mb-3">
-                            <label for="tour_name" class="form-label text-primary">Tên location</label>
-                            <input type="text" class="form-control" id="location_name" name="location_name" placeholder="Tên location">
-                        </div>
-                        <div class="mb-3">
-                            <label for="start_day" class="form-label text-primary">Hình ảnh</label>
-                            <input type="file" class="form-control" id="location_image" name="location_image" placeholder="Hình ảnh">
-                        </div>
-                        <div class="text-end">
-                            <button type="submit" class="btn btn-primary">Thêm</button>
-                        </div>
+                    <div class="mb-3">
+                        <label for="tour_name" class="form-label text-primary">Tên location</label>
+                        <input type="text" class="form-control" id="location_name" name="location_name" placeholder="Tên location">
+                    </div>
+                    <div class="mb-3">
+                        <label for="start_day" class="form-label text-primary">Hình ảnh</label>
+                        <input type="file" class="form-control" id="location_image" name="location_image" placeholder="Hình ảnh">
+                    </div>
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-primary">Thêm</button>
+                    </div>
                 </div>
             </form>
         </div>
@@ -50,25 +50,26 @@
                             <th class="text-center" scope="col">ID</th>
                             <th class="text-center" scope="col">Location name</th>
                             <th class="text-center" scope="col">Image</th>
+                            <th class="text-center" scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
 
                         @foreach($data_location as $row)
                         <tr>
-                            <td style="width: 50px;" class="text-center">{{ $row->location_id}}</td>
-                            <td style="width: 10px;">{{ $row->location_name}}</td>
+                            <td style="width: 50px; line-height: 250px;" class="text-center">{{ $row->location_id}}</td>
+                            <td style="width: 10px; line-height: 250px;" class="text-center">{{ $row->location_name}}</td>
                             <td class="text-center" style="width: 100px;"><img class="img-fluid" style="width: 600px; height: 250px" src="{{ asset('img/'.$row->location_image) }}" alt=""></td>
                             <!-- Nút xóa -->
-                            <td style="width: 50px;" class="text-center">
-                                <div class="btn-group" style="line-height: 10px;" role="group" aria-label="Basic example">
-                                <form action="{{ route('location.destroy', $row->location_id) }}" method="POST">
+                            <td style="width: 50px; line-height: 250px;" class="text-center">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <form action="{{ route('location.destroy', $row->location_id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn" style="margin-right: 10px;"><i class="fa fa-trash-alt text-danger"></i></button>
                                     </form>
-                                    <a href="{{ route('location.edit', $row->location_id) }}" class="btn"><i class="fa fa-edit text-primary"></i></a>
                                 </div>
+                                <a href="{{ route('location.edit', $row->location_id) }}" class="btn"><i class="fa fa-edit text-primary"></i></a>
                             </td>
                         </tr>
                         @endforeach

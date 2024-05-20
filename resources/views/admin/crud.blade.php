@@ -110,11 +110,6 @@
                             <label for="tour_schedule" class="form-label text-primary">Lịch trình tour</label>
                             <textarea class="form-control" id="tour_schedule" name="tour_schedule" placeholder="Lịch trình tour"></textarea>
                         </div>
-
-
-
-
-
                         <div class="text-end">
                             <button type="submit" class="btn btn-primary">Thêm</button>
                         </div>
