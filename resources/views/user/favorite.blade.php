@@ -29,7 +29,7 @@
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h1 class="text-center text-primary px-3">Tour yêu thích của bạn </h1>
         </div>
-        <div class="row g-4 justify-content-center">
+        <div class="row g-4 justify-content-center favoriteList-content">
             @foreach($favoriteTours as $favoriteTour)
             @if($favoriteTour->tour && $favoriteTour->tour->tour_image)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -72,15 +72,15 @@
                         <div class="d-flex justify-content-center mb-2 pb-2">
                             <a href="{{ route('user.tour.readmore', $favoriteTour->tour->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Xem thêm</a>
                             <a href="{{ route('user.tour.readmore', $favoriteTour->tour->tour_id) }}" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 0 0 0 0;">Đặt ngay</a>
-                            <form class="favorite-form" action="{{ route('favorite.add') }}" method="POST">
+                            <!-- <form class="favorite-form" action="{{ route('favorite.add') }}" method="POST">
                                 @csrf
                                 <input type="hidden" name="tour_id" value="{{ $favoriteTour->tour->tour_id }}">
-                                <button type="submit" class="btn btn-sm btn-primary px-3 favorite-btn" style="border-radius: 0 30px 30px 0;">
-                                    <i class="far fa-heart heart-icon favorite-icon text-white"></i>
-                                </button>
-                            </form>
 
+                            </form> -->
 
+                            <div class="btn-sm btn-primary px-3 border-end btn-far" style="border-radius: 0 30px 30px 0;" data-tour-id="{{ $favoriteTour->tour_id }}">
+                                <i class="fas fa-heart " id="favorite-btn-{{$favoriteTour->tour_id}}"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -94,5 +94,50 @@
 
 
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Favorite tour javascript -->
+<script>
+    $(document).ready(function() {
 
+        // Sự kiện click hoặc sự kiện khác để kích hoạt Ajax
+        $(".btn-far").each(function() {
+
+            $(this).on("click", function() {
+                const id = $(this).data("tourId");
+                const fav_btn = $("#favorite-btn-" + id);
+                const dataToSend = {
+                    tourId: id,
+                    // Các dữ liệu khác nếu cần
+                };
+                // Gửi yêu cầu Ajax khi button được click
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url: "{{ route('favorite.saveData') }}", // Route của Laravel
+                    method: 'POST', // Phương thức HTTP
+                    data: dataToSend,
+                    dataType: 'json', // Loại dữ liệu trả về
+                    success: function(response) {
+
+                        // Xử lý phản hồi từ máy chủ;
+                        console.log(response);
+                        if (response.tour_id != null) {
+                            fav_btn.removeClass("far").addClass("fas");
+
+                        } else {
+                            console.log("cmm")
+                            fav_btn.removeClass("fas").addClass("far");
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        // Xử lý lỗi nếu có
+                        console.error('Error:', error);
+                    }
+                });
+                $(this).parent().parent().parent().parent().remove();
+            });
+        });
+    });
+</script>
 @endsection
