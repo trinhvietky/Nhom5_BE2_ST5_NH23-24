@@ -39,7 +39,7 @@
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                 <div class="position-relative h-100" id="imageDiv">
-                    <img class="img-fluid position-absolute w-100 h-100" src="img/about_us.jpg" alt="" style="object-fit: cover;">
+                    <img class="img-fluid position-absolute w-100 h-100" src="{{asset('img/about_us.jpg')}}" alt="" style="object-fit: cover;">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -325,7 +325,14 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
-        const images = ["img/about_us.jpg", "img/duLich1.jpg", "img/duLich2.jpg", "img/duLich3.jpg", "img/duLich4.jpg", "img/duLich5.jpg"];
+        const images = [
+            "{{ asset('img/about_us.jpg') }}",
+            "{{ asset('img/duLich1.jpg') }}",
+            "{{ asset('img/duLich2.jpg') }}",
+            "{{ asset('img/duLich3.jpg') }}",
+            "{{ asset('img/duLich4.jpg') }}",
+            "{{ asset('img/duLich5.jpg') }}"
+        ];
         let currentIndex = 0;
 
         function changeImage() {

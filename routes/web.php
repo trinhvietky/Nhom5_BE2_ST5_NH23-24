@@ -41,7 +41,7 @@ Route::get('/search', [LienKetTrangController::class, 'search']);
 
 
 Route::get('/user/home', [UserController::class, 'index'])->name('user.home');
-Route::get('/admin/home', [UserController::class, 'index'])->name('admin.home');
+Route::get('/admin/home', [UserController::class, 'index'])->name('home');
 
 //USER CHƯA CÓ TÀI KHOẢN
 
