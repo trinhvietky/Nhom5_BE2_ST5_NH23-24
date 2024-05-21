@@ -54,7 +54,6 @@
                             <input style="margin-bottom: 35px;" type="file" class="form-control" id="tour_image" name="tour_image">
                         </div>
 
-
                         <div class="mb-3">
                             <label for="tour_description" class="form-label text-primary">Giới thiệu tour</label>
                             <textarea class="form-control" id="tour_description" name="tour_description" placeholder="Giới thiệu tour"></textarea>

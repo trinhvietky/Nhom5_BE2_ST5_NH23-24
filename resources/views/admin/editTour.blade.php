@@ -17,12 +17,11 @@
     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
         <h1 class="text-center text-primary px-3">Chỉnh sửa thông tin tour</h1>
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" style="position: relative; left: 420px;">
         <form action="{{ route('tours.update', $tour->tour_id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class=" col-md-6" style="width: 500px;">
-
                 <div class="mb-3">
                     <label for="tour_name" class="form-label text-primary">Tên tour</label>
                     <input type="text" class="form-control" id="tour_name" name="tour_name" value="{{ $tour->tour_name }}" placeholder="Tên tour">

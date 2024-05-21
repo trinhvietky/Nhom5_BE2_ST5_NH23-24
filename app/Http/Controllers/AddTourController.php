@@ -141,7 +141,7 @@ class AddTourController extends Controller
     public function showCrud()
     {
         $user_main = Auth::user(); // Lấy thông tin người dùng đã đăng nhập
-        $tours = Tour::orderBy('tour_id')->paginate(6);
+        $tours = Tour::orderByDesc('tour_id')->paginate(6);
         $user = User::orderBy('id')->get();
         $guide = Guide::orderBy('guide_Id')->get();
         $location = Location::orderBy('location_id')->get();

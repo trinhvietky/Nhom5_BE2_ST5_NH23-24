@@ -13,7 +13,6 @@ use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FavoriteTourController;
 use App\Http\Controllers\AddLocationController;
-use App\Http\Controllers\AddGuideController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -84,7 +83,9 @@ Route::get('/admin/booking/{tour_id}', [LienKetTrangController::class, 'adminHie
 Route::get('/admin/result', [LienKetTrangController::class, 'adminSearch'])->name('searchAdmin');
 
 //-------Quay lại trang CRUD sau khi edit tour - admin
-Route::get('/admin/crud', [LienKetTrangController::class, 'index'])->name('crud');
+// Route::get('/admin/crud', [LienKetTrangController::class, 'index'])->name('crud');
+// 
+Route::get('/admin/crudtour', [AddTourController::class, 'S'])->name('admin.tour');
 
 
 

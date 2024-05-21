@@ -15,7 +15,7 @@
 
 <div class="container-xxl py-5">
     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-        <h1 class="text-center text-primary px-3">Chỉnh sửa thông tin tour</h1>
+        <h1 class="text-center text-primary px-3">Chỉnh sửa thông tin location</h1>
     </div>
     <div class="row justify-content-center">
     <form action="{{ route('location.update', $location->location_id) }}" method="POST" enctype="multipart/form-data">
@@ -34,7 +34,7 @@
                             <button type="submit" class="btn btn-primary">Sửa</button>
                         </div>
                 </div>
-            </form>
+        </form>
     </div>
 </div>
 
