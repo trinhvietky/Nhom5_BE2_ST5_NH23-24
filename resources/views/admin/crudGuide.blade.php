@@ -14,6 +14,11 @@
 </div>
 
 <div class="container-xxl py-5">
+@if (session('success'))
+    <div class="alert alert-success text-center" style="font-size: 30px;">
+        {{ session('success') }}
+    </div>
+@endif
     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
         <h1 class="text-center text-primary px-3">Thêm hướng dẫn viên</h1>
     </div>

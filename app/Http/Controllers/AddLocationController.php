@@ -89,6 +89,6 @@ class AddLocationController extends Controller
         $location->location_name = $validatedData['location_name'];
         $location->save();
 
-        return redirect()->route('admin.location-crud')->with('success', 'Tour đã được cập nhật thành công!');
+        return redirect()->route('admin.location-crud')->with('success', 'Location đã được cập nhật thành công!');
     }
 }

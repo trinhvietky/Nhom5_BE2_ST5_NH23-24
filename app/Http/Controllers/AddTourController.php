@@ -203,7 +203,7 @@ class AddTourController extends Controller
         }
         $guide->delete();
 
-        return redirect()->back()->with('success', 'Hướng dẫn viên đã bị đuổi!');
+        return redirect()->back()->with('success', 'Đã xóa hướng dẫn viên ra khỏi danh sách');
     }
 
     public function editGuide($id)

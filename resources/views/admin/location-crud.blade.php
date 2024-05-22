@@ -14,8 +14,13 @@
 </div>
 
 <div class="container-xxl py-5">
+@if (session('success'))
+    <div class="alert alert-success text-center" style="font-size: 30px;">
+        {{ session('success') }}
+    </div>
+@endif
     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-        <h1 class="text-center text-primary px-3">Thêm tour</h1>
+        <h1 class="text-center text-primary px-3">Thêm Địa Điểm</h1>
     </div>
     <div class="row justify-content-center">
         <div class="col-md-6">
