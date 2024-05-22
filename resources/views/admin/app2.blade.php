@@ -88,9 +88,9 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Quản lý</a>
                         <div class="dropdown-menu m-0">
                             <a href="{{ route('admin.showcrud') }}" class="dropdown-item">Tour</a>
-                            <a href="{{ url('/admin.crudGuide') }}" class="dropdown-item">Guide</a>
+                            <a href="{{ route('admin.guide') }}" class="dropdown-item">Guide</a>
                             <a href="{{ url('/admin.infomation') }}" class="dropdown-item">Users</a>
-                            <a href="{{ url('/admin.location-crud') }}" class="dropdown-item">Location</a>
+                            <a href="{{ route('admin.location-crud') }}" class="dropdown-item">Location</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">

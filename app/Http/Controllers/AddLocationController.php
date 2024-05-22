@@ -51,8 +51,8 @@ class AddLocationController extends Controller
         return view('admin.editLocation', compact('location'));
     }
 
-    public function showCrud() {
-        $location = Location::orderBy('location_id')->get();
+    public function showCrudLocation() {
+        $location = Location::orderByDesc('location_id')->get();
 
         // Lấy các tour yêu thích của người dùng hiện tại
         // $favoriteTours = FavoriteTour::where('user_id', $user_main->id)->get();

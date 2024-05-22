@@ -15,72 +15,14 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('myUsers')->insert([
+        DB::table('users')->insert([
             [
-                'username' => 'trinhvietky',
-                'password' => '123456',
-                'admin' => '1',
+                'username' => 'admin@gmail.com',
+                'password' => '12345678',
+                'usertype' => 'admin',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-
-            [
-                'username' => 'maitrananhtuan',
-                'password' => '123456',
-                'admin' => '1',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-
-            [
-                'username' => 'nguyenthanhtai',
-                'password' => '123456',
-                'admin' => '1',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-
-            [
-                'username' => 'hosiminhtri',
-                'password' => '123456',
-                'admin' => '1',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-
-            [
-                'username' => 'vulehuytruong',
-                'password' => '123456',
-                'admin' => '1',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-
-            [
-                'username' => 'user1',
-                'password' => '123456',
-                'admin' => '0',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-
-            [
-                'username' => 'user2',
-                'password' => '123456',
-                'admin' => '0',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-
-            [
-                'username' => 'user3',
-                'password' => '123456',
-                'admin' => '0',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-
-
         ]);
 
     }

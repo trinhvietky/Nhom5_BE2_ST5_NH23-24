@@ -213,7 +213,7 @@ class AddTourController extends Controller
     }
 
     public function showCRUDGuide() {
-        $guide = Guide::orderBy('guide_Id')->get();
+        $guide = Guide::orderByDesc('guide_Id')->get();
 
         // Lấy các tour yêu thích của người dùng hiện tại
         // $favoriteTours = FavoriteTour::where('user_id', $user_main->id)->get();

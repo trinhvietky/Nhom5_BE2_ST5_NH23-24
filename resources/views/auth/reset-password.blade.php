@@ -15,7 +15,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title text-center mb-4">Reset Password</h2>
-                        <form method="post" action="{{ route('password.update') }}">
+                        <form method="post" action="{{ route('password.updated') }}">
                             @csrf
                             <input type="hidden" name="email" value="{{ $email }}">
 

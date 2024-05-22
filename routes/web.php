@@ -160,7 +160,7 @@ Route::post('/check-otp', [ForgotPasswordController::class, 'checkOtp'])
 
 // Route cho trang đặt lại mật khẩu
 Route::post('/auth/reset-password', [ForgotPasswordController::class, 'update'])
-    ->name('password.update');
+    ->name('password.updated');
 
 
 Route::post('/favorite/add', [FavoriteTourController::class, 'add'])->name('favorite.add');
@@ -178,4 +178,4 @@ Route::delete('/locations/{id}', [AddLocationController::class, 'destroy'])->nam
 Route::get('/locations/{id}/edit', [AddLocationController::class, 'edit'])->name('location.edit');
 // cập nhật location
 Route::put('/locations/{id}', [AddLocationController::class, 'update'])->name('location.update');
-Route::get('/locations/crud', [AddLocationController::class, 'showCRUD'])->name('admin.location-crud');
+Route::get('/locations/crud', [AddLocationController::class, 'showCrudLocation'])->name('admin.location-crud');
